@@ -8,7 +8,7 @@ This directory consists of schematic diagrams demonstrating the connections betw
 
 | Part Name | Explanation | Image | Datasheet |
 | ----------- | ----------- | ----------- | ----------- |
-| NiMH Battery Packs | We use two 6-volt NiMH (Nickel-Metal Hydride) battery packs to power all our electronics, providing enough current to run the robot for longer periods without performance drops. These rechargeable packs save time and cost by removing the need to replace batteries after every use. Each battery pack measures 7.2 cm × 5 cm × 1.5 cm, making them compact enough to fit neatly inside the robot’s chassis while keeping the weight balanced. | ![image]([https://drive.google.com/file/d/1_7wnMNgIy24hCdx4dEVy9Ar747YReUGw/view?usp=drive_link]) | [Battery Info]([https://drive.google.com/file/d/1VK_VsjF3aPhSJzILikrdEzxNDgZSIByU/view?usp=drive_link]) |
+| NiMH Battery Packs | We use two 6-volt NiMH (Nickel-Metal Hydride) battery packs to power all our electronics, providing enough current to run the robot for longer periods without performance drops. These rechargeable packs save time and cost by removing the need to replace batteries after every use. Each battery pack measures 7.2 cm × 5 cm × 1.5 cm, making them compact enough to fit neatly inside the robot’s chassis while keeping the weight balanced. | ![image]([https://drive.google.com/file/d/1_7wnMNgIy24hCdx4dEVy9Ar747YReUGw/view?usp=drive_link])       | [Battery Info] ([https://drive.google.com/file/d/1VK_VsjF3aPhSJzILikrdEzxNDgZSIByU/view?usp=drive_link])       |
 | | | | |
 | | | | |
 | | | | |
