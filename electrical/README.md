@@ -19,15 +19,11 @@ This directory consists of schematic diagrams demonstrating the connections betw
 ## Parts Bill Of Materials (BOM)
 | Part Name | Quantity |
 | ----------| -------- |
-| 1.5V Rechargeable Lithium Ion Battery | 4 |
-| DC 6V Micro Gear Box Speed Reduction Motor, 300RPM | 2 |
-| CJMCU34725 TCS34725 RGB Light Color Sensor | 1 |
-| Arduino Nano | 1 |
-| ES08MA Metal Analog Servo | 1 |
-| GP2Y0A02YK0F IR Range Sensor | 3 |
-| GP2Y0A41SK0F IR Range Sensor | 2 |
-| HW-201 IR Sensor | 1 |
-| L298N Dual H-Bridge Motor Driver | 1 |
-| L3G4200D Triple Axis Gyro Angular Velocity Sensor Module | 1 |
-| PixyCam Pixy 2.1 Robot Vision Image Sensor | 1 |
+| NiMH Battery Packs | 2 |
+| VL53L0X V2 Distance Sensors | 3 |
+| ESP32 | 1 |
+| 24mm Brushless DC Gear Motor – 6V 175RPM | 1 |
+| Miuzei MG90S 9G Micro Servo Motor | 1 |
+| MPU-6050 3-Axis Accelerometer & Gyroscope | 1 |
+| HuskyLens | 1 |
 
