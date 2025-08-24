@@ -1,7 +1,7 @@
 Models
 ====
 
-This directory contains all the models used for our robot. Since our robot is made out of LEGO technic pieces, we are going to be 3d printing mounts and adapters for the electronics. Below is a table of our 3D-printed parts and what they are used for.
+This directory contains all the custom 3D models used for our robot. The chassis is a fully optimized, super small design with sharp servo steering, while additional sensor mounts were created in Tinkercad. The rear assembly is adapted to work with LEGO wheels, axles, and a reinforced differential. Below is a table of our 3D-printed parts and their functions.
 
 | File Name | Description | Image |
 | ----------- | ----------- | ----------- |
