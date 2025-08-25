@@ -73,9 +73,9 @@ Right sensor (used for wall following).
 
 Example usage:
 
-int frontdist = front.readDistance1();
+' int frontdist = front.readDistance1(); '
 rightdist = constrain(right.readDistance1(), 0, 1200);
-leftdist = constrain(left.readDistance1(), 0, 1200);
+leftdist = constrain(left.readDistance1(), 0, 1200);'
 
 ## Gyroscope (ZebraGyro)
 
