@@ -3,7 +3,7 @@
 This repository contains the documentation for Team VHR robot for the 2025 World Robot Olympiad Future Engineers competition.
 
 
-## The Team <a class="anchor" id="team"></a>
+## The Team <a class="anchor"></a>
 
 ### Harshad Mahajan
 
@@ -50,4 +50,20 @@ This challenge emphasizes all aspects of the engineering process, including:
 Points are awarded based on how well teams perform in the challenge rounds, the thoroughness of their engineering documentation, and the creativity and reliability of their solutions. The aim is to inspire learning in STEM through hands-on robotics, collaborative teamwork, and inventive problem-solving.
 
 To learn more about the challenge, click [here](https://wro-association.org/wp-content/uploads/WRO-2025-Future-Engineers-Self-Driving-Cars-General-Rules.pdf).
+
+---
+
+## Strategy <a class="anchor"></a>
+
+### Open Challenge
+
+In the open challenge, the only changes to the mat are the size of the interior walls. To tackle these challenges, we will be using laser distance sensors to measure the distance from the walls. By having multiple sensors around the robot, the robot can accurately calculate the distance to the surrounding walls. The robot can use these readings from the sensor to correct itself and make sure it stays parallel to the wall. The robot will know when to turn using the distance sensors as one sensor will be placed in the front. Once the distance is less than a certain amount, the robot will know to turn. We keep track of the laps by keeping track of each turn we compete so we know when to end.
+
+| Straight Movement | Turning |
+| ----------------- | ------- |
+| ![image](https://drive.google.com/uc?id=1DB79bmORLYsZtvS3ZY7Et7zxQinYhLz2) | ![image](https://drive.google.com/uc?id=10EQ50uIVgxQVyQ04zlm_7qe28uHlypXn) |
+
+| Open Challenge Flowchart |
+| ------------------------ |
+| ![image](https://drive.google.com/uc?id=1ebbFPcefdsMD9-E0WnutMVh5yYC2ZdSq) |
 
