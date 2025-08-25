@@ -36,4 +36,5 @@ This repository contains the documentation for Team VHR robot for the 2025 World
 ---
 
 ### Team photo
-| ![image](https://drive.google.com/uc?id=1DvdrtPkqM7Knqy3OlnnTlUUaTfWU8p-L) | ![image](https://drive.google.com/uc?id=1Naz8VsuH2fz2HpzyK-oHjj93q9z5KsKU) |
+<img src="https://drive.google.com/uc?id=1DvdrtPkqM7Knqy3OlnnTlUUaTfWU8p-L" alt="Team" width="80%"/>
+<img src="https://drive.google.com/uc?id=1Naz8VsuH2fz2HpzyK-oHjj93q9z5KsKU" alt="Team" width="80%"/>
