@@ -36,5 +36,18 @@ This repository contains the documentation for Team VHR robot for the 2025 World
 ---
 
 ### Team photo
-<img src="https://drive.google.com/uc?id=1DvdrtPkqM7Knqy3OlnnTlUUaTfWU8p-L" alt="Team" width="80%"/>  <img src="https://drive.google.com/uc?id=1Naz8VsuH2fz2HpzyK-oHjj93q9z5KsKU" alt="Team" width="80%"/>
+<img src="https://drive.google.com/uc?id=1DvdrtPkqM7Knqy3OlnnTlUUaTfWU8p-L" alt="Team" width="50%"/>  <img src="https://drive.google.com/uc?id=1Naz8VsuH2fz2HpzyK-oHjj93q9z5KsKU" alt="Team" width="50%"/>
+
+## The Challenge <a class="anchor" id="challenge"></a>
+
+The **[WRO 2025 Future Engineers](https://wro-association.org/)** challenge is all about building an autonomous car that can adapt to a racetrack which changes every round. Instead of just speed, the focus is on control and problem-solving: the car needs to handle obstacles placed at random and also pull off a precise parallel park. It’s a mix of engineering and strategy, where teams combine sensors, algorithms, and creative design to make their car both smart and reliable.
+
+This challenge emphasizes all aspects of the engineering process, including:
+- **Movement:** Designing the vehicle to move efficiently and smoothly.
+- **Obstacle Navigation:** Programming the car to detect and handle traffic markers within the rules.les.
+- **Documentation:** Recording design decisions, progress, and collaborative work in a public GitHub repository.
+
+Points are awarded based on how well teams perform in the challenge rounds, the thoroughness of their engineering documentation, and the creativity and reliability of their solutions. The aim is to inspire learning in STEM through hands-on robotics, collaborative teamwork, and inventive problem-solving.
+
+To learn more about the challeng, click here [here](https://wro-association.org/wp-content/uploads/WRO-2025-Future-Engineers-Self-Driving-Cars-General-Rules.pdf).
 
