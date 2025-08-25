@@ -13,4 +13,5 @@ Description: Hello! I’m Rajas Salunke from Canada, and this is my second WRO s
 ## Harshad Mahajan
 age = 16
 High School: John Fraser S.S 
+
 Description: Hi! I’m Harshad Mahajan from Canada, and this is my first WRO season. I previously competed in Zone01, which sparked my interest in robotics. I’m passionate about coding and building robots, exploring new ideas, and applying creative solutions to challenges. Outside of robotics, I enjoy playing cricket and watching basketball.
