@@ -73,9 +73,9 @@ Right sensor (used for wall following).
 
 Example usage:
 
-' int frontdist = front.readDistance1(); '
-rightdist = constrain(right.readDistance1(), 0, 1200);
-leftdist = constrain(left.readDistance1(), 0, 1200);'
+` int frontdist = front.readDistance1(); `
+`rightdist = constrain(right.readDistance1(), 0, 1200);`
+`leftdist = constrain(left.readDistance1(), 0, 1200);'`
 
 ## Gyroscope (ZebraGyro)
 
@@ -87,8 +87,8 @@ Used for gyro-based turning and to maintain straight-line movement.
 
 Example:
 
-gyro.update();
-yaw = gyro.getYaw();
+`gyro.update();`
+`yaw = gyro.getYaw();`
 
 ## Camera (HuskyLens AI Vision Sensor)
 
@@ -98,7 +98,7 @@ Detects colored objects (red, green, pink, blue, orange).
 Communicates over UART (TX/RX pins on ESP32).
 
 
-Provides bounding box data (x, y, width, height, area) for detected objects.
+Provides bounding box data `(x, y, width, height, area)` for detected objects.
 
 
 Used for color-based navigation and obstacle identification.
@@ -121,11 +121,11 @@ Uses gyroscope readings to rotate precisely to target angles.
 
 Example:
 
- while (yaw > (target * -1)) {
+ `while (yaw > (target * -1)) {
     gyro.update();
     yaw = gyro.getYaw();
     myservo.write(45);
-}
+}`
 
 
 Wall Following
@@ -136,8 +136,8 @@ Uses ToF sensors to maintain a safe distance from walls.
 
 Steering corrections are applied proportionally:
 
- err = 20.0 - rightdist;
-steer = err * -2.0;
+ `err = 20.0 - rightdist;
+steer = err * -2.0;`
 
 
 Object Detection & Color Following
@@ -181,12 +181,12 @@ Some of the key global variables in the code:
 
 ## Example: Forward Movement with Gyro Correction
 
-gyro.update();
+`gyro.update();
 yaw = gyro.getYaw();
 rightdist = constrain(right.readDistance1(), 0, 1200);
 leftdist = constrain(left.readDistance1(), 0, 1200);
 forward(yaw, target_x, rightdist, leftdist);
-
+`
 This ensures that the robot drives forward while correcting its heading using the gyroscope and wall distances.
 
 
