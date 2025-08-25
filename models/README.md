@@ -1,7 +1,7 @@
 Models
 ====
 
-This directory contains all the custom 3D models used for our robot. The chassis is a fully optimized, super small design with sharp servo steering, while additional sensor mounts were created in Tinkercad. The rear assembly is adapted to work with LEGO wheels, axles, and a reinforced differential. Below is a table of our 3D-printed parts and their functions.
+This directory contains all the custom 3D models used for our robot. The chassis is a fully optimized, super small design with sharp servo steering, while additional sensor mounts were created in Tinkercad. The rear assembly is adapted to work with LEGO wheels, axles, and a reinforced differential. Below is a table of our 3D-printed parts and their functions. (The iterations of the robot, how all the electrical components and 3d models fit with robot and the purpose and optimization of each piece will be described in BUILD)
 
 | File Name | Description | Image |
 | ----------- | ----------- | ----------- |
