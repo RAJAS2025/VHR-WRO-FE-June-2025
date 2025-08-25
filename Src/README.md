@@ -172,11 +172,10 @@ Some of the key global variables in the code:
 | ------------- | ---- | ------- |
 | yaw | float | Stores gyro yaw angle |
 | frontdist, leftdist, rightdist | int | Stores ToF distance readings |
-| target_X | int | Target x-position of detected object (for steering) |
+| target_X | int | Takes the sum of the correctional values of red, green and pink |
 | count | int | Counts laps based of each 90 degree turn |
 | side | int | Defines direction (1 = counter-clockwise, 2 = clockwise) |
-| red, green, pink | float | Stores weighted values from HuskyLens detections |
-| pillar | bool | Flags pillar detection |  
+| red, green, pink | float | They are float correction value calculated from the blocks x and y position, used to steer the robot toward alignment when the marker is off center.|
 | distance | bool | Used for proportional distance-based control |  
 
 ## Example: Forward Movement with Gyro Correction
