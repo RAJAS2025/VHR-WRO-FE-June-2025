@@ -94,7 +94,7 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 **Total Car Cost: $180.79 CAD**
 
 
-## Parts Bill Of Materials (BOM)
+### Parts Bill Of Materials (BOM)
 | Part Name | Quantity |
 | ----------| -------- |
 | NiMH Battery Packs | 2 |
@@ -105,7 +105,7 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 | MPU-6050 3-Axis Accelerometer & Gyroscope | 1 |
 | HuskyLens | 1 |
 
-### Mechanical Design
+## Mechanical Design
 
 ### Chassis
 
