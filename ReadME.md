@@ -1,6 +1,10 @@
 
 # The Team <a class="anchor"></a>
 
+### Team photo
+<img src="https://drive.google.com/uc?id=1DvdrtPkqM7Knqy3OlnnTlUUaTfWU8p-L" width="40%"/> <img src="https://drive.google.com/uc?id=1Naz8VsuH2fz2HpzyK-oHjj93q9z5KsKU" width="40%"/>
+(Harshad, Vishnu, Rajas)
+
 ### Harshad Mahajan
 
 <b>Age:</b> 15
@@ -31,8 +35,6 @@
 
 ---
 
-### Team photo
-<img src="https://drive.google.com/uc?id=1DvdrtPkqM7Knqy3OlnnTlUUaTfWU8p-L" width="40%"/> <img src="https://drive.google.com/uc?id=1Naz8VsuH2fz2HpzyK-oHjj93q9z5KsKU" width="40%"/>
 
 ## The Challenge <a class="anchor" id="challenge"></a>
 
