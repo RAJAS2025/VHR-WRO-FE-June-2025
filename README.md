@@ -3,7 +3,7 @@
 This repository contains the documentation for Team VHR robot for the 2025 World Robot Olympiad Future Engineers competition.
 
 ##  Table of Contents 
-* [Team](#the-team-)
+* **[Team](#the-team-)**
 * **[The Challenge](#the-challenge-)**
   * [Strategy](#strategy-)
 * **[Hardware](#hardware-)**
