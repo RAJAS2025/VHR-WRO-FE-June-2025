@@ -1,3 +1,4 @@
+
 # The Team <a class="anchor"></a>
 
 ### Harshad Mahajan
@@ -133,3 +134,42 @@ Our old robot also used a rear-wheel drive system with the same advantages. Howe
 | Back Photo of Motor | Side Photo of Motor |
 | ---------------- | ----------------- |
 | ![image](https://drive.google.com/uc?id=14TVYNowK-BndGGxMD3PfKOjJBTohapYJ) | ![image](https://drive.google.com/uc?id=1WCMvpPhPwMwsXJ10z-Ut7Bo1HqB2yM2O) |
+
+# Power and Sense Management <a class="anchor"></a>  
+
+## Battery
+
+The robot is powered by two 6-volt NiMH (Nickel-Metal Hydride) battery packs. We chose these batteries for their high current output, which is essential for reliably running all the electronics, including the motors, without performance drops. Their use also ensures the robot has enough capacity for longer operation periods, a key advantage during competition.
+
+As rechargeable batteries, they provide a cost-effective and time-saving solution, as they don't need to be replaced after every use. Their compact size allows them to fit neatly inside the robot's chassis, which helps in maintaining a balanced and low-profile design.
+
+<img src="https://drive.google.com/uc?id=1_7wnMNgIy24hCdx4dEVy9Ar747YReUGw" width="20%" alt="An image of a NiMH battery pack"/>
+
+## Sensing
+
+### VL53L0X Time-of-Flight (ToF) Distance Sensors
+
+The robot uses three VL53L0X Time-of-Flight (ToF) distance sensors to measure the distance to surrounding objects. These sensors work by emitting a laser pulse and calculating the time it takes for the light to reflect back, providing highly accurate and reliable distance measurements in millimeters. The three sensors are strategically placed on the robot to provide multi-directional awareness for obstacle avoidance and maintaining a consistent distance from the walls. They are the primary tool for the robot's navigation on the track.
+
+<img src="https://drive.google.com/uc?id=1NXoMHVktarTHrdZuAl4HXU65G1BZpMTT" width="20%" alt="An image of a VL53L0X ToF distance sensor"/>
+
+### MPU-6050 3-Axis Accelerometer & Gyroscope
+
+The MPU-6050 is used to monitor the robot's orientation and heading. The gyroscope provides real-time data on the robot's yaw, pitch, and roll. The robot primarily uses the yaw axis to track its heading and maintain accurate directional control. Before each use, the gyro is calibrated to ensure precision, and a starting reference angle is set to 0. This allows the robot to consistently track its orientation and make precise turns, such as a 90-degree turn, by adjusting the offset relative to its starting position. This sensor is crucial for ensuring the robot drives in a straight line and turns accurately.
+
+
+### HuskyLens AI Vision Sensor
+The HuskyLens is a powerful AI vision sensor that provides the robot with the ability to "see" and identify objects. It is pre-trained to recognize colors and objects, which is a key part of your strategy for the Obstacle Challenge. The robot uses the HuskyLens for several key functions:
+
+- **Color Recognition:** It is trained to detect specific colors like red and green for identifying traffic blocks, pink for the parallel parking markers, and blue and orange lines to turn.
+
+- **Object Positioning:** The sensor provides the x and y coordinates of the detected objects, which are directly used by the program to guide the robot's movements.
+This sensor allows the robot to perform complex tasks like avoiding obstacles and executing precise maneuvers such as parallel parking.
+
+<img src="https://drive.google.com/uc?id=1YfXz-XhAxRQu1AgmiXbnKuT8Nj0EGX9x" width="20%" alt="An image of a Huskylens AI vision sensor"/>
+
+# Schematics <a class="anchor"></a>
+
+This schematic provides a clear overview of the robot's electronic design. It shows how a central ESP32 microcontroller manages various sensors and motors, enabling autonomous navigation and obstacle avoidance. The design is modular, with a focus on efficient communication and power management.
+
+<img src="https://drive.google.com/uc?id=1aF5MVUdIMGfIHesjWJOWcKdBSu5RwNBk" width="50%" alt="A schematic of the robot's electronic components and connections"/>
