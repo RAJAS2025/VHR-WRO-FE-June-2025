@@ -75,3 +75,20 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 | ----------------- | ------- |
 | ![image](https://drive.google.com/uc?id=1o8-S4fOHuvVPILtzNyMyq0V-x_8KhPgD) | ![image](https://drive.google.com/uc?id=1D9FqWyBBqiH5tIUv-c189Mm-1k3GZKxQ) |
 
+
+<br>
+
+# Mobility Management <a class="anchor"></a>
+
+### Motor <a class="anchor"></a>
+
+<table>
+  <tr>
+    <td width="50%" style="text-align: left;">
+      ![image](https://drive.google.com/uc?id=1zPMkLOjHfUfX1sFINI6UgpPYMk2pBiHa)
+    </td>
+    <td width="50%" style="text-align: left; vertical-align: top;">
+      [DC Motor Specs](https://drive.google.com/file/d/1moiPKcTiO8_0Bga1mJdIX5mgfcUgAj7J/view?usp=drive_link)
+    </td>
+  </tr>
+</table>
