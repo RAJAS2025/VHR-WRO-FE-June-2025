@@ -107,14 +107,16 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 
 This directory contains all the custom 3D models used for our robot. The chassis is a fully optimized, super small design with sharp servo steering, while additional sensor mounts were created in Tinkercad. The rear assembly is adapted to work with LEGO wheels, axles, and a reinforced differential. Below is a table of our 3D-printed parts and their functions. (The iterations of the robot, how all the electrical components and 3d models fit with robot and the purpose and optimization of each piece will be described in BUILD)
 
-| Parts Name | Description | Image |
-| ----------- | ----------- | ----------- |
-| Chassis | The chassis is a fully optimized, custom-designed base modeled in SolidWorks for a compact structure with sharp servo steering. It houses the drivetrain, electronics, and reinforced LEGO differential, forming the core of the robot. For details on iterations, component placement, and assembly, see the build documentation. | ![image](https://drive.google.com/uc?id=1Xr69AL12gRIF-5ft7Ylq5KtJu0QJ6xsf) |
-| Spur Gear| To transfer power from the 6V motors to the modified LEGO differential, we designed and 3D-printed a 36-tooth gear that fits the motor’s 3mm D-shaped shaft and meshes with the LEGO axle system. Using a 36-tooth input gear with a 24-tooth output gear, we geared it for higher speed because the motor has a low RPM and high torque. | ![image](https://drive.google.com/uc?id=15A_ULyuqfeW1OqZAiTphIvPfeZAlDUrT) |
-| Differential Gear | The LEGO differential was imported from an online CAD model into SolidWorks, then slightly reinforced by adding extra material around the mounting holes and adapted to fit our custom chassis. These modifications improve durability while maintaining smooth power transfer to the wheels under high-torque operation. | ![image](https://drive.google.com/uc?id=1qzpYpQRpw_0YeEP1o6rX9YchPsRdpLrL) |
-| Steering Connecting Bar | The steering connecting bar is a compact, custom-designed link optimized for the sharp servo steering system of the WRO Future Engineers self-driving car. Modeled in SolidWorks, it features recessed screw inlets that improve grip and durability, ensuring a secure fit while transferring motion smoothly between steering components. Its minimal, lightweight design makes it both efficient and reliable under high steering loads. | ![image](https://drive.google.com/uc?id=1eNLU3cQQbzHstJQHPj6PBz5TVGXz-ltt) |
-| Distance Sensor Holder | A custom-made, imported 4M LEGO beam is combined with a secure holder, modeled in TinkerCAD to keep the TOF sensor rigid and immovable. The holder eliminates any shifting or vibration, ensuring consistent and accurate sensor readings. Its LEGO integration allows for straightforward attachment to the structure while maintaining a locked, stable position. | ![image](https://drive.google.com/uc?id=1M6zluK-iLSjezei6UIyS69u5_PhCzkHq) |
+### Chassis
 
+Our chassis is a fully custom-designed base, modeled in SolidWorks to create a compact and efficient structure optimized for sharp servo steering. On top of the chassis, we mounted our PCB, which holds the main electronics and three laser distance sensors—one at the front and one on each side—allowing the robot to sense walls and obstacles accurately. The motor is positioned beneath the PCB in a dedicated motor holder and drives a spur gear that connects to a reinforced LEGO differential, forming a robust drivetrain.
+
+The front steering is designed for sharp, precise turns, giving the robot the ability to navigate tight corners and avoid obstacles efficiently. The chassis layout also ensures that the weight of the sensors and electronics is balanced over the drivetrain, improving stability and traction during high-speed maneuvers.
+
+Potential Chassis Improvements
+TO BE ADDED
+
+![image](https://drive.google.com/uc?id=1Xr69AL12gRIF-5ft7Ylq5KtJu0QJ6xsf)
 ---
 
 # Schematics <a class="anchor"></a>
