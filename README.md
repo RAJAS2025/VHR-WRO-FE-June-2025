@@ -152,7 +152,8 @@ The robot's forward and backward propulsion is provided by a 24mm brushless DC g
 ### Miuzei MG90S 9G Micro Servo Motor
 The robot's steering mechanism is controlled by a Miuzei MG90S 9G Micro Servo Motor. A servo is a specialized motor designed for precise angular control rather than continuous rotation. This particular model was chosen for its metal gear construction, which offers greater durability and higher torque than plastic gear versions. The servo's ability to hold a specific angle is what allows the robot to make precise steering adjustments and navigate tight corners effectively.
 
-![image](https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ)
+![image](https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ_)
+
 
 ### Materials 
 
@@ -202,19 +203,18 @@ As rechargeable batteries, they provide a cost-effective and time-saving solutio
 
 ## Sensing
 
-# VL53L0X Time-of-Flight (ToF) Distance Sensors
+### VL53L0X Time-of-Flight (ToF) Distance Sensors
 
 The robot uses three VL53L0X Time-of-Flight (ToF) distance sensors to measure the distance to surrounding objects. These sensors work by emitting a laser pulse and calculating the time it takes for the light to reflect back, providing highly accurate and reliable distance measurements in millimeters. The three sensors are strategically placed on the robot to provide multi-directional awareness for obstacle avoidance and maintaining a consistent distance from the walls. They are the primary tool for the robot's navigation on the track.
 
 ![image](https://drive.google.com/uc?id=1NXoMHVktarTHrdZuAl4HXU65G1BZpMTT)
 
-# MPU-6050 3-Axis Accelerometer & Gyroscope
+### MPU-6050 3-Axis Accelerometer & Gyroscope
 
 The MPU-6050 is used to monitor the robot's orientation and heading. The gyroscope provides real-time data on the robot's yaw, pitch, and roll. The robot primarily uses the yaw axis to track its heading and maintain accurate directional control. Before each use, the gyro is calibrated to ensure precision, and a starting reference angle is set to 0. This allows the robot to consistently track its orientation and make precise turns, such as a 90-degree turn, by adjusting the offset relative to its starting position. This sensor is crucial for ensuring the robot drives in a straight line and turns accurately.
 
-![image](https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ_)
 
-HuskyLens AI Vision Sensor
+### HuskyLens AI Vision Sensor
 The HuskyLens is a powerful AI vision sensor that provides the robot with the ability to "see" and identify objects. It is pre-trained to recognize colors and objects, which is a key part of your strategy for the Obstacle Challenge. The robot uses the HuskyLens for several key functions:
 
 - **Color Recognition:** It is trained to detect specific colors like red and green for identifying traffic blocks, pink for the parallel parking markers, and blue and orange lines to turn.
@@ -226,22 +226,19 @@ This sensor allows the robot to perform complex tasks like avoiding obstacles an
 
 # Schematics <a class="anchor"></a>
 
-
 This schematic provides a clear overview of the robot's electronic design. It shows how a central ESP32 microcontroller manages various sensors and motors, enabling autonomous navigation and obstacle avoidance. The design is modular, with a focus on efficient communication and power management.
-
-# Key Components
 
 ![image](https://drive.google.com/uc?id=1aF5MVUdIMGfIHesjWJOWcKdBSu5RwNBk) 
 
-This schematic provides a complete overview of the robot's electronic system. It shows how the NodeMCU-32S microcontroller acts as the central hub, connecting to and controlling every other component.
+# Key Components
 
-# Power Management
-The robot's power is supplied by a 6V battery pack, which connects at CN1. This power is distributed to all components in two ways. A voltage regulator (U8) steps down the 6V to a stable 3.3V to safely power the NodeMCU-32S and other sensitive electronics. The 6V supply is also used directly to power the motors and servo, as they require higher voltage and current.
+### Power Management
+The robot's power is supplied by a 6V battery pack, which connects at CN1. This power is distributed to all components in two ways. A voltage regulator (U8) steps down the 6V to a stable 3.3V to safely power the ESP32 and other sensitive electronics. The 6V supply is also used directly to power the motors and servo, as they require higher voltage and current.
 
-# Motors
+### Motors
 The Miuzei MG90S 9G Micro Servo Motor (S1) connects to pin D32 on the board for its control signal. The 24mm Brushless DC Gear Motor connects to the board via its motor driver (not explicitly shown) to a GPIO pin for control. Both motors are powered by the external 6V supply
 
-# Sensors
+### Sensors
 
 - **VL53L0X ToF Lidar Sensors (U2, U3, U4):** The three VL53L0X Lidar sensors (U2, U3, U4) connect to the board's I2C pins (SDA/SCL) via an I2C Multiplexer (U7).
 
