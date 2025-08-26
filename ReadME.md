@@ -173,3 +173,18 @@ This sensor allows the robot to perform complex tasks like avoiding obstacles an
 This schematic provides a clear overview of the robot's electronic design. It shows how a central ESP32 microcontroller manages various sensors and motors, enabling autonomous navigation and obstacle avoidance. The design is modular, with a focus on efficient communication and power management.
 
 <img src="https://drive.google.com/uc?id=1aF5MVUdIMGfIHesjWJOWcKdBSu5RwNBk" width="50%" alt="A schematic of the robot's electronic components and connections"/>
+
+### Power Management
+The robot's power is supplied by a 6V battery pack, which connects at CN1. This power is distributed to all components in two ways. A voltage regulator (U8) steps down the 6V to a stable 3.3V to safely power the ESP32 and other sensitive electronics. The 6V supply is also used directly to power the motors and servo, as they require higher voltage and current.
+
+### Motors
+The Miuzei MG90S 9G Micro Servo Motor (S1) connects to pin D32 on the board for its control signal. The 24mm Brushless DC Gear Motor connects to the board via its motor driver (not explicitly shown) to a GPIO pin for control. Both motors are powered by the external 6V supply
+
+### Sensors
+
+- **VL53L0X ToF Lidar Sensors (U2, U3, U4):** The three VL53L0X Lidar sensors (U2, U3, U4) connect to the board's I2C pins (SDA/SCL) via an I2C Multiplexer (U7).
+
+- **I2C Multiplexer (U7) & I2C Expander (U5):** To manage the three Lidar sensors on a single I2C bus, an I2C Multiplexer is used to allow the microcontroller to communicate with each sensor individually. An I2C Expander is also included to provide additional I2C communication lines for other devices.
+
+- **HuskyLens (UB):** The HuskyLens (UB) connects to the board's serial communication pins (RXD2/TXD2) to send data back and forth.
+
