@@ -212,6 +212,8 @@ The Miuzei MG90S 9G Micro Servo Motor (S1) connects to pin D32 on the board for 
 
 **Total Car Cost: $180.79 CAD**
 
+---
+
 # Strategy <a class="anchor"></a>
 
 ## Open Challenge
