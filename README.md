@@ -82,13 +82,6 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 
 ### Motor <a class="anchor"></a>
 
-<table>
-  <tr>
-    <td width="50%" style="text-align: left;">
-      ![image](https://drive.google.com/uc?id=1zPMkLOjHfUfX1sFINI6UgpPYMk2pBiHa)
-    </td>
-    <td width="50%" style="text-align: left; vertical-align: top;">
-      [DC Motor Specs](https://drive.google.com/file/d/1moiPKcTiO8_0Bga1mJdIX5mgfcUgAj7J/view?usp=drive_link)
-    </td>
-  </tr>
-</table>
+| Part Name | Explanation | Image | Datasheet |
+| ----------- | ----------- | ----------- | ----------- |
+| 24mm Brushless DC Gear Motor – 6V 175RPM | The 24mm brushless DC gear motor provides the driving force for our robot, offering a balance of speed and torque for reliable movement. Operating at 6V with a rated speed of 175 RPM and a stall torque greater than 1.7 kg·cm, it ensures smooth and efficient motion while maintaining precise control during maneuvers. In our project, these motors are used to drive the wheels, enabling the robot to respond accurately to sensor inputs and execute navigation tasks such as obstacle avoidance and parallel parking. |![image](https://drive.google.com/uc?id=1zPMkLOjHfUfX1sFINI6UgpPYMk2pBiHa)| [DC Motor Specs](https://drive.google.com/file/d/1moiPKcTiO8_0Bga1mJdIX5mgfcUgAj7J/view?usp=drive_link) | 
