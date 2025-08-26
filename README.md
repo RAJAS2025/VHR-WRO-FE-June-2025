@@ -80,7 +80,7 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 
 # Hardware <a class="anchor"></a>
 
-### Components
+## Components
 
 | Part Name | Product | Price |
 | ----------- | ----------- | ----------- |
@@ -94,7 +94,7 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 **Total Car Cost: $180.79 CAD**
 
 
-### Parts Bill Of Materials (BOM)
+## Parts Bill Of Materials (BOM)
 | Part Name | Quantity |
 | ----------| -------- |
 | NiMH Battery Packs | 2 |
@@ -144,12 +144,12 @@ The distance sensor holder combines a custom-made 4M LEGO beam with a secure Tin
 
 ### Motors
 
-# 24mm Brushless DC Gear Motor
+### 24mm Brushless DC Gear Motor
 The robot's forward and backward propulsion is provided by a 24mm brushless DC gear motor. This motor was chosen for its ideal balance of high speed and torque. The brushless design makes it highly efficient, durable, and provides a smooth, consistent power delivery. This motor is the core of the drivetrain, ensuring reliable and powerful movement throughout the competition.
 
 ![image](https://drive.google.com/uc?id=1zPMkLOjHfUfX1sFINI6UgpPYMk2pBiHa)
 
-# Miuzei MG90S 9G Micro Servo Motor
+### Miuzei MG90S 9G Micro Servo Motor
 The robot's steering mechanism is controlled by a Miuzei MG90S 9G Micro Servo Motor. A servo is a specialized motor designed for precise angular control rather than continuous rotation. This particular model was chosen for its metal gear construction, which offers greater durability and higher torque than plastic gear versions. The servo's ability to hold a specific angle is what allows the robot to make precise steering adjustments and navigate tight corners effectively.
 
 ![image](https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ)
@@ -162,7 +162,7 @@ When creating our robot, we wanted to be able to easily iterate and update the r
 
 # Mobility Management <a class="anchor"></a>
 
-### Drivetrain and Steering
+## Drivetrain and Steering
 Our robot's drivetrain uses a rear-wheel drive with sharp front-wheel servo steering. We chose this configuration to separate the driving and steering systems, which helped us avoid spacing issues and ensured that the drive motors and steering servo operate independently without interference.
 
 The drivetrain is powered by a 24mm brushless DC gear motor, chosen for its balance of high speed and ample torque. To transfer power from the motor to the wheels, we designed and 3D-printed a 36-tooth spur gear that fits securely onto the motor's shaft. This gear meshes directly with a reinforced LEGO differential, which distributes power to both rear wheels. This specific gear ratio gives our robot the speed needed for the challenges while maintaining the high torque required for smooth turns and accelerations. This simple, efficient, and reliable configuration is well-suited for our competition needs, and it provides several advantages:
@@ -179,7 +179,7 @@ This design results in a simple, efficient, and reliable drivetrain well-suited 
 | ![image](https://drive.google.com/uc?id=1Jf-CvguoRfaVFCoVMNndH-xFYlsa_ZU-) | ![image](https://drive.google.com/uc?id=1VLR8ZvrXIQMaj_SNlWJ1fxSpYCzsmNQD) |
 
 
-### Steering
+## Steering
 
 Our steering mechanism is a four-bar linkage, with free-spinning wheels mounted on it. This system proved to be the most efficient and easiest to implement for our purposes, as it only required a servo motor and a simple rig to connect it to the wheel axles. The servo motor moves the four-bar, which changes the angle of the wheels and, in turn, the direction of the vehicle.
 
@@ -192,7 +192,7 @@ Steering is managed by a Miuzei MG90S micro servo motor, which provides precise 
 
 # Power and Sense Management <a class="anchor"></a>  
 
-### Battery
+## Battery
 
 The robot is powered by two 6-volt NiMH (Nickel-Metal Hydride) battery packs. We chose these batteries for their high current output, which is essential for reliably running all the electronics, including the motors, without performance drops. Their use also ensures the robot has enough capacity for longer operation periods, a key advantage during competition.
 
@@ -200,7 +200,7 @@ As rechargeable batteries, they provide a cost-effective and time-saving solutio
 
 <img src="https://drive.google.com/uc?id=1_7wnMNgIy24hCdx4dEVy9Ar747YReUGw" width="20000">
 
-### Sensing
+## Sensing
 
 # VL53L0X Time-of-Flight (ToF) Distance Sensors
 
