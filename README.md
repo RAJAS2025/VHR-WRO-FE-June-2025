@@ -116,7 +116,7 @@ The front steering is designed for sharp, precise turns, giving the robot the ab
 Potential Chassis Improvements
 TO BE ADDED
 
-![image](https://drive.google.com/uc?id=1Xr69AL12gRIF-5ft7Ylq5KtJu0QJ6xsf)
+![image](https://drive.google.com/uc?id=1Xr69AL12gRIF-5ft7Ylq5KtJu0QJ6xsf) width="40%"
 
 ### Spur Gear
 
@@ -142,7 +142,7 @@ The distance sensor holder combines a custom-made 4M LEGO beam with a secure Tin
 
 ![image](https://drive.google.com/uc?id=1M6zluK-iLSjezei6UIyS69u5_PhCzkHq)
 
-### Motors
+## Motors
 
 ### 24mm Brushless DC Gear Motor
 The robot's forward and backward propulsion is provided by a 24mm brushless DC gear motor. This motor was chosen for its ideal balance of high speed and torque. The brushless design makes it highly efficient, durable, and provides a smooth, consistent power delivery. This motor is the core of the drivetrain, ensuring reliable and powerful movement throughout the competition.
