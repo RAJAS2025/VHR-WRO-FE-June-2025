@@ -21,7 +21,7 @@ This design results in a simple, efficient, and reliable drivetrain well-suited 
 | ---------------- | ----------------- |
 | ![image](https://drive.google.com/uc?id=1Jf-CvguoRfaVFCoVMNndH-xFYlsa_ZU-) | ![image](https://drive.google.com/uc?id=1VLR8ZvrXIQMaj_SNlWJ1fxSpYCzsmNQD) |
 
-## Old Drivetrain & Chassis Design & Differences of both & Why we switched
+## Old Drivetrain & Chassis Design
 
 Our old robot also used a rear-wheel drive system with the same advantages. However, it was built mostly from LEGO pieces, making it bulkier and less optimized. The drivetrain design placed the motor vertically at the back, which consumed a lot of space.
 
