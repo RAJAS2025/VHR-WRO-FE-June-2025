@@ -145,3 +145,4 @@ The distance sensor holder combines a custom-made 4M LEGO beam with a secure Tin
 
 # Schematics <a class="anchor"></a>
 
+![image](https://drive.google.com/uc?id=1aF5MVUdIMGfIHesjWJOWcKdBSu5RwNBk) 
