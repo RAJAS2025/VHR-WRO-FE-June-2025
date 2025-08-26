@@ -36,7 +36,7 @@ This repository contains the documentation for Team VHR robot for the 2025 World
 ---
 
 ### Team photo
-<img src="https://drive.google.com/uc?id=1DvdrtPkqM7Knqy3OlnnTlUUaTfWU8p-L" width="40%"/>  <img src="https://drive.google.com/uc?id=1Naz8VsuH2fz2HpzyK-oHjj93q9z5KsKU" width="40%"/>
+<img src="https://drive.google.com/uc?id=1DvdrtPkqM7Knqy3OlnnTlUUaTfWU8p-L" width="50%" alt="Team VHR members Harshad and Vishnu"/> <img src="https://drive.google.com/uc?id=1Naz8VsuH2fz2HpzyK-oHjj93q9z5KsKU" width="50%" alt="Team VHR member Rajas"/>
 
 ## The Challenge <a class="anchor" id="challenge"></a>
 
@@ -61,19 +61,19 @@ In the open challenge, the only modification to the mat is the size of the inter
 
 | Straight Movement | Turning |
 | ----------------- | ------- |
-| ![image](https://drive.google.com/uc?id=1DB79bmORLYsZtvS3ZY7Et7zxQinYhLz2) | ![image](https://drive.google.com/uc?id=10EQ50uIVgxQVyQ04zlm_7qe28uHlypXn) |
+| <img src="https://drive.google.com/uc?id=1DB79bmORLYsZtvS3ZY7Et7zxQinYhLz2" width="50%" alt="Diagram of robot moving in a straight line"/> | <img src="https://drive.google.com/uc?id=10EQ50uIVgxQVyQ04zlm_7qe28uHlypXn" width="50%" alt="Diagram of robot turning"/> |
 
 | Open Challenge Flowchart |
 | ------------------------ |
-| ![image](https://drive.google.com/uc?id=1ebbFPcefdsMD9-E0WnutMVh5yYC2ZdSq) |
+| <img src="https://drive.google.com/uc?id=1ebbFPcefdsMD9-E0WnutMVh5yYC2ZdSq" width="50%" alt="Flowchart for the open challenge strategy"/> |
 
- ### Obstacle Challenge
+ ### Obstacle Challenge
 
 In the obstacle challenge, our approach focuses on maintaining precise control while navigating the dynamic course. We plan to use gyro-based line following to keep the robot moving straight along the track, while wall safety distance sensors prevent collisions if the robot gets too close to the walls. When a block is detected, the robot will decelerate to maneuver around it, using an algorithm that continues turning until the obstacle is fully passed and the robot has reached the target x coordinate, then accelerates again once the path is clear. For turns, the robot uses a camera system to detect the blue and orange lines on the mat, allowing accurate and consistent adjustments. This strategy combines speed, precision, and adaptability to handle obstacles effectively while staying on course. Just like the open challenge, we track laps by counting each completed turn, allowing the robot to know when the course is finished.
 
 | 1 Block Movement | 2 Block Movement|
 | ----------------- | ------- |
-| ![image](https://drive.google.com/uc?id=1o8-S4fOHuvVPILtzNyMyq0V-x_8KhPgD) | ![image](https://drive.google.com/uc?id=1D9FqWyBBqiH5tIUv-c189Mm-1k3GZKxQ) |
+| <img src="https://drive.google.com/uc?id=1o8-S4fOHuvVPILtzNyMyq0V-x_8KhPgD" width="50%" alt="Diagram showing movement around one obstacle block"/> | <img src="https://drive.google.com/uc?id=1D9FqWyBBqiH5tIUv-c189Mm-1k3GZKxQ" width="50%" alt="Diagram showing movement around two obstacle blocks"/> |
 
 
 <br>
@@ -85,11 +85,11 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 | Part Name | Product | Price |
 | ----------- | ----------- | ----------- |
 | Battery | [`NiMH Battery Packs`](https://www.amazon.ca/melasta-Controller-Transmitter-Batteries-Rechargeable/dp/B08H1VGPTQ/ref=sr_1_7?dib=eyJ2IjoiMSJ9.6jvflqZLSyioPNMTbi8u2oe0zjAEgO0SVPFmtKSFcVizyx8WJCpY7NcH67l6ZsVLjccSUX8HYYjTynHbsuqijKooCKc_3E3V4i9yGfv1DUzkUEpPnH7BWjww65ARWq3aR8I3X-4wDlUcIDOTiW2SNK2GfzKjpEqyjw2gWkhN3qZLF-YHq3X34O7wB6gIdI6kQjp9vD7B4ZKpChUHuOPTyEezkS0Ww22aKja5_yWcUTZewEimsz45EgEAp40r7HhbXSbVoyv8Z3yoRuE6NEykaONUX4CWj9M31CB7GmyHM8U.VH-fCOSL3T6fqm7b1sa9Ko1dU032TcThg869M1KAW-Q&dib_tag=se&gad_source=1&hvadid=249594509029&hvdev=c&hvexpln=0&hvlocphy=9000820&hvnetw=g&hvocijid=14621881054563641559--&hvqmt=e&hvrand=14621881054563641559&hvtargid=kwd-307540910796&hydadcr=29607_10647357&keywords=nimh+battery+packs&mcid=16df915f92a43ecc8818107c43aee59d&qid=1756174155&sr=8-7) | $26.59 |
-| Drive Motor | [`24mm Brushless DC Gear Motor – 6V 175RPM`](https://ca.robotshop.com/products/e-s-motor-24mm-brushless-dc-gear-motor-6v-175rpm?qd=f4e8ef762cd02e5a0efc04a59a1c2b2e) | $17.43 | 
+| Drive Motor | [`24mm Brushless DC Gear Motor – 6V 175RPM`](https://ca.robotshop.com/products/e-s-motor-24mm-brushless-dc-gear-motor-6v-175rpm?qd=f4e8ef762cd02e5a0efc04a59a1c2b2e) | $17.43 | 
 | Servo Motor| [`Miuzei MG90S 9G Micro Servo Motor`](https://www.amazon.ca/Miuzei-MG90S-Servo-Helicopter-Arduino/dp/B0BWJ4RKGV/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.SjyQKb523oHkxGq8PZ33pXReP1_e_7FqP-xfnh4b3jZYwBlFnqYn3YfGZIt1VAZFgdQQPbQ28JjAq5Q_OZ9rJM26C2zVBQ2RIiqlaPzHOVu1u_A26R-ppvWzVuxkWyoYrTyqZXVHsXjhdK6FuN1Q89Ya0LATUSz7Ov6aD9w_EueGaBZmUSwLkKOr6cfwBffRFrB5ZC-irsOd57WjfhrXDH5drSJtA5gYU1mBC3Lkb7-G-CraqkPVl18oWgp0ao1i6DB2GteeZjfId37Kl5zk-1BfClGpkLqgh5kT6wC73CE.60P5bf61P-tOKAz1bI-IDdX9t9Z3JUCbb4ZwwRZxXPE&dib_tag=se&keywords=mg90s%2Bservo&qid=1756174433&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1) | $16.99 (Price of 1: $8.49 |
 | Distance Sensors | [`VL53L0X V2 Distance Sensors`](https://www.adafruit.com/product/3317?srsltid=AfmBOoo2bXDFNLP4muxH_TJ6E1TMgPw9tgMk8_leCCFIUnABXe_XegRi) | $14.95 (Price of 3: $44.85 |
 | Gyro | [`MPU-6050 3-Axis Accelerometer & Gyroscope: LINK NEEDED`](https://carisma-shop.com/products/gt24-alum-motor-mount) | $TBD |
-| Camera | [`Huskylens`](https://ca.robotshop.com/products/gravity-huskylens-ai-machine-vision-sensor-w-silicone-case?gad_source=1&gad_campaignid=20151185247&gbraid=0AAAAAD_f_xxytUT8IaTqhSAT_ir4KZ1jB&gclid=CjwKCAjwk7DFBhBAEiwAeYbJsc7MoTx8vF9xUZmZP27axQPZ4kNTacxE1th6vTxau1L4F4zaG-6MnRoCdAcQAvD_BwE) | $83.43 |
+| Camera | [`Huskylens`](https://ca.robotshop.com/products/gravity-huskylens-ai-machine-vision-sensor-w-silicone-case?gad_source=1&gad_campaignid=20151185247&gbraid=0AAAAAD_f_xxytUT8IaTqhSAT_ir4KZ1jB&gclid=CjwKCAjwk7DFBhBAEiwAeYbJsc7MoTx8vF9xUZyPZp27axQPZ4kNTacxE1th6vTxau1L4F4zaG-6MnRoCdAcQAvD_BwE) | $83.43 |
 
 **Total Car Cost: $180.79 CAD**
 
@@ -116,46 +116,46 @@ The front steering is designed for sharp, precise turns, giving the robot the ab
 Potential Chassis Improvements
 TO BE ADDED
 
-![image](https://drive.google.com/uc?id=1Xr69AL12gRIF-5ft7Ylq5KtJu0QJ6xsf) width="40%"
+<img src="https://drive.google.com/uc?id=1Xr69AL12gRIF-5ft7Ylq5KtJu0QJ6xsf" width="50%" alt="A 3D model of the robot chassis">
 
 ### Spur Gear
 
 To transfer power from the 6V motors to the modified LEGO differential, we designed and 3D-printed a 36-tooth spur gear that fits the motor’s 3mm D-shaped shaft and meshes precisely with the LEGO axle system. Using a 36-tooth input gear paired with a 24-tooth output gear, we geared the drivetrain for higher speed while taking advantage of the motor’s high torque and low RPM. This gear ensures smooth and efficient power transfer, providing consistent wheel rotation even under load.
 
-![image](https://drive.google.com/uc?id=15A_ULyuqfeW1OqZAiTphIvPfeZAlDUrT)
+<img src="https://drive.google.com/uc?id=15A_ULyuqfeW1OqZAiTphIvPfeZAlDUrT" width="50%" alt="A 3D model of the custom spur gear">
 
 ### Differential Gear
 
 The LEGO differential was imported from an online CAD model into SolidWorks and slightly reinforced to improve durability. Extra material was added around the mounting holes, and the differential was adapted to fit our custom chassis. These modifications maintain smooth power transfer to the wheels under high-torque operation, while reducing stress on the mounting points and improving overall reliability during obstacle navigation.
 
-![image](https://drive.google.com/uc?id=1qzpYpQRpw_0YeEP1o6rX9YchPsRdpLrL)
+<img src="https://drive.google.com/uc?id=1qzpYpQRpw_0YeEP1o6rX9YchPsRdpLrL" width="50%" alt="A 3D model of the reinforced LEGO differential gear"/>
 
 ### Steering Connecting Bar
 
 The steering connecting bar is a compact, custom-designed link optimized for our sharp servo steering system. Modeled in SolidWorks, it features recessed screw inlets for better grip and durability, ensuring a secure connection between steering components. Its lightweight design minimizes additional load while transferring motion smoothly, allowing the front wheels to respond precisely to steering commands even during tight turns.
 
-![image](https://drive.google.com/uc?id=1eNLU3cQQbzHstJQHPj6PBz5TVGXz-ltt) 
+<img src="https://drive.google.com/uc?id=1eNLU3cQQbzHstJQHPj6PBz5TVGXz-ltt" width="50%" alt="A 3D model of the steering connecting bar"/> 
 
 ### Distance Sensor Holder
 
 The distance sensor holder combines a custom-made 4M LEGO beam with a secure TinkerCAD-designed mount to keep the TOF sensor rigid and stable. This eliminates vibration or shifting during operation, ensuring accurate and consistent sensor readings. The LEGO integration allows for easy attachment to the chassis while maintaining a locked position, supporting reliable obstacle detection and wall-following maneuvers.
 
-![image](https://drive.google.com/uc?id=1M6zluK-iLSjezei6UIyS69u5_PhCzkHq)
+<img src="https://drive.google.com/uc?id=1M6zluK-iLSjezei6UIyS69u5_PhCzkHq" width="50%" alt="A 3D model of the distance sensor holder"/>
 
 ## Motors
 
 ### 24mm Brushless DC Gear Motor
 The robot's forward and backward propulsion is provided by a 24mm brushless DC gear motor. This motor was chosen for its ideal balance of high speed and torque. The brushless design makes it highly efficient, durable, and provides a smooth, consistent power delivery. This motor is the core of the drivetrain, ensuring reliable and powerful movement throughout the competition.
 
-![image](https://drive.google.com/uc?id=1zPMkLOjHfUfX1sFINI6UgpPYMk2pBiHa)
+<img src="https://drive.google.com/uc?id=1zPMkLOjHfUfX1sFINI6UgpPYMk2pBiHa" width="50%" alt="An image of the brushless DC gear motor"/>
 
 ### Miuzei MG90S 9G Micro Servo Motor
 The robot's steering mechanism is controlled by a Miuzei MG90S 9G Micro Servo Motor. A servo is a specialized motor designed for precise angular control rather than continuous rotation. This particular model was chosen for its metal gear construction, which offers greater durability and higher torque than plastic gear versions. The servo's ability to hold a specific angle is what allows the robot to make precise steering adjustments and navigate tight corners effectively.
 
-![image](https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ_)
+<img src="https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ_" width="50%" alt="An image of the micro servo motor"/>
 
 
-### Materials 
+### Materials 
 
 When creating our robot, we wanted to be able to easily iterate and update the robot in many ways as we tested it. In order to achieve these goals, we decided to use LEGO Technic pieces to construct the majority of our robot. LEGO technic was the perfect choice for us since our robotics centre, Zebra Robotics, focuses on LEGO robotics and competitions related to that, so we have an abundance of LEGO technic pieces. Our team members also have extensive experience in working with LEGO Technic parts and completing challenges with them. In order to attach the electronic components onto our chassis, we 3D printed mounts for the components, as they allowed us to smoothly integrate the non-LEGO parts with the LEGO parts.
 
@@ -168,16 +168,16 @@ Our robot's drivetrain uses a rear-wheel drive with sharp front-wheel servo stee
 
 The drivetrain is powered by a 24mm brushless DC gear motor, chosen for its balance of high speed and ample torque. To transfer power from the motor to the wheels, we designed and 3D-printed a 36-tooth spur gear that fits securely onto the motor's shaft. This gear meshes directly with a reinforced LEGO differential, which distributes power to both rear wheels. This specific gear ratio gives our robot the speed needed for the challenges while maintaining the high torque required for smooth turns and accelerations. This simple, efficient, and reliable configuration is well-suited for our competition needs, and it provides several advantages:
 
-- **Better torque transfer** through the reinforced LEGO differential.  
-- **Greater stability** under load, as the weight of the robot is more evenly distributed over the rear drive wheels.  
-- **Improved maneuverability**, since steering and driving forces are separated between the front and rear axles.  
+- **Better torque transfer** through the reinforced LEGO differential.  
+- **Greater stability** under load, as the weight of the robot is more evenly distributed over the rear drive wheels.  
+- **Improved maneuverability**, since steering and driving forces are separated between the front and rear axles.  
 - **Familiar control response**, matching our previous experience with other rear-driven LEGO robots.
 
 This design results in a simple, efficient, and reliable drivetrain well-suited for our competition needs.
 
 | Rear-Wheel Drive | Front Wheel Drive |
 | ---------------- | ----------------- |
-| ![image](https://drive.google.com/uc?id=1Jf-CvguoRfaVFCoVMNndH-xFYlsa_ZU-) | ![image](https://drive.google.com/uc?id=1VLR8ZvrXIQMaj_SNlWJ1fxSpYCzsmNQD) |
+| <img src="https://drive.google.com/uc?id=1Jf-CvguoRfaVFCoVMNndH-xFYlsa_ZU-" width="50%" alt="Diagram showing a rear-wheel drive vehicle"/> | <img src="https://drive.google.com/uc?id=1VLR8ZvrXIQMaj_SNlWJ1fxSpYCzsmNQD" width="50%" alt="Diagram showing a front-wheel drive vehicle"/> |
 
 
 ## Steering
@@ -188,10 +188,10 @@ Steering is managed by a Miuzei MG90S micro servo motor, which provides precise 
 
 | Four-Bar Steering Mechanism |
 | --------------------------- |
-| ![image](https://drive.google.com/uc?id=16rHeZFgRDMQf3lHZIuXqODQA6GuB-DN7) |
+| <img src="https://drive.google.com/uc?id=16rHeZFgRDMQf3lHZIuXqODQA6GuB-DN7" width="50%" alt="Diagram showing the four-bar steering mechanism"/> |
 
 
-# Power and Sense Management <a class="anchor"></a>  
+# Power and Sense Management <a class="anchor"></a>  
 
 ## Battery
 
@@ -199,7 +199,7 @@ The robot is powered by two 6-volt NiMH (Nickel-Metal Hydride) battery packs. We
 
 As rechargeable batteries, they provide a cost-effective and time-saving solution, as they don't need to be replaced after every use. Their compact size allows them to fit neatly inside the robot's chassis, which helps in maintaining a balanced and low-profile design.
 
-<img src="https://drive.google.com/uc?id=1_7wnMNgIy24hCdx4dEVy9Ar747YReUGw" width="20000">
+<img src="https://drive.google.com/uc?id=1_7wnMNgIy24hCdx4dEVy9Ar747YReUGw" width="50%" alt="An image of a NiMH battery pack"/>
 
 ## Sensing
 
@@ -207,7 +207,7 @@ As rechargeable batteries, they provide a cost-effective and time-saving solutio
 
 The robot uses three VL53L0X Time-of-Flight (ToF) distance sensors to measure the distance to surrounding objects. These sensors work by emitting a laser pulse and calculating the time it takes for the light to reflect back, providing highly accurate and reliable distance measurements in millimeters. The three sensors are strategically placed on the robot to provide multi-directional awareness for obstacle avoidance and maintaining a consistent distance from the walls. They are the primary tool for the robot's navigation on the track.
 
-![image](https://drive.google.com/uc?id=1NXoMHVktarTHrdZuAl4HXU65G1BZpMTT)
+<img src="https://drive.google.com/uc?id=1NXoMHVktarTHrdZuAl4HXU65G1BZpMTT" width="50%" alt="An image of a VL53L0X ToF distance sensor"/>
 
 ### MPU-6050 3-Axis Accelerometer & Gyroscope
 
@@ -222,13 +222,13 @@ The HuskyLens is a powerful AI vision sensor that provides the robot with the ab
 - **Object Positioning:** The sensor provides the x and y coordinates of the detected objects, which are directly used by the program to guide the robot's movements.
 This sensor allows the robot to perform complex tasks like avoiding obstacles and executing precise maneuvers such as parallel parking.
 
-![image](https://drive.google.com/uc?id=1YfXz-XhAxRQu1AgmiXbnKuT8Nj0EGX9x)
+<img src="https://drive.google.com/uc?id=1YfXz-XhAxRQu1AgmiXbnKuT8Nj0EGX9x" width="50%" alt="An image of a Huskylens AI vision sensor"/>
 
 # Schematics <a class="anchor"></a>
 
 This schematic provides a clear overview of the robot's electronic design. It shows how a central ESP32 microcontroller manages various sensors and motors, enabling autonomous navigation and obstacle avoidance. The design is modular, with a focus on efficient communication and power management.
 
-![image](https://drive.google.com/uc?id=1aF5MVUdIMGfIHesjWJOWcKdBSu5RwNBk) 
+<img src="https://drive.google.com/uc?id=1aF5MVUdIMGfIHesjWJOWcKdBSu5RwNBk" width="50%" alt="A schematic of the robot's electronic components and connections"/>
 
 # Key Components
 
