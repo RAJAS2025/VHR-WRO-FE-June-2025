@@ -148,12 +148,12 @@ The distance sensor holder combines a custom-made 4M LEGO beam with a secure Tin
 ### 24mm Brushless DC Gear Motor
 The robot's forward and backward propulsion is provided by a 24mm brushless DC gear motor. This motor was chosen for its ideal balance of high speed and torque. The brushless design makes it highly efficient, durable, and provides a smooth, consistent power delivery. This motor is the core of the drivetrain, ensuring reliable and powerful movement throughout the competition.
 
-<img src="https://drive.google.com/uc?id=1zPMkLOjHfUfX1sFINI6UgpPYMk2pBiHa" width="20%" alt="An image of the brushless DC gear motor"/>
+<img src="https://drive.google.com/uc?id=1zPMkLOjHfUfX1sFINI6UgpPYMk2pBiHa" width="20%" />
 
 ### Miuzei MG90S 9G Micro Servo Motor
 The robot's steering mechanism is controlled by a Miuzei MG90S 9G Micro Servo Motor. A servo is a specialized motor designed for precise angular control rather than continuous rotation. This particular model was chosen for its metal gear construction, which offers greater durability and higher torque than plastic gear versions. The servo's ability to hold a specific angle is what allows the robot to make precise steering adjustments and navigate tight corners effectively.
 
-<img src="https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ_" width="20%" alt="An image of the micro servo motor"/>
+<img src="https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ_" width="20%" height="10" />
 
 
 ### Materials 
