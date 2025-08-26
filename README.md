@@ -104,3 +104,7 @@ This directory contains all the custom 3D models used for our robot. The chassis
 | Steering Connecting Bar | The steering connecting bar is a compact, custom-designed link optimized for the sharp servo steering system of the WRO Future Engineers self-driving car. Modeled in SolidWorks, it features recessed screw inlets that improve grip and durability, ensuring a secure fit while transferring motion smoothly between steering components. Its minimal, lightweight design makes it both efficient and reliable under high steering loads. | ![image](https://drive.google.com/uc?id=1eNLU3cQQbzHstJQHPj6PBz5TVGXz-ltt) |
 | Distance Sensor Holder | A custom-made, imported 4M LEGO beam is combined with a secure holder, modeled in TinkerCAD to keep the TOF sensor rigid and immovable. The holder eliminates any shifting or vibration, ensuring consistent and accurate sensor readings. Its LEGO integration allows for straightforward attachment to the structure while maintaining a locked, stable position. | ![image](https://drive.google.com/uc?id=1M6zluK-iLSjezei6UIyS69u5_PhCzkHq) |
 
+---
+
+# Schematics <a class="anchor"></a>
+
