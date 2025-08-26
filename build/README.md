@@ -2,7 +2,7 @@ Build
 ====
 
 This directory documents the materials used to construct our robot, along with the reasoning behind our drivetrain, gearing, and steering choices. It also includes the design iterations, comparisons between old and new robots, the CAD process, and how electrical components, 3D-printed parts, VEX pieces, and LEGO elements were integrated into our fully 3D-printed chassis. An assembly video is also provided to demonstrate how the robot comes together.
-## Drivetrain & Chassis Design
+## New Drivetrain & Chassis Design
 
 Our robot is a four-wheeled vehicle that uses a **rear-wheel drive with sharp front-wheel servo steering**. The chassis was custom-modeled in SolidWorks for a compact, lightweight structure that minimizes complexity while maximizing reliability. By separating the steering system from the drivetrain, we avoided issues with spacing and ensured that the steering servo and the drive motors operate independently without interference. This gave us two possible configurations: front-wheel drive with rear steering or rear-wheel drive with front steering.  
 
