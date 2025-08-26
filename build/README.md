@@ -26,4 +26,6 @@ This design results in a simple, efficient, and reliable drivetrain well-suited 
 Our old robot also used a rear-wheel drive system with the same advantages. However, it was built mostly from LEGO pieces, making it bulkier and less optimized. The drivetrain design placed the motor vertically at the back, which consumed a lot of space.
 
 
-
+| Back Photo of Motor | Side Photo of Motor |
+| ---------------- | ----------------- |
+| ![image](https://drive.google.com/uc?id=14TVYNowK-BndGGxMD3PfKOjJBTohapYJ) | ![image](https://drive.google.com/uc?id=1WCMvpPhPwMwsXJ10z-Ut7Bo1HqB2yM2O) |
