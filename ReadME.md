@@ -3,6 +3,7 @@
 
 ### Team photo
 <img src="https://drive.google.com/uc?id=1DvdrtPkqM7Knqy3OlnnTlUUaTfWU8p-L" width="40%"/> <img src="https://drive.google.com/uc?id=1Naz8VsuH2fz2HpzyK-oHjj93q9z5KsKU" width="40%"/>
+<br>
 (Harshad, Vishnu, Rajas)
 
 ### Harshad Mahajan
