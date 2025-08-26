@@ -80,8 +80,6 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 
 # Hardware <a class="anchor"></a>
 
-### Motor <a class="anchor"></a>
-
 | Part Name | Explanation | Image | Datasheet |
 | ----------- | ----------- | ----------- | ----------- |
 | NiMH Battery Packs | We use two 6-volt NiMH (Nickel-Metal Hydride) battery packs to power all our electronics, providing enough current to run the robot for longer periods without performance drops. These rechargeable packs save time and cost by removing the need to replace batteries after every use. Each battery pack measures 7.2 cm × 5 cm × 1.5 cm, making them compact enough to fit neatly inside the robot’s chassis while keeping the weight balanced. |<img src="https://drive.google.com/uc?id=1_7wnMNgIy24hCdx4dEVy9Ar747YReUGw" width="20000">| [Battery Info](https://drive.google.com/file/d/1VK_VsjF3aPhSJzILikrdEzxNDgZSIByU/view?usp=drive_link)| 
@@ -95,9 +93,6 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 ---
 
 # Mobility Management <a class="anchor"></a>
-
-Models
-====
 
 This directory contains all the custom 3D models used for our robot. The chassis is a fully optimized, super small design with sharp servo steering, while additional sensor mounts were created in Tinkercad. The rear assembly is adapted to work with LEGO wheels, axles, and a reinforced differential. Below is a table of our 3D-printed parts and their functions. (The iterations of the robot, how all the electrical components and 3d models fit with robot and the purpose and optimization of each piece will be described in BUILD)
 
