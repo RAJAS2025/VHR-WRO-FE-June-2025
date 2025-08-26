@@ -96,3 +96,40 @@ The robot's steering mechanism is controlled by a Miuzei MG90S 9G Micro Servo Mo
 
 <img src="https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ_" width="20%" />
 
+## New Drivetrain & Chassis Design
+
+Our robot is a four-wheeled vehicle that uses a **rear-wheel drive with sharp front-wheel servo steering**. The chassis was custom-modeled in SolidWorks for a compact, lightweight structure that minimizes complexity while maximizing reliability. By separating the steering system from the drivetrain, we avoided issues with spacing and ensured that the steering servo and the drive motors operate independently without interference. This gave us two possible configurations: front-wheel drive with rear steering or rear-wheel drive with front steering.  
+
+We chose the **rear-wheel drive with front steering** configuration because it provides several advantages:  
+- **More precise steering**, since the front wheels focus only on steering.  
+- **Balanced handling**, with weight distributed between front and rear.  
+- **No torque steer**, unlike front-wheel drive systems.  
+- **Stronger traction under acceleration**, as weight shifts to the rear drive wheels.  
+- **Better power handling**, making it suitable for higher torque motors.  
+- **Familiar control response**, matching our previous experience with other rear-driven LEGO robots.   
+
+This design results in a simple, efficient, and reliable drivetrain well-suited for our competition needs.
+
+
+| Rear-Wheel Drive | Front Wheel Drive |
+| ---------------- | ----------------- |
+| ![image](https://drive.google.com/uc?id=1Jf-CvguoRfaVFCoVMNndH-xFYlsa_ZU-) | ![image](https://drive.google.com/uc?id=1VLR8ZvrXIQMaj_SNlWJ1fxSpYCzsmNQD) |
+
+## Steering
+
+Our steering mechanism is a four-bar linkage, with free-spinning wheels mounted on it. This system proved to be the most efficient and easiest to implement for our purposes, as it only required a servo motor and a simple rig to connect it to the wheel axles. The servo motor moves the four-bar, which changes the angle of the wheels and, in turn, the direction of the vehicle.
+
+Steering is managed by a Miuzei MG90S micro servo motor, which provides precise angular control. The rig that connects the servo to the wheel axles was 3D-printed as a single piece along with the servo mount. It features a LEGO axle-shaped cross hole that rotates with the servo, ensuring a secure connection. The lightweight and durable design of this part ensures the front wheels respond quickly and accurately to the servo's commands, allowing our robot to execute the sharp turns necessary for navigating obstacles and completing tasks.
+
+| Four-Bar Steering Mechanism |
+| --------------------------- |
+| <img src="https://drive.google.com/uc?id=16rHeZFgRDMQf3lHZIuXqODQA6GuB-DN7" /> |
+
+## Old Drivetrain & Chassis Design
+
+Our old robot also used a rear-wheel drive system with the same advantages. However, it was built mostly from LEGO pieces, making it bulkier and less optimized. The drivetrain design placed the motor vertically at the back, which consumed a lot of space.
+
+
+| Back Photo of Motor | Side Photo of Motor |
+| ---------------- | ----------------- |
+| ![image](https://drive.google.com/uc?id=14TVYNowK-BndGGxMD3PfKOjJBTohapYJ) | ![image](https://drive.google.com/uc?id=1WCMvpPhPwMwsXJ10z-Ut7Bo1HqB2yM2O) |
