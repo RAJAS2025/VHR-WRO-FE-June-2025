@@ -188,3 +188,26 @@ The Miuzei MG90S 9G Micro Servo Motor (S1) connects to pin D32 on the board for 
 
 - **HuskyLens (UB):** The HuskyLens (UB) connects to the board's serial communication pins (RXD2/TXD2) to send data back and forth.
 
+| Part Name | Product | Price |
+| ----------- | ----------- | ----------- |
+| Battery | [`NiMH Battery Packs`](https://www.amazon.ca/melasta-Controller-Transmitter-Batteries-Rechargeable/dp/B08H1VGPTQ/ref=sr_1_7?dib=eyJ2IjoiMSJ9.6jvflqZLSyioPNMTbi8u2oe0zjAEgO0SVPFmtKSFcVizyx8WJCpY7NcH67l6ZsVLjccSUX8HYYjTynHbsuqijKooCKc_3E3V4i9yGfv1DUzkUEpPnH7BWjww65ARWq3aR8I3X-4wDlUcIDOTiW2SNK2GfzKjpEqyjw2gWkhN3qZLF-YHq3X34O7wB6gIdI6kQjp9vD7B4ZKpChUHuOPTyEezkS0Ww22aKja5_yWcUTZewEimsz45EgEAp40r7HhbXSbVoyv8Z3yoRuE6NEykaONUX4CWj9M31CB7GmyHM8U.VH-fCOSL3T6fqm7b1sa9Ko1dU032TcThg869M1KAW-Q&dib_tag=se&gad_source=1&hvadid=249594509029&hvdev=c&hvexpln=0&hvlocphy=9000820&hvnetw=g&hvocijid=14621881054563641559--&hvqmt=e&hvrand=14621881054563641559&hvtargid=kwd-307540910796&hydadcr=29607_10647357&keywords=nimh+battery+packs&mcid=16df915f92a43ecc8818107c43aee59d&qid=1756174155&sr=8-7) | $26.59 |
+| Drive Motor | [`24mm Brushless DC Gear Motor – 6V 175RPM`](https://ca.robotshop.com/products/e-s-motor-24mm-brushless-dc-gear-motor-6v-175rpm?qd=f4e8ef762cd02e5a0efc04a59a1c2b2e) | $17.43 | 
+| Servo Motor| [`Miuzei MG90S 9G Micro Servo Motor`](https://www.amazon.ca/Miuzei-MG90S-Servo-Helicopter-Arduino/dp/B0BWJ4RKGV/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.SjyQKb523oHkxGq8PZ33pXReP1_e_7FqP-xfnh4b3jZYwBlFnqYn3YfGZIt1VAZFgdQQPbQ28JjAq5Q_OZ9rJM26C2zVBQ2RIiqlaPzHOVu1u_A26R-ppvWzVuxkWyoYrTyqZXVHsXjhdK6FuN1Q89Ya0LATUSz7Ov6aD9w_EueGaBZmUSwLkKOr6cfwBffRFrB5ZC-irsOd57WjfhrXDH5drSJtA5gYU1mBC3Lkb7-G-CraqkPVl18oWgp0ao1i6DB2GteeZjfId37Kl5zk-1BfClGpkLqgh5kT6wC73CE.60P5bf61P-tOKAz1bI-IDdX9t9Z3JUCbb4ZwwRZxXPE&dib_tag=se&keywords=mg90s%2Bservo&qid=1756174433&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1) | $8.49 |
+| Distance Sensors | [`VL53L0X V2 Distance Sensors`](https://www.adafruit.com/product/3317?srsltid=AfmBOoo2bXDFNLP4muxH_TJ6E1TMgPw9tgMk8_leCCFIUnABXe_XegRi) | $14.95 |
+| Gyro | [`MPU-6050 3-Axis Accelerometer & Gyroscope: LINK NEEDED`](https://carisma-shop.com/products/gt24-alum-motor-mount) | $TBD |
+| Camera | [`Huskylens`](https://ca.robotshop.com/products/gravity-huskylens-ai-machine-vision-sensor-w-silicone-case?gad_source=1&gad_campaignid=20151185247&gbraid=0AAAAAD_f_xxytUT8IaTqhSAT_ir4KZ1jB&gclid=CjwKCAjwk7DFBhBAEiwAeYbJsc7MoTx8vF9xUZyPZp27axQPZ4kNTacxE1th6vTxau1L4F4zaG-6MnRoCdAcQAvD_BwE) | $83.43 |
+
+
+
+## Parts Bill Of Materials (BOM)
+| Part Name | Quantity |
+| ----------| -------- |
+| NiMH Battery Packs | 2 |
+| VL53L0X V2 Distance Sensors | 3 |
+| ESP32 | 1 |
+| 24mm Brushless DC Gear Motor – 6V 175RPM | 1 |
+| Miuzei MG90S 9G Micro Servo Motor | 1 |
+| MPU-6050 3-Axis Accelerometer & Gyroscope | 1 |
+| HuskyLens | 1 |
+
+**Total Car Cost: $180.79 CAD**
