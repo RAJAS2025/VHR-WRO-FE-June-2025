@@ -186,22 +186,25 @@ When creating our robot, we wanted to be able to easily iterate and update the r
 
 # Mobility Management <a class="anchor"></a>
 
-## Drivetrain and Steering
-Our robot's drivetrain uses a rear-wheel drive with sharp front-wheel servo steering. We chose this configuration to separate the driving and steering systems, which helped us avoid spacing issues and ensured that the drive motors and steering servo operate independently without interference.
+This directory documents the materials used to construct our robot, along with the reasoning behind our drivetrain, gearing, and steering choices. It also includes the design iterations, comparisons between old and new robots, the CAD process, and how electrical components, 3D-printed parts, VEX pieces, and LEGO elements were integrated into our fully 3D-printed chassis. An assembly video is also provided to demonstrate how the robot comes together.
+## New Drivetrain & Chassis Design
 
-The drivetrain is powered by a 24mm brushless DC gear motor, chosen for its balance of high speed and ample torque. To transfer power from the motor to the wheels, we designed and 3D-printed a 36-tooth spur gear that fits securely onto the motor's shaft. This gear meshes directly with a reinforced LEGO differential, which distributes power to both rear wheels. This specific gear ratio gives our robot the speed needed for the challenges while maintaining the high torque required for smooth turns and accelerations. This simple, efficient, and reliable configuration is well-suited for our competition needs, and it provides several advantages:
+Our robot is a four-wheeled vehicle that uses a **rear-wheel drive with sharp front-wheel servo steering**. The chassis was custom-modeled in SolidWorks for a compact, lightweight structure that minimizes complexity while maximizing reliability. By separating the steering system from the drivetrain, we avoided issues with spacing and ensured that the steering servo and the drive motors operate independently without interference. This gave us two possible configurations: front-wheel drive with rear steering or rear-wheel drive with front steering.  
 
-- **Better torque transfer** through the reinforced LEGO differential.  
-- **Greater stability** under load, as the weight of the robot is more evenly distributed over the rear drive wheels.  
-- **Improved maneuverability**, since steering and driving forces are separated between the front and rear axles.  
-- **Familiar control response**, matching our previous experience with other rear-driven LEGO robots.
+We chose the **rear-wheel drive with front steering** configuration because it provides several advantages:  
+- **More precise steering**, since the front wheels focus only on steering.  
+- **Balanced handling**, with weight distributed between front and rear.  
+- **No torque steer**, unlike front-wheel drive systems.  
+- **Stronger traction under acceleration**, as weight shifts to the rear drive wheels.  
+- **Better power handling**, making it suitable for higher torque motors.  
+- **Familiar control response**, matching our previous experience with other rear-driven LEGO robots.   
 
 This design results in a simple, efficient, and reliable drivetrain well-suited for our competition needs.
 
+
 | Rear-Wheel Drive | Front Wheel Drive |
 | ---------------- | ----------------- |
-| <img src="https://drive.google.com/uc?id=1Jf-CvguoRfaVFCoVMNndH-xFYlsa_ZU-" /> | <img src="https://drive.google.com/uc?id=1VLR8ZvrXIQMaj_SNlWJ1fxSpYCzsmNQD" /> |
-
+| ![image](https://drive.google.com/uc?id=1Jf-CvguoRfaVFCoVMNndH-xFYlsa_ZU-) | ![image](https://drive.google.com/uc?id=1VLR8ZvrXIQMaj_SNlWJ1fxSpYCzsmNQD) |
 
 ## Steering
 
@@ -212,6 +215,15 @@ Steering is managed by a Miuzei MG90S micro servo motor, which provides precise 
 | Four-Bar Steering Mechanism |
 | --------------------------- |
 | <img src="https://drive.google.com/uc?id=16rHeZFgRDMQf3lHZIuXqODQA6GuB-DN7" /> |
+
+## Old Drivetrain & Chassis Design
+
+Our old robot also used a rear-wheel drive system with the same advantages. However, it was built mostly from LEGO pieces, making it bulkier and less optimized. The drivetrain design placed the motor vertically at the back, which consumed a lot of space.
+
+
+| Back Photo of Motor | Side Photo of Motor |
+| ---------------- | ----------------- |
+| ![image](https://drive.google.com/uc?id=14TVYNowK-BndGGxMD3PfKOjJBTohapYJ) | ![image](https://drive.google.com/uc?id=1WCMvpPhPwMwsXJ10z-Ut7Bo1HqB2yM2O) |
 
 
 # Power and Sense Management <a class="anchor"></a>  
