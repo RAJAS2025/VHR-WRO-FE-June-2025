@@ -143,7 +143,7 @@ The distance sensor holder combines a custom-made 4M LEGO beam with a secure Tin
 ![image](https://drive.google.com/uc?id=1M6zluK-iLSjezei6UIyS69u5_PhCzkHq)
 ---
 
-Build
+# Build <a class="anchor"></a>
 ====
 
 This directory documents the materials used to construct our robot, along with the reasoning behind our drivetrain, gearing, and steering choices. It also includes the design iterations, comparisons between old and new robots, the CAD process, and how electrical components, 3D-printed parts, VEX pieces, and LEGO elements were integrated into our fully 3D-printed chassis. An assembly video is also provided to demonstrate how the robot comes together.
