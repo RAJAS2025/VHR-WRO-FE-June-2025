@@ -65,7 +65,7 @@ In the open challenge, the only modification to the mat is the size of the inter
 
 | Open Challenge Flowchart |
 | ------------------------ |
-| <img src="https://drive.google.com/uc?id=1ebbFPcefdsMD9-E0WnutMVh5yYC2ZdSq" width="50%"/> |
+| <img src="https://drive.google.com/uc?id=1ebbFPcefdsMD9-E0WnutMVh5yYC2ZdSq" /> |
 
  ### Obstacle Challenge
 
@@ -153,7 +153,7 @@ The robot's forward and backward propulsion is provided by a 24mm brushless DC g
 ### Miuzei MG90S 9G Micro Servo Motor
 The robot's steering mechanism is controlled by a Miuzei MG90S 9G Micro Servo Motor. A servo is a specialized motor designed for precise angular control rather than continuous rotation. This particular model was chosen for its metal gear construction, which offers greater durability and higher torque than plastic gear versions. The servo's ability to hold a specific angle is what allows the robot to make precise steering adjustments and navigate tight corners effectively.
 
-<img src="https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ_" width="50%" alt="An image of the micro servo motor"/>
+<img src="https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ_" width="20%" alt="An image of the micro servo motor"/>
 
 
 ### Materials 
@@ -200,7 +200,7 @@ The robot is powered by two 6-volt NiMH (Nickel-Metal Hydride) battery packs. We
 
 As rechargeable batteries, they provide a cost-effective and time-saving solution, as they don't need to be replaced after every use. Their compact size allows them to fit neatly inside the robot's chassis, which helps in maintaining a balanced and low-profile design.
 
-<img src="https://drive.google.com/uc?id=1_7wnMNgIy24hCdx4dEVy9Ar747YReUGw" width="50%" alt="An image of a NiMH battery pack"/>
+<img src="https://drive.google.com/uc?id=1_7wnMNgIy24hCdx4dEVy9Ar747YReUGw" width="20%" alt="An image of a NiMH battery pack"/>
 
 ## Sensing
 
@@ -208,7 +208,7 @@ As rechargeable batteries, they provide a cost-effective and time-saving solutio
 
 The robot uses three VL53L0X Time-of-Flight (ToF) distance sensors to measure the distance to surrounding objects. These sensors work by emitting a laser pulse and calculating the time it takes for the light to reflect back, providing highly accurate and reliable distance measurements in millimeters. The three sensors are strategically placed on the robot to provide multi-directional awareness for obstacle avoidance and maintaining a consistent distance from the walls. They are the primary tool for the robot's navigation on the track.
 
-<img src="https://drive.google.com/uc?id=1NXoMHVktarTHrdZuAl4HXU65G1BZpMTT" width="50%" alt="An image of a VL53L0X ToF distance sensor"/>
+<img src="https://drive.google.com/uc?id=1NXoMHVktarTHrdZuAl4HXU65G1BZpMTT" width="20%" alt="An image of a VL53L0X ToF distance sensor"/>
 
 ### MPU-6050 3-Axis Accelerometer & Gyroscope
 
@@ -223,7 +223,7 @@ The HuskyLens is a powerful AI vision sensor that provides the robot with the ab
 - **Object Positioning:** The sensor provides the x and y coordinates of the detected objects, which are directly used by the program to guide the robot's movements.
 This sensor allows the robot to perform complex tasks like avoiding obstacles and executing precise maneuvers such as parallel parking.
 
-<img src="https://drive.google.com/uc?id=1YfXz-XhAxRQu1AgmiXbnKuT8Nj0EGX9x" width="50%" alt="An image of a Huskylens AI vision sensor"/>
+<img src="https://drive.google.com/uc?id=1YfXz-XhAxRQu1AgmiXbnKuT8Nj0EGX9x" width="20%" alt="An image of a Huskylens AI vision sensor"/>
 
 # Schematics <a class="anchor"></a>
 
