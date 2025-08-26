@@ -3,29 +3,26 @@
 This repository contains the documentation for Team VHR robot for the 2025 World Robot Olympiad Future Engineers competition.
 
 ##  Table of Contents 
-* **[Team](#-the-team)**
-  * [Components](#%EF%B8%8F-components-%EF%B8%8F)
-  * [Mobility Management](#-mobility-management-)
-    * [Chassis](#chassis)
-    * [Design](#design)
-    * [Motors](#motors)
-  * [Power and Sense Management](#-power-and-sense-management-)
-    * [Power and Wiring](#power-and-wiring)
-    * [Sensors](#sensors)
-    * [Schematic](#schematic)
-* **[Software](#-software-)**
-  * [Initialization and Connection Process](#-initialization-and-connection-process-)
-  * [Object Management](#object-management)
-    *  [Object Detection](#object-detection--open-challenge--obstacle-challenge-)
-    *  [Wall Detection/Management](#wall-detectionmanagement--open-challenge--obstacle-challenge-)
-    *  [Signal Pillar Detection/Management](#signal-pillar-detectionmanagement--obstacle-challenge-)
-    *  [Turning (Open Challenge)](#turning--open-challenge-)
-    *  [Turning (Obstacle Challenge)](#turning--obstacle-challenge-)
-    *  [Parking Lot Detection/Management](#parking-lot-detectionmanagement--obstacle-challenge-)
-    *  [Three-Point Turn](#three-point-turn--obstacle-challenge-)
-    *  [Backing Up](#backing-up--obstacle-challenge-)
-    *  [Potential Improvement: Stuck Detection](#potential-improvement-stuck-detection--open-challenge--obstacle-challenge-)
-* **[Assembly Instructions](#-complete-assembly-instructions-)**
+* [Team](#the-team-)
+* **[The Challenge](#the-challenge-)**
+  * [Strategy](#strategy-)
+* **[Hardware](#hardware-)**
+  * [Components](#components)
+  * [Mechanical Design](#mechanical-design)*
+     * [Chassis](#chassis)
+     * [Spur Gear](#spur-gear)
+     * [Differential Gear](#differential-gear)
+     * [Steering Connecting Bar](#steering-connecting-bar)
+     * [Distance Sensor Holder](#distance-sensor-holder)
+     * [Motors](#motors)
+* **[Mobility Management](#mobility-management-)**
+  * [Drivetrain and Steering](#drivetrain-and-steering)
+  * [Steering](#steering)
+* **[Power and Sense Management](#power-and-sense-management-)**
+    *  [Battery](#battery-)
+    *  [Sensing](#sensing)
+* **[Schematics](#schematics-)**
+    *  [Key Components](#key-components)
 
 
 ## The Team <a class="anchor"></a>
@@ -256,7 +253,7 @@ This schematic provides a clear overview of the robot's electronic design. It sh
 
 <img src="https://drive.google.com/uc?id=1aF5MVUdIMGfIHesjWJOWcKdBSu5RwNBk" width="50%" alt="A schematic of the robot's electronic components and connections"/>
 
-# Key Components
+## Key Components
 
 ### Power Management
 The robot's power is supplied by a 6V battery pack, which connects at CN1. This power is distributed to all components in two ways. A voltage regulator (U8) steps down the 6V to a stable 3.3V to safely power the ESP32 and other sensitive electronics. The 6V supply is also used directly to power the motors and servo, as they require higher voltage and current.
