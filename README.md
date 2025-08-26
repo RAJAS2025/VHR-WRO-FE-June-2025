@@ -80,15 +80,19 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 
 # Hardware <a class="anchor"></a>
 
-| Part Name | Explanation | Image | Datasheet |
-| ----------- | ----------- | ----------- | ----------- |
-| NiMH Battery Packs | We use two 6-volt NiMH (Nickel-Metal Hydride) battery packs to power all our electronics, providing enough current to run the robot for longer periods without performance drops. These rechargeable packs save time and cost by removing the need to replace batteries after every use. Each battery pack measures 7.2 cm × 5 cm × 1.5 cm, making them compact enough to fit neatly inside the robot’s chassis while keeping the weight balanced. |<img src="https://drive.google.com/uc?id=1_7wnMNgIy24hCdx4dEVy9Ar747YReUGw" width="20000">| [Battery Info](https://drive.google.com/file/d/1VK_VsjF3aPhSJzILikrdEzxNDgZSIByU/view?usp=drive_link)| 
-| VL53L0X V2 Distance Sensors | The VL53L0X V2 laser-based time-of-flight distance sensor is used to help our robot maintain a consistent distance from the wall. It works by emitting a laser pulse and measuring the time it takes for the light to reflect back, providing precise distance readings regardless of surface color or reflectivity. In our implementation, if the robot gets too close to the wall, it steers away, and if it moves too far, it steers back toward the wall. This continuous feedback ensures smooth navigation and stable alignment throughout the robot’s movement. |![image](https://drive.google.com/uc?id=1NXoMHVktarTHrdZuAl4HXU65G1BZpMTT) | [Distance Sensors Data Sheet](https://www.st.com/resource/en/datasheet/vl53l0x.pdf) |
-| ESP32 | The ESP32 microcontroller serves as the central processing unit of our robot, coordinating inputs from sensors and executing control logic. Programmed through the Arduino framework, it processes data from the HuskyLens and VL53L0X V2 sensors, interprets the robot’s environment, and adjusts motor outputs accordingly. This allows the robot to make real-time decisions for navigation and task execution with both speed and reliability. |![image](https://drive.google.com/uc?id=16JG7iEVeS1MaPWzfHZvTljShi8YVHX4t)|[ESP32 Data Sheet](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf) | 
-| 24mm Brushless DC Gear Motor – 6V 175RPM | The 24mm brushless DC gear motor provides the driving force for our robot, offering a balance of speed and torque for reliable movement. Operating at 6V with a rated speed of 175 RPM and a stall torque greater than 1.7 kg·cm, it ensures smooth and efficient motion while maintaining precise control during maneuvers. In our project, these motors are used to drive the wheels, enabling the robot to respond accurately to sensor inputs and execute navigation tasks such as obstacle avoidance and parallel parking. |![image](https://drive.google.com/uc?id=1zPMkLOjHfUfX1sFINI6UgpPYMk2pBiHa)| [DC Motor Specs](https://drive.google.com/file/d/1moiPKcTiO8_0Bga1mJdIX5mgfcUgAj7J/view?usp=drive_link) | 
-| Miuzei MG90S 9G Micro Servo Motor | The Miuzei MG90S 9G micro servo motor is used as the steering mechanism of our robot, providing precise angular control to adjust wheel direction. Its metal gear construction delivers durability and higher torque compared to plastic gear servos, ensuring reliable performance under continuous operation. In our project, the servo enables accurate steering adjustments based on sensor inputs, allowing the robot to smoothly navigate around obstacles and maintain alignment during tasks such as parallel parking. | ![image](https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ_) |[Servo Motor Specs](https://drive.google.com/file/d/1ZQCr9s1xJsN8NOYWgczae_1dq8hoC7bo/view?usp=drive_link)|
-| MPU-6050 3-Axis Accelerometer & Gyroscope | We use an MPU-6050 3-Axis Accelerometer & Gyroscope to monitor our robot’s orientation, providing real-time data on yaw, pitch, and roll. The robot primarily uses the yaw axis to determine its heading and maintain accurate directional control. To ensure precision, the gyro is calibrated before use, and an offset value is initialized at 0 as the robot’s starting reference angle. Each time the robot needs to turn 90 degrees, we adjust the offset by adding or subtracting 90 depending on whether the turn is to the left or right. This allows the robot to consistently track its orientation relative to its starting position. | ![image](https://drive.google.com/uc?id=1YB_kWYPEaFlx49eQdC9Qf1M95aLCoaWm) | [Gyro Info](https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf) |
-| HuskyLens | The HuskyLens AI vision sensor, powered by a Kendryte K210 processor, is used for color recognition in our project. We train it to detect red and green blocks for obstacle navigation and pink blocks as markers for parallel parking. The sensor provides the x and y coordinates of the detected objects, which we integrate directly into our code to guide the robot’s movements. This allows the robot to not only avoid collisions but also accurately exit and re-enter parallel parking, demonstrating how we leverage color recognition and positional data for reliable navigation and task-specific maneuvers.| ![image](https://drive.google.com/uc?id=1YfXz-XhAxRQu1AgmiXbnKuT8Nj0EGX9x) | [HuskyLens Info](https://wiki.dfrobot.com/HUSKYLENS_V1.0_SKU_SEN0305_SEN0336) |
+### Components
+
+| Part Name | Product | Price |
+| ----------- | ----------- | ----------- |
+| Battery | [`NiMH Battery Packs`](https://www.amazon.ca/melasta-Controller-Transmitter-Batteries-Rechargeable/dp/B08H1VGPTQ/ref=sr_1_7?dib=eyJ2IjoiMSJ9.6jvflqZLSyioPNMTbi8u2oe0zjAEgO0SVPFmtKSFcVizyx8WJCpY7NcH67l6ZsVLjccSUX8HYYjTynHbsuqijKooCKc_3E3V4i9yGfv1DUzkUEpPnH7BWjww65ARWq3aR8I3X-4wDlUcIDOTiW2SNK2GfzKjpEqyjw2gWkhN3qZLF-YHq3X34O7wB6gIdI6kQjp9vD7B4ZKpChUHuOPTyEezkS0Ww22aKja5_yWcUTZewEimsz45EgEAp40r7HhbXSbVoyv8Z3yoRuE6NEykaONUX4CWj9M31CB7GmyHM8U.VH-fCOSL3T6fqm7b1sa9Ko1dU032TcThg869M1KAW-Q&dib_tag=se&gad_source=1&hvadid=249594509029&hvdev=c&hvexpln=0&hvlocphy=9000820&hvnetw=g&hvocijid=14621881054563641559--&hvqmt=e&hvrand=14621881054563641559&hvtargid=kwd-307540910796&hydadcr=29607_10647357&keywords=nimh+battery+packs&mcid=16df915f92a43ecc8818107c43aee59d&qid=1756174155&sr=8-7) | $26.59 |
+| Drive Motor | [`24mm Brushless DC Gear Motor – 6V 175RPM`](https://ca.robotshop.com/products/e-s-motor-24mm-brushless-dc-gear-motor-6v-175rpm?qd=f4e8ef762cd02e5a0efc04a59a1c2b2e) | $17.43 | 
+| Servo Motor| [`Miuzei MG90S 9G Micro Servo Motor`](https://www.amazon.ca/Miuzei-MG90S-Servo-Helicopter-Arduino/dp/B0BWJ4RKGV/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.SjyQKb523oHkxGq8PZ33pXReP1_e_7FqP-xfnh4b3jZYwBlFnqYn3YfGZIt1VAZFgdQQPbQ28JjAq5Q_OZ9rJM26C2zVBQ2RIiqlaPzHOVu1u_A26R-ppvWzVuxkWyoYrTyqZXVHsXjhdK6FuN1Q89Ya0LATUSz7Ov6aD9w_EueGaBZmUSwLkKOr6cfwBffRFrB5ZC-irsOd57WjfhrXDH5drSJtA5gYU1mBC3Lkb7-G-CraqkPVl18oWgp0ao1i6DB2GteeZjfId37Kl5zk-1BfClGpkLqgh5kT6wC73CE.60P5bf61P-tOKAz1bI-IDdX9t9Z3JUCbb4ZwwRZxXPE&dib_tag=se&keywords=mg90s%2Bservo&qid=1756174433&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1) | $16.99 (Price of 1: $8.49 |
+| Distance Sensors | [`VL53L0X V2 Distance Sensors`](https://www.adafruit.com/product/3317?srsltid=AfmBOoo2bXDFNLP4muxH_TJ6E1TMgPw9tgMk8_leCCFIUnABXe_XegRi) | $14.95 (Price of 3: $44.85 |
+| Gyro | [`MPU-6050 3-Axis Accelerometer & Gyroscope: LINK NEEDED`](https://carisma-shop.com/products/gt24-alum-motor-mount) | $TBD |
+| Camera | [`Huskylens`](https://ca.robotshop.com/products/gravity-huskylens-ai-machine-vision-sensor-w-silicone-case?gad_source=1&gad_campaignid=20151185247&gbraid=0AAAAAD_f_xxytUT8IaTqhSAT_ir4KZ1jB&gclid=CjwKCAjwk7DFBhBAEiwAeYbJsc7MoTx8vF9xUZmZP27axQPZ4kNTacxE1th6vTxau1L4F4zaG-6MnRoCdAcQAvD_BwE) | $83.43 |
+
+**Total Car Cost: $180.79 CAD**
+
 
 ## Parts Bill Of Materials (BOM)
 | Part Name | Quantity |
@@ -101,11 +105,7 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 | MPU-6050 3-Axis Accelerometer & Gyroscope | 1 |
 | HuskyLens | 1 |
 
----
-
-# Mobility Management <a class="anchor"></a>
-
-This directory contains all the custom 3D models used for our robot. The chassis is a fully optimized, super small design with sharp servo steering, while additional sensor mounts were created in Tinkercad. The rear assembly is adapted to work with LEGO wheels, axles, and a reinforced differential. Below is a table of our 3D-printed parts and their functions. (The iterations of the robot, how all the electrical components and 3d models fit with robot and the purpose and optimization of each piece will be described in BUILD)
+### Mechanical Design
 
 ### Chassis
 
@@ -141,45 +141,110 @@ The steering connecting bar is a compact, custom-designed link optimized for our
 The distance sensor holder combines a custom-made 4M LEGO beam with a secure TinkerCAD-designed mount to keep the TOF sensor rigid and stable. This eliminates vibration or shifting during operation, ensuring accurate and consistent sensor readings. The LEGO integration allows for easy attachment to the chassis while maintaining a locked position, supporting reliable obstacle detection and wall-following maneuvers.
 
 ![image](https://drive.google.com/uc?id=1M6zluK-iLSjezei6UIyS69u5_PhCzkHq)
+
+### Motors
+
+# 24mm Brushless DC Gear Motor
+The robot's forward and backward propulsion is provided by a 24mm brushless DC gear motor. This motor was chosen for its ideal balance of high speed and torque. The brushless design makes it highly efficient, durable, and provides a smooth, consistent power delivery. This motor is the core of the drivetrain, ensuring reliable and powerful movement throughout the competition.
+
+![image](https://drive.google.com/uc?id=1zPMkLOjHfUfX1sFINI6UgpPYMk2pBiHa)
+
+# Miuzei MG90S 9G Micro Servo Motor
+The robot's steering mechanism is controlled by a Miuzei MG90S 9G Micro Servo Motor. A servo is a specialized motor designed for precise angular control rather than continuous rotation. This particular model was chosen for its metal gear construction, which offers greater durability and higher torque than plastic gear versions. The servo's ability to hold a specific angle is what allows the robot to make precise steering adjustments and navigate tight corners effectively.
+
+![image](https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ)
+
+### Materials 
+
+When creating our robot, we wanted to be able to easily iterate and update the robot in many ways as we tested it. In order to achieve these goals, we decided to use LEGO Technic pieces to construct the majority of our robot. LEGO technic was the perfect choice for us since our robotics centre, Zebra Robotics, focuses on LEGO robotics and competitions related to that, so we have an abundance of LEGO technic pieces. Our team members also have extensive experience in working with LEGO Technic parts and completing challenges with them. In order to attach the electronic components onto our chassis, we 3D printed mounts for the components, as they allowed us to smoothly integrate the non-LEGO parts with the LEGO parts.
+
 ---
 
-# Build <a class="anchor"></a>
+# Mobility Management <a class="anchor"></a>
 
-This directory documents the materials used to construct our robot, along with the reasoning behind our drivetrain, gearing, and steering choices. It also includes the design iterations, comparisons between old and new robots, the CAD process, and how electrical components, 3D-printed parts, VEX pieces, and LEGO elements were integrated into our fully 3D-printed chassis. An assembly video is also provided to demonstrate how the robot comes together.
-## Drivetrain & Chassis Design
+### Drivetrain and Steering
+Our robot's drivetrain uses a rear-wheel drive with sharp front-wheel servo steering. We chose this configuration to separate the driving and steering systems, which helped us avoid spacing issues and ensured that the drive motors and steering servo operate independently without interference.
 
-Our robot is a four-wheeled vehicle that uses a **rear-wheel drive with sharp front-wheel servo steering**. The chassis was custom-modeled in SolidWorks for a compact, lightweight structure that minimizes complexity while maximizing reliability. By separating the steering system from the drivetrain, we avoided issues with spacing and ensured that the steering servo and the drive motors operate independently without interference. This gave us two possible configurations: front-wheel drive with rear steering or rear-wheel drive with front steering.  
-
-We chose the **rear-wheel drive with front steering** configuration because it provides several advantages:  
+The drivetrain is powered by a 24mm brushless DC gear motor, chosen for its balance of high speed and ample torque. To transfer power from the motor to the wheels, we designed and 3D-printed a 36-tooth spur gear that fits securely onto the motor's shaft. This gear meshes directly with a reinforced LEGO differential, which distributes power to both rear wheels. This specific gear ratio gives our robot the speed needed for the challenges while maintaining the high torque required for smooth turns and accelerations. This simple, efficient, and reliable configuration is well-suited for our competition needs, and it provides several advantages:
 
 - **Better torque transfer** through the reinforced LEGO differential.  
 - **Greater stability** under load, as the weight of the robot is more evenly distributed over the rear drive wheels.  
 - **Improved maneuverability**, since steering and driving forces are separated between the front and rear axles.  
-- **Familiar control response**, matching our previous experience with other rear-driven LEGO robots.  
+- **Familiar control response**, matching our previous experience with other rear-driven LEGO robots.
 
 This design results in a simple, efficient, and reliable drivetrain well-suited for our competition needs.
-
 
 | Rear-Wheel Drive | Front Wheel Drive |
 | ---------------- | ----------------- |
 | ![image](https://drive.google.com/uc?id=1Jf-CvguoRfaVFCoVMNndH-xFYlsa_ZU-) | ![image](https://drive.google.com/uc?id=1VLR8ZvrXIQMaj_SNlWJ1fxSpYCzsmNQD) |
 
-## Steering
 
-Our steering mechanism is a four-bar with free-spinning wheels mounted on it. The motor will move the four-bar, which changes the angle of the wheels, which in turn changes the direction that the vehicle is travelling in. This type of steering proved to be the most efficient for our purposes and was also the easiest version for us to implement, as it only required a servo motor and a simple rig that connected the servo to the wheel axles. The rig was 3D printed along with the servo mount as one piece and had a LEGO axle-shaped cross hole that would turn along with the servo.
+### Steering
+
+Our steering mechanism is a four-bar linkage, with free-spinning wheels mounted on it. This system proved to be the most efficient and easiest to implement for our purposes, as it only required a servo motor and a simple rig to connect it to the wheel axles. The servo motor moves the four-bar, which changes the angle of the wheels and, in turn, the direction of the vehicle.
+
+Steering is managed by a Miuzei MG90S micro servo motor, which provides precise angular control. The rig that connects the servo to the wheel axles was 3D-printed as a single piece along with the servo mount. It features a LEGO axle-shaped cross hole that rotates with the servo, ensuring a secure connection. The lightweight and durable design of this part ensures the front wheels respond quickly and accurately to the servo's commands, allowing our robot to execute the sharp turns necessary for navigating obstacles and completing tasks.
 
 | Four-Bar Steering Mechanism |
 | --------------------------- |
 | ![image](https://drive.google.com/uc?id=16rHeZFgRDMQf3lHZIuXqODQA6GuB-DN7) |
 
-## Materials
 
-When creating our robot, we wanted to be able to easily iterate and update the robot in many ways as we tested it. In order to achieve these goals, we decided to use LEGO Technic pieces to construct the majority of our robot. LEGO technic was the perfect choice for us since our robotics centre, Zebra Robotics, focuses on LEGO robotics and competitions related to that, so we have an abundance of LEGO technic pieces. Our team members also have extensive experience in working with LEGO Technic parts and completing challenges with them. In order to attach the electronic components onto our chassis, we 3D printed mounts for the components, as they allowed us to smoothly integrate the non-LEGO parts with the LEGO parts.
+# Power and Sense Management <a class="anchor"></a>  
 
+### Battery
 
+The robot is powered by two 6-volt NiMH (Nickel-Metal Hydride) battery packs. We chose these batteries for their high current output, which is essential for reliably running all the electronics, including the motors, without performance drops. Their use also ensures the robot has enough capacity for longer operation periods, a key advantage during competition.
 
+As rechargeable batteries, they provide a cost-effective and time-saving solution, as they don't need to be replaced after every use. Their compact size allows them to fit neatly inside the robot's chassis, which helps in maintaining a balanced and low-profile design.
 
+<img src="https://drive.google.com/uc?id=1_7wnMNgIy24hCdx4dEVy9Ar747YReUGw" width="20000">
+
+### Sensing
+
+# VL53L0X Time-of-Flight (ToF) Distance Sensors
+
+The robot uses three VL53L0X Time-of-Flight (ToF) distance sensors to measure the distance to surrounding objects. These sensors work by emitting a laser pulse and calculating the time it takes for the light to reflect back, providing highly accurate and reliable distance measurements in millimeters. The three sensors are strategically placed on the robot to provide multi-directional awareness for obstacle avoidance and maintaining a consistent distance from the walls. They are the primary tool for the robot's navigation on the track.
+
+![image](https://drive.google.com/uc?id=1NXoMHVktarTHrdZuAl4HXU65G1BZpMTT)
+
+# MPU-6050 3-Axis Accelerometer & Gyroscope
+
+The MPU-6050 is used to monitor the robot's orientation and heading. The gyroscope provides real-time data on the robot's yaw, pitch, and roll. The robot primarily uses the yaw axis to track its heading and maintain accurate directional control. Before each use, the gyro is calibrated to ensure precision, and a starting reference angle is set to 0. This allows the robot to consistently track its orientation and make precise turns, such as a 90-degree turn, by adjusting the offset relative to its starting position. This sensor is crucial for ensuring the robot drives in a straight line and turns accurately.
+
+![image](https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ_)
+
+HuskyLens AI Vision Sensor
+The HuskyLens is a powerful AI vision sensor that provides the robot with the ability to "see" and identify objects. It is pre-trained to recognize colors and objects, which is a key part of your strategy for the Obstacle Challenge. The robot uses the HuskyLens for several key functions:
+
+- **Color Recognition:** It is trained to detect specific colors like red and green for identifying traffic blocks, pink for the parallel parking markers, and blue and orange lines to turn.
+
+- **Object Positioning:** The sensor provides the x and y coordinates of the detected objects, which are directly used by the program to guide the robot's movements.
+This sensor allows the robot to perform complex tasks like avoiding obstacles and executing precise maneuvers such as parallel parking.
+
+![image](https://drive.google.com/uc?id=1YfXz-XhAxRQu1AgmiXbnKuT8Nj0EGX9x)
 
 # Schematics <a class="anchor"></a>
 
+
+This schematic provides a clear overview of the robot's electronic design. It shows how a central ESP32 microcontroller manages various sensors and motors, enabling autonomous navigation and obstacle avoidance. The design is modular, with a focus on efficient communication and power management.
+
+# Key Components
+
 ![image](https://drive.google.com/uc?id=1aF5MVUdIMGfIHesjWJOWcKdBSu5RwNBk) 
+
+This schematic provides a complete overview of the robot's electronic system. It shows how the NodeMCU-32S microcontroller acts as the central hub, connecting to and controlling every other component.
+
+# Power Management
+The robot's power is supplied by a 6V battery pack, which connects at CN1. This power is distributed to all components in two ways. A voltage regulator (U8) steps down the 6V to a stable 3.3V to safely power the NodeMCU-32S and other sensitive electronics. The 6V supply is also used directly to power the motors and servo, as they require higher voltage and current.
+
+# Motors
+The Miuzei MG90S 9G Micro Servo Motor (S1) connects to pin D32 on the board for its control signal. The 24mm Brushless DC Gear Motor connects to the board via its motor driver (not explicitly shown) to a GPIO pin for control. Both motors are powered by the external 6V supply
+
+# Sensors
+
+- **VL53L0X ToF Lidar Sensors (U2, U3, U4):** The three VL53L0X Lidar sensors (U2, U3, U4) connect to the board's I2C pins (SDA/SCL) via an I2C Multiplexer (U7).
+
+- **I2C Multiplexer (U7) & I2C Expander (U5):** To manage the three Lidar sensors on a single I2C bus, an I2C Multiplexer is used to allow the microcontroller to communicate with each sensor individually. An I2C Expander is also included to provide additional I2C communication lines for other devices.
+
+- **HuskyLens (UB):** The HuskyLens (UB) connects to the board's serial communication pins (RXD2/TXD2) to send data back and forth.
