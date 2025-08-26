@@ -2,7 +2,7 @@
 
 This repository contains the documentation for Team VHR robot for the 2025 World Robot Olympiad Future Engineers competition.
 
-##  Table of Contents 
+#  Table of Contents 
 * **[Team](#the-team-)**
 * **[The Challenge](#the-challenge-)**
   * [Strategy](#strategy-)
@@ -25,7 +25,7 @@ This repository contains the documentation for Team VHR robot for the 2025 World
     *  [Key Components](#key-components)
 
 
-## The Team <a class="anchor"></a>
+# The Team <a class="anchor"></a>
 
 ### Harshad Mahajan
 
@@ -75,9 +75,9 @@ To learn more about the challenge, click [here](https://wro-association.org/wp-c
 
 ---
 
-## Strategy <a class="anchor"></a>
+# Strategy <a class="anchor"></a>
 
-### Open Challenge
+## Open Challenge
 
 In the open challenge, the only modification to the mat is the size of the interior walls. To handle this, we will use distance sensors to measure the robot’s distance from the walls. With multiple sensors positioned around the robot, it can accurately determine its position relative to the surroundings and make adjustments to stay parallel to the walls. A front-facing sensor will help the robot know when to turn—once the distance to the wall falls below a set threshold, it will initiate a turn. We will also track laps by counting each completed turn, allowing the robot to know when the course is finished.
 
@@ -89,7 +89,7 @@ In the open challenge, the only modification to the mat is the size of the inter
 | ------------------------ |
 | <img src="https://drive.google.com/uc?id=1ebbFPcefdsMD9-E0WnutMVh5yYC2ZdSq" /> |
 
- ### Obstacle Challenge
+## Obstacle Challenge
 
 In the obstacle challenge, our approach focuses on maintaining precise control while navigating the dynamic course. We plan to use gyro-based line following to keep the robot moving straight along the track, while wall safety distance sensors prevent collisions if the robot gets too close to the walls. When a block is detected, the robot will decelerate to maneuver around it, using an algorithm that continues turning until the obstacle is fully passed and the robot has reached the target x coordinate, then accelerates again once the path is clear. For turns, the robot uses a camera system to detect the blue and orange lines on the mat, allowing accurate and consistent adjustments. This strategy combines speed, precision, and adaptability to handle obstacles effectively while staying on course. Just like the open challenge, we track laps by counting each completed turn, allowing the robot to know when the course is finished.
 
