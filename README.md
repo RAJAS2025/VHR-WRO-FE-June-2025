@@ -90,6 +90,17 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 | MPU-6050 3-Axis Accelerometer & Gyroscope | We use an MPU-6050 3-Axis Accelerometer & Gyroscope to monitor our robot’s orientation, providing real-time data on yaw, pitch, and roll. The robot primarily uses the yaw axis to determine its heading and maintain accurate directional control. To ensure precision, the gyro is calibrated before use, and an offset value is initialized at 0 as the robot’s starting reference angle. Each time the robot needs to turn 90 degrees, we adjust the offset by adding or subtracting 90 depending on whether the turn is to the left or right. This allows the robot to consistently track its orientation relative to its starting position. | ![image](https://drive.google.com/uc?id=1YB_kWYPEaFlx49eQdC9Qf1M95aLCoaWm) | [Gyro Info](https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf) |
 | HuskyLens | The HuskyLens AI vision sensor, powered by a Kendryte K210 processor, is used for color recognition in our project. We train it to detect red and green blocks for obstacle navigation and pink blocks as markers for parallel parking. The sensor provides the x and y coordinates of the detected objects, which we integrate directly into our code to guide the robot’s movements. This allows the robot to not only avoid collisions but also accurately exit and re-enter parallel parking, demonstrating how we leverage color recognition and positional data for reliable navigation and task-specific maneuvers.| ![image](https://drive.google.com/uc?id=1YfXz-XhAxRQu1AgmiXbnKuT8Nj0EGX9x) | [HuskyLens Info](https://wiki.dfrobot.com/HUSKYLENS_V1.0_SKU_SEN0305_SEN0336) |
 
+## Parts Bill Of Materials (BOM)
+| Part Name | Quantity |
+| ----------| -------- |
+| NiMH Battery Packs | 2 |
+| VL53L0X V2 Distance Sensors | 3 |
+| ESP32 | 1 |
+| 24mm Brushless DC Gear Motor – 6V 175RPM | 1 |
+| Miuzei MG90S 9G Micro Servo Motor | 1 |
+| MPU-6050 3-Axis Accelerometer & Gyroscope | 1 |
+| HuskyLens | 1 |
+
 ---
 
 # Mobility Management <a class="anchor"></a>
