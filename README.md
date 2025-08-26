@@ -2,6 +2,31 @@
 
 This repository contains the documentation for Team VHR robot for the 2025 World Robot Olympiad Future Engineers competition.
 
+##  Table of Contents 
+* **[Team](#-the-team)**
+  * [Components](#%EF%B8%8F-components-%EF%B8%8F)
+  * [Mobility Management](#-mobility-management-)
+    * [Chassis](#chassis)
+    * [Design](#design)
+    * [Motors](#motors)
+  * [Power and Sense Management](#-power-and-sense-management-)
+    * [Power and Wiring](#power-and-wiring)
+    * [Sensors](#sensors)
+    * [Schematic](#schematic)
+* **[Software](#-software-)**
+  * [Initialization and Connection Process](#-initialization-and-connection-process-)
+  * [Object Management](#object-management)
+    *  [Object Detection](#object-detection--open-challenge--obstacle-challenge-)
+    *  [Wall Detection/Management](#wall-detectionmanagement--open-challenge--obstacle-challenge-)
+    *  [Signal Pillar Detection/Management](#signal-pillar-detectionmanagement--obstacle-challenge-)
+    *  [Turning (Open Challenge)](#turning--open-challenge-)
+    *  [Turning (Obstacle Challenge)](#turning--obstacle-challenge-)
+    *  [Parking Lot Detection/Management](#parking-lot-detectionmanagement--obstacle-challenge-)
+    *  [Three-Point Turn](#three-point-turn--obstacle-challenge-)
+    *  [Backing Up](#backing-up--obstacle-challenge-)
+    *  [Potential Improvement: Stuck Detection](#potential-improvement-stuck-detection--open-challenge--obstacle-challenge-)
+* **[Assembly Instructions](#-complete-assembly-instructions-)**
+
 
 ## The Team <a class="anchor"></a>
 
