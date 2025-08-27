@@ -240,9 +240,9 @@ In the open challenge, the only modification to the mat is the size of the inter
 
 In the obstacle challenge, our approach focuses on maintaining precise control while navigating the dynamic course. We plan to use gyro-based line following to keep the robot moving straight along the track, while wall safety distance sensors prevent collisions if the robot gets too close to the walls. When a block is detected, the robot will decelerate to maneuver around it, using an algorithm that continues turning until the obstacle is fully passed and the robot has reached the target x coordinate, then accelerates again once the path is clear. For turns, the robot uses a camera system to detect the blue and orange lines on the mat, allowing accurate and consistent adjustments. This strategy combines speed, precision, and adaptability to handle obstacles effectively while staying on course. Just like the open challenge, we track laps by counting each completed turn, allowing the robot to know when the course is finished.
 
-| 1 Block Movement | 2 Block Movement|
+| Red Block Movement | Green Block Movement |
 | ----------------- | ------- |
-| <img src="https://drive.google.com/uc?id=1o8-S4fOHuvVPILtzNyMyq0V-x_8KhPgD" /> | <img src="https://drive.google.com/uc?id=1D9FqWyBBqiH5tIUv-c189Mm-1k3GZKxQ"/> |
+| <img src="https://drive.google.com/uc?id=1x1ThfU5bREkVYrc2lWV1rFM2sHI3Szyz" /> | <img src="https://drive.google.com/uc?id=1t3yGyIsXJndeDdpIoREGKFj_onKRimM3"/> |
 
 
 <br>
