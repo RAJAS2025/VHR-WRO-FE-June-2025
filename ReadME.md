@@ -251,7 +251,6 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 In the **Obstacle Challenge**, our robot had to detect the blue and orange lines on the playing field and update its gyro heading to execute precise turning maneuvers.  
 We implemented **three distinct turning logics** depending on what obstacle is detected ahead:
 
----
 
 ## If we see a Green Block → Do Green Turning Logic  
 
@@ -271,8 +270,6 @@ We implemented **three distinct turning logics** depending on what obstacle is d
 </tr>
 </table>
 
----
-
 ## If we see a Red Block → Do Red Turning Logic  
 
 <table>
@@ -291,7 +288,6 @@ We implemented **three distinct turning logics** depending on what obstacle is d
 </tr>
 </table>
 
----
 
 ## If No Block is Detected → Do No Block Turning Logic  
 
@@ -311,7 +307,6 @@ We implemented **three distinct turning logics** depending on what obstacle is d
 </tr>
 </table>
 
----
 
 By combining **line detection (blue/orange lines)** with **gyro updates**, the robot could reliably identify its position and apply the correct turning strategy. This adaptive logic ensured consistent navigation through different obstacle configurations.
 
