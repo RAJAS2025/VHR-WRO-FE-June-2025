@@ -258,7 +258,7 @@ We implemented **three distinct turning logics** depending on what obstacle is d
 - Once the block is cleared, it performs a controlled turn using the updated gyro heading.  
 - This ensures the robot smoothly goes around the block without losing alignment.  
 
-![image](https://drive.google.com/uc?id=1_S9_KFHU9lJkQZhPrbB9JMGBXcy7Chq2)  
+<img src="https://drive.google.com/uc?id=1_S9_KFHU9lJkQZhPrbB9JMGBXcy7Chq2" alt="Green Turning" width="300"/>  
 *Figure 1: Green turning logic – go forward, then turn to go around the block.*
 
 ---
@@ -268,7 +268,7 @@ We implemented **three distinct turning logics** depending on what obstacle is d
 - This quick maneuver avoids collision while still keeping the robot on course.  
 - The gyro is then used to realign before moving forward again.  
 
-![image](https://drive.google.com/uc?id=1t3JghLeIdHi3IofLzN8IA0bfSzszBdW0)  
+<img src="https://drive.google.com/uc?id=1t3JghLeIdHi3IofLzN8IA0bfSzszBdW0" alt="Red Turning" width="300"/>  
 *Figure 2: Red turning logic – sharp turn around the red block.*
 
 ---
@@ -278,7 +278,7 @@ We implemented **three distinct turning logics** depending on what obstacle is d
 - It then performs a turn and reverses slightly.  
 - The backward movement helps re-center the robot in the next section for better alignment.  
 
-![image](https://drive.google.com/uc?id=1rmYoQZw9NiFVDCYeccVctoPgYiQ5xjv2) 
+<img src="https://drive.google.com/uc?id=1rmYoQZw9NiFVDCYeccVctoPgYiQ5xjv2" alt="No Block Turning" width="300"/>  
 *Figure 3: Final turning logic – align to the center when no block is detected.*
 
 ---
