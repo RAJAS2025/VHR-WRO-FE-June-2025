@@ -121,6 +121,8 @@ This design results in a simple, efficient, and reliable drivetrain well-suited 
 | ---------------- | ----------------- |
 | ![image](https://drive.google.com/uc?id=1Jf-CvguoRfaVFCoVMNndH-xFYlsa_ZU-) | ![image](https://drive.google.com/uc?id=1VLR8ZvrXIQMaj_SNlWJ1fxSpYCzsmNQD) |
 
+The drivetrain works by transferring power from the rear motors into a 36-tooth spur gear that meshes with a 24-tooth gear, creating a 1.5:1 gear ratio. This gearing choice slightly increases speed while still maintaining enough torque to handle obstacles. From there, power flows into the differential gear, which splits torque between the two rear wheels so they can spin at different speeds during turns. This prevents skidding, reduces stress on the drivetrain, and keeps the robot’s motion smooth. The differential outputs directly to the rear wheels, giving strong and reliable traction. Meanwhile, the front wheels are connected to a servo motor that independently controls steering. Because the steering and drivetrain are separate, the robot achieves sharp, responsive turns without being affected by torque from the drive system.
+
 ## Old Drivetrain & Chassis Design
 
 Our old robot also used a rear-wheel drive system with the same advantages. However, it was built mostly from LEGO pieces, making it bulkier and less optimized. The drivetrain design placed the motor vertically at the back, which consumed a lot of space.
