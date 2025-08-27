@@ -254,32 +254,63 @@ We implemented **three distinct turning logics** depending on what obstacle is d
 ---
 
 ## If we see a Green Block → Do Green Turning Logic  
-- The robot first drives forward past the green block.  
-- Once the block is cleared, it performs a controlled turn using the updated gyro heading.  
-- This ensures the robot smoothly goes around the block without losing alignment.  
 
-<img src="https://drive.google.com/uc?id=1_S9_KFHU9lJkQZhPrbB9JMGBXcy7Chq2" alt="Green Turning" width="300"/>  
-*Figure 1: Green turning logic – go forward, then turn to go around the block.*
+<table>
+<tr>
+<td width="60%">
+<ul>
+<li>The robot first drives forward past the green block.</li>
+<li>Once the block is cleared, it performs a controlled turn using the updated gyro heading.</li>
+<li>This ensures the robot smoothly goes around the block without losing alignment.</li>
+</ul>
+</td>
+<td width="40%">
+<img src="https://drive.google.com/uc?id=1_S9_KFHU9lJkQZhPrbB9JMGBXcy7Chq2" alt="Green Turning" width="250"/><br>
+<em>Figure 1: Green turning logic – go forward, then turn to go around the block.</em>
+</td>
+</tr>
+</table>
 
 ---
 
 ## If we see a Red Block → Do Red Turning Logic  
-- The robot immediately executes a **sharp turn** as soon as it detects the red block.  
-- This quick maneuver avoids collision while still keeping the robot on course.  
-- The gyro is then used to realign before moving forward again.  
 
-<img src="https://drive.google.com/uc?id=1t3JghLeIdHi3IofLzN8IA0bfSzszBdW0" alt="Red Turning" width="300"/>  
-*Figure 2: Red turning logic – sharp turn around the red block.*
+<table>
+<tr>
+<td width="60%">
+<ul>
+<li>The robot immediately executes a <b>sharp turn</b> as soon as it detects the red block.</li>
+<li>This quick maneuver avoids collision while still keeping the robot on course.</li>
+<li>The gyro is then used to realign before moving forward again.</li>
+</ul>
+</td>
+<td width="40%">
+<img src="https://drive.google.com/uc?id=1t3JghLeIdHi3IofLzN8IA0bfSzszBdW0" alt="Red Turning" width="250"/><br>
+<em>Figure 2: Red turning logic – sharp turn around the red block.</em>
+</td>
+</tr>
+</table>
 
 ---
 
 ## If No Block is Detected → Do No Block Turning Logic  
-- The robot drives forward into the middle of the field.  
-- It then performs a turn and reverses slightly.  
-- The backward movement helps re-center the robot in the next section for better alignment.  
 
-<img src="https://drive.google.com/uc?id=1rmYoQZw9NiFVDCYeccVctoPgYiQ5xjv2" alt="No Block Turning" width="300"/>  
-*Figure 3: Final turning logic – align to the center when no block is detected.*
+<table>
+<tr>
+<td width="60%">
+<ul>
+<li>The robot drives forward into the middle of the field.</li>
+<li>It then performs a turn and reverses slightly.</li>
+<li>The backward movement helps re-center the robot in the next section for better alignment.</li>
+</ul>
+</td>
+<td width="40%">
+<img src="https://drive.google.com/uc?id=1rmYoQZw9NiFVDCYeccVctoPgYiQ5xjv2" alt="No Block Turning" width="250"/><br>
+<em>Figure 3: Final turning logic – align to the center when no block is detected.</em>
+</td>
+</tr>
+</table>
+
 
 ---
 
