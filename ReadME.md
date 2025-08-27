@@ -109,14 +109,11 @@ Our robot is a four-wheeled vehicle that uses a **rear-wheel drive with sharp fr
 
 We chose the **rear-wheel drive with front steering** configuration because it provides several advantages:
 
----
 
 | Rear-Wheel Drive | Front-Wheel Drive |
 | ---------------- | ----------------- |
 | ![image](https://drive.google.com/uc?id=1Jf-CvguoRfaVFCoVMNndH-xFYlsa_ZU-) | ![image](https://drive.google.com/uc?id=1VLR8ZvrXIQMaj_SNlWJ1fxSpYCzsmNQD) |
 | **Why we chose rear-wheel drive:** <br><br>- **More precise steering**, since the front wheels focus only on steering. <br>- **Balanced handling**, with weight distributed between front and rear. <br>- **No torque steer**, unlike front-wheel drive systems. <br>- **Stronger traction under acceleration**, as weight shifts to the rear drive wheels. <br>- **Better power handling**, making it suitable for higher torque motors. <br>- **Familiar control response**, matching our previous experience with other rear-driven LEGO robots. | **Why we avoided front-wheel drive:** <br><br>- Steering is less precise because the wheels also handle power delivery. <br>- Can cause **torque steer**, pulling the robot off-course under acceleration. <br>- Reduced traction at the rear wheels, especially when weight shifts forward during braking. <br>- Harder to balance power and steering without interference. <br>- Less efficient for handling higher torque loads. |
-
----
 
 Overall, the **rear-wheel drive with front steering** configuration gave us the best balance of control, traction, and reliability. It allowed us to maximize precision while keeping the drivetrain simple and effective for competition.
 
