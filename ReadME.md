@@ -107,6 +107,8 @@ The robot's steering mechanism is controlled by a Miuzei MG90S 9G Micro Servo Mo
 
 Our robot is a four-wheeled vehicle that uses a **rear-wheel drive with sharp front-wheel servo steering**. The chassis was custom-modeled in SolidWorks for a compact, lightweight structure that minimizes complexity while maximizing reliability. By separating the steering system from the drivetrain, we avoided issues with spacing and ensured that the steering servo and the drive motors operate independently without interference. This gave us two possible configurations: front-wheel drive with rear steering or rear-wheel drive with front steering.  
 
+We chose the **rear-wheel drive with front steering** configuration because it provides several advantages:
+
 ---
 
 | Rear-Wheel Drive | Front-Wheel Drive |
@@ -115,6 +117,8 @@ Our robot is a four-wheeled vehicle that uses a **rear-wheel drive with sharp fr
 | **Why we chose rear-wheel drive:** <br><br>- **More precise steering**, since the front wheels focus only on steering. <br>- **Balanced handling**, with weight distributed between front and rear. <br>- **No torque steer**, unlike front-wheel drive systems. <br>- **Stronger traction under acceleration**, as weight shifts to the rear drive wheels. <br>- **Better power handling**, making it suitable for higher torque motors. <br>- **Familiar control response**, matching our previous experience with other rear-driven LEGO robots. | **Why we avoided front-wheel drive:** <br><br>- Steering is less precise because the wheels also handle power delivery. <br>- Can cause **torque steer**, pulling the robot off-course under acceleration. <br>- Reduced traction at the rear wheels, especially when weight shifts forward during braking. <br>- Harder to balance power and steering without interference. <br>- Less efficient for handling higher torque loads. |
 
 ---
+
+Overall, the **rear-wheel drive with front steering** configuration gave us the best balance of control, traction, and reliability. It allowed us to maximize precision while keeping the drivetrain simple and effective for competition.
 
 
 The drivetrain works by transferring power from the rear motors into a 36-tooth spur gear that meshes with a 24-tooth gear, creating a 1.5:1 gear ratio. This gearing choice slightly increases speed while still maintaining enough torque to handle obstacles. From there, power flows into the differential gear, which splits torque between the two rear wheels so they can spin at different speeds during turns. This prevents skidding, reduces stress on the drivetrain, and keeps the robot’s motion smooth. The differential outputs directly to the rear wheels, giving strong and reliable traction. Meanwhile, the front wheels are connected to a servo motor that independently controls steering. Because the steering and drivetrain are separate, the robot achieves sharp, responsive turns without being affected by torque from the drive system.
