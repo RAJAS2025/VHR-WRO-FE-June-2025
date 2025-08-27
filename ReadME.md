@@ -244,5 +244,44 @@ In the obstacle challenge, our approach focuses on maintaining precise control w
 | ----------------- | ------- |
 | <img src="https://drive.google.com/uc?id=1x1ThfU5bREkVYrc2lWV1rFM2sHI3Szyz" /> | <img src="https://drive.google.com/uc?id=1t3yGyIsXJndeDdpIoREGKFj_onKRimM3"/> |
 
-
 <br>
+
+## Obstacle Challenge Turning Logic
+
+In the **Obstacle Challenge**, our robot had to detect the blue and orange lines on the playing field and update its gyro heading to execute precise turning maneuvers.  
+We implemented **three distinct turning logics** depending on what obstacle is detected ahead:
+
+---
+
+## If we see a Green Block → Do Green Turning Logic  
+- The robot first drives forward past the green block.  
+- Once the block is cleared, it performs a controlled turn using the updated gyro heading.  
+- This ensures the robot smoothly goes around the block without losing alignment.  
+
+![image](https://drive.google.com/uc?id=1_S9_KFHU9lJkQZhPrbB9JMGBXcy7Chq2)  
+*Figure 1: Green turning logic – go forward, then turn to go around the block.*
+
+---
+
+## If we see a Red Block → Do Red Turning Logic  
+- The robot immediately executes a **sharp turn** as soon as it detects the red block.  
+- This quick maneuver avoids collision while still keeping the robot on course.  
+- The gyro is then used to realign before moving forward again.  
+
+![image](https://drive.google.com/uc?id=1t3JghLeIdHi3IofLzN8IA0bfSzszBdW0)  
+*Figure 2: Red turning logic – sharp turn around the red block.*
+
+---
+
+## If No Block is Detected → Do No Block Turning Logic  
+- The robot drives forward into the middle of the field.  
+- It then performs a turn and reverses slightly.  
+- The backward movement helps re-center the robot in the next section for better alignment.  
+
+![image](https://drive.google.com/uc?id=1rmYoQZw9NiFVDCYeccVctoPgYiQ5xjv2) 
+*Figure 3: Final turning logic – align to the center when no block is detected.*
+
+---
+
+By combining **line detection (blue/orange lines)** with **gyro updates**, the robot could reliably identify its position and apply the correct turning strategy. This adaptive logic ensured consistent navigation through different obstacle configurations.
+
