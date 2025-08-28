@@ -135,11 +135,14 @@ Our old robot also used a rear-wheel drive system with the same advantages. Howe
 | ---------------- | ----------------- |
 | ![image](https://drive.google.com/uc?id=14TVYNowK-BndGGxMD3PfKOjJBTohapYJ) | ![image](https://drive.google.com/uc?id=1WCMvpPhPwMwsXJ10z-Ut7Bo1HqB2yM2O) |
 
-## Steering
+## New Robot Steering
 
-Our steering mechanism is a four-bar linkage, with free-spinning wheels mounted on it. This system proved to be the most efficient and easiest to implement for our purposes, as it only required a servo motor and a simple rig to connect it to the wheel axles. The servo motor moves the four-bar, which changes the angle of the wheels and, in turn, the direction of the vehicle.
+Our steering system uses a four-bar linkage with free-spinning wheels on each side. A servo motor with an arm drives the four-bar, changing the wheel angles to steer the vehicle. This setup is lightweight, efficient, and easy to implement with minimal components.
 
-Steering is managed by a Miuzei MG90S micro servo motor, which provides precise angular control. The rig that connects the servo to the wheel axles was 3D-printed as a single piece along with the servo mount. It features a LEGO axle-shaped cross hole that rotates with the servo, ensuring a secure connection. The lightweight and durable design of this part ensures the front wheels respond quickly and accurately to the servo's commands, allowing our robot to execute the sharp turns necessary for navigating obstacles and completing tasks.
+The steering is managed by a Miuzei MG90S micro servo motor, which provides precise angular control. A standard servo arm drives a four-bar linkage, with free-spinning wheels on each side made from a bearing fitted with a tire. Each wheel is secured using a custom attachment that connects directly to the bearing. This lightweight and durable setup ensures quick, precise steering response, enabling the robot to execute sharp turns and navigate obstacles effectively. To save space, our steering is mounted in a reversed configuration: the four-bar sits behind the servo’s output, and the arm operates in the opposite direction.
+
+## Old Robot Steering
+In our previous robot, we employed the same steering concept, but the system was configured in a forward layout and was significantly larger and wider. The servo arm and mount were 3D printed as a single piece, featuring a LEGO axle–shaped cross hole that rotated in sync with the servo. Unlike the new design, the four-bar linkage was not 3D printed; it was constructed by connecting two LEGO beams with a LEGO wheel mounted on each side.
 
 | Four-Bar Steering Mechanism |
 | --------------------------- |
