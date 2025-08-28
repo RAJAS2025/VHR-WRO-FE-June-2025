@@ -84,6 +84,11 @@ The steering connecting bar is a compact, custom-designed link optimized for our
 
 <img src="https://drive.google.com/uc?id=1eNLU3cQQbzHstJQHPj6PBz5TVGXz-ltt" /> 
 
+### Wheel Holders(Left and Right)
+The wheel holder was custom-designed in SolidWorks for our compact steering system. The extended cylinder secures a bearing for smooth tire rotation, while the smaller hole connects to the steering bar and the larger hole mounts to the chassis base.
+
+<img src="https://drive.google.com/uc?id=1as7IMKPgUTItqlqpQ569neKkn1CLuJKQ" /> 
+
 ### Distance Sensor Holder
 
 The distance sensor holder combines a custom-made 4M LEGO beam with a secure TinkerCAD-designed mount to keep the TOF sensor rigid and stable. This eliminates vibration or shifting during operation, ensuring accurate and consistent sensor readings. The LEGO integration allows for easy attachment to the chassis while maintaining a locked position, supporting reliable obstacle detection and wall-following maneuvers.
