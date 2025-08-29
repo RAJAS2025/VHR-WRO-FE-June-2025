@@ -140,7 +140,7 @@ In our new robot, the motor case is positioned beneath the battery holder, savin
 
 | Spur Gear View of Chassis | Differential Gear View of Chassis |
 | ---------------- | ----------------- |
-| ![image](https://drive.google.com/uc?id=1xcu38yokfdGivFnAiR7ZYKQTt5mwW3h0) | ![image](https://drive.google.com/uc?id=1WCMvpPhPwMwsXJ10z-Ut7Bo1HqB2yM2O) |
+| ![image](https://drive.google.com/uc?id=1xcu38yokfdGivFnAiR7ZYKQTt5mwW3h0) | ![image](https://drive.google.com/uc?id=1HChk87Bm6tqbjaCHRuMx-vfJ_bkpE52m) |
 
 ## New Robot Steering
 
