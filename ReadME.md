@@ -136,8 +136,11 @@ Our old robot also used a rear-wheel drive system with the same advantages. Howe
 
 ## Differences between New and Old Chassis
 
-In our new robot, the motor case is positioned beneath the battery holder, saving significant space and allowing for a more compact design. The gearing layout has also been updated: the new robot uses a side-to-side gearing configuration, whereas the old robot had a downward setup. The old chassis was designed with space for gearing down to achieve more torque, while the new chassis supports either a 1:1 ratio (30-tooth spur to 30-tooth differential) or our current setup with a 36-tooth spur and 24-tooth differential. Additionally, the steering base in the new chassis is smaller and more compact, in contrast to the old design where the steering width spanned the entire chassis.
+In our new robot, the motor case is positioned beneath the battery holder, saving significant space and allowing for a more compact design. The gearing layout has also been updated: the new robot uses a side-to-side gearing configuration due to the use of spur gears, whereas the old robot had a downward setup due to the use of bevel gears. The old chassis was designed with space for gearing down to achieve more torque, while the new chassis supports either a 1:1 ratio (30-tooth spur to 30-tooth differential) or our current setup with a 36-tooth spur and 24-tooth differential. Additionally, the steering base in the new chassis is smaller and more compact, in contrast to the old design where the steering width spanned the entire chassis.
 
+| Spur Gear View of Chassis | Differential Gear View of Chassis |
+| ---------------- | ----------------- |
+| ![image](https://drive.google.com/uc?id=1xcu38yokfdGivFnAiR7ZYKQTt5mwW3h0) | ![image](https://drive.google.com/uc?id=1WCMvpPhPwMwsXJ10z-Ut7Bo1HqB2yM2O) |
 
 ## New Robot Steering
 
