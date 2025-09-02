@@ -157,7 +157,16 @@ In our previous robot, we employed the same steering concept, but the system was
 
 ## Car Component Placement
 
-The main chassis serves as the foundation of the car, housing most of the core components. On top of this base, additional parts such as VEX pieces, LEGO elements, and custom 3D-printed mounts are integrated to securely attach and support each component. 
+The main chassis serves as the foundation of the car, housing most of the core components. On top of this base, additional parts such as VEX pieces, LEGO elements, and custom 3D-printed mounts are integrated to securely attach and support each component. More details about each specific electrical component can be found in power and sense management. 
+
+| Part | Description | Image |
+| ----------- | ----------- | ----------- |
+| TOF Distance Sensors | To transfer power from the 6V motors to the modified LEGO differential, we designed and 3D-printed a 36-tooth gear that fits the motor’s 3mm D-shaped shaft and meshes with the LEGO axle system. Using a 36-tooth input gear with a 24-tooth output gear, we geared it for higher speed because the motor has a low RPM and high torque. | ![image](https://drive.google.com/uc?id=15A_ULyuqfeW1OqZAiTphIvPfeZAlDUrT) |
+| Husky Lens Camera | The LEGO differential was imported from an online CAD model into SolidWorks, then slightly reinforced by adding extra material around the mounting holes and adapted to fit our custom chassis. These modifications improve durability while maintaining smooth power transfer to the wheels under high-torque operation. | ![image](https://drive.google.com/uc?id=1qzpYpQRpw_0YeEP1o6rX9YchPsRdpLrL) |
+| Battery | The chassis is a fully optimized, custom-designed base modeled in SolidWorks for a compact structure with sharp servo steering. It houses the drivetrain, electronics, and reinforced LEGO differential, forming the core of the robot. For details on iterations, component placement, and assembly, see the build documentation. | ![image](https://drive.google.com/uc?id=1Xr69AL12gRIF-5ft7Ylq5KtJu0QJ6xsf) |
+| PCB | The steering connecting bar is a compact, custom-designed link optimized for the sharp servo steering system of the WRO Future Engineers self-driving car. Modeled in SolidWorks, it features recessed screw inlets that improve grip and durability, ensuring a secure fit while transferring motion smoothly between steering components. Its minimal, lightweight design makes it both efficient and reliable under high steering loads. | ![image](https://drive.google.com/uc?id=1eNLU3cQQbzHstJQHPj6PBz5TVGXz-ltt) |
+| Rear Robot | The wheel holder was custom-designed in SolidWorks for our compact steering system. The extended cylinder secures a bearing for smooth tire rotation, while the smaller hole connects to the steering bar and the larger hole mounts to the chassis base. | ![image](https://drive.google.com/uc?id=1as7IMKPgUTItqlqpQ569neKkn1CLuJKQ) |
+| Steering | A custom-made, imported 4M LEGO beam is combined with a secure holder, modeled in TinkerCAD to keep the TOF sensor rigid and immovable. The holder eliminates any shifting or vibration, ensuring consistent and accurate sensor readings. Its LEGO integration allows for straightforward attachment to the structure while maintaining a locked, stable position. | ![image](https://drive.google.com/uc?id=1M6zluK-iLSjezei6UIyS69u5_PhCzkHq) |
 
 # Power and Sense Management <a class="anchor"></a>  
 
