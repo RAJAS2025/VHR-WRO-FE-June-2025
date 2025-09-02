@@ -155,6 +155,9 @@ In our previous robot, we employed the same steering concept, but the system was
 | --------------------------- |
 | <img src="https://drive.google.com/uc?id=16rHeZFgRDMQf3lHZIuXqODQA6GuB-DN7" /> |
 
+## Car Component Placement
+
+The main chassis serves as the foundation of the car, housing most of the core components. On top of this base, additional parts such as VEX pieces, LEGO elements, and custom 3D-printed mounts are integrated to securely attach and support each component. 
 
 # Power and Sense Management <a class="anchor"></a>  
 
