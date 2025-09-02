@@ -168,6 +168,8 @@ The main chassis serves as the foundation of the car, housing most of the core c
 | Rear Robot | The wheel holder was custom-designed in SolidWorks for our compact steering system. The extended cylinder secures a bearing for smooth tire rotation, while the smaller hole connects to the steering bar and the larger hole mounts to the chassis base. | ![image](https://drive.google.com/uc?id=1as7IMKPgUTItqlqpQ569neKkn1CLuJKQ) |
 | Steering | A custom-made, imported 4M LEGO beam is combined with a secure holder, modeled in TinkerCAD to keep the TOF sensor rigid and immovable. The holder eliminates any shifting or vibration, ensuring consistent and accurate sensor readings. Its LEGO integration allows for straightforward attachment to the structure while maintaining a locked, stable position. | ![image](https://drive.google.com/uc?id=1M6zluK-iLSjezei6UIyS69u5_PhCzkHq) |
 
+## Assembly Of Robot
+
 # Power and Sense Management <a class="anchor"></a>  
 
 ## Battery
