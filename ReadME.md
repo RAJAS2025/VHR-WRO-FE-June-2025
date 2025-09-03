@@ -170,7 +170,7 @@ The main chassis serves as the foundation of the car, housing most of the core c
 | Battery | At the center of the robot, the chassis CAD includes a dedicated slot precisely designed to fit the battery. Positioning the battery here, with the PCB mounted directly above, ensures a short and direct connection while preventing wire tangling. Additionally, a cutout at the front of the slot provides space to integrate the servo motor without interference. | ![image](https://drive.google.com/uc?id=1Xr69AL12gRIF-5ft7Ylq5KtJu0QJ6xsf) |
 | PCB | Above the battery slot, the chassis includes a dedicated space for the PCB. The PCB is designed with ports for each sensor, so both sides of the slot are kept clear to allow ample room for wire management. A hole at the back of the PCB slot also provides easy access to the power button from the rear of the robot. | ![image](https://drive.google.com/uc?id=1eNLU3cQQbzHstJQHPj6PBz5TVGXz-ltt) |
 
-## Assembly Of Robot
+## Assembly Of Chassis
 
 ![ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/ab738715-b7e1-4af7-a5c3-a2ef0259da04)
 
