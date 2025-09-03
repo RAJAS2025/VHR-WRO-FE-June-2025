@@ -61,7 +61,7 @@ Our chassis is a fully custom-designed base, modeled in SolidWorks to create a c
 
 The front steering is designed for sharp, precise turns, giving the robot the ability to navigate tight corners and avoid obstacles efficiently. The chassis layout also ensures that the weight of the sensors and electronics is balanced over the drivetrain, improving stability and traction during high-speed maneuvers.
 
-Potential Chassis Improvements
+### Potential Chassis Improvements
 An improvement we could make to our chassis is lowering the center of gravity even further. A lower center of gravity keeps the car’s weight closer to the ground, which improves stability and allows for quicker, more accurate steering at higher speeds. With reduced body roll, the tires maintain stronger grip on the road, giving the driver greater precision and control. As a result, the car feels more responsive during sharp turns, lane changes, and fast cornering.
 
 
