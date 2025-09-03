@@ -168,7 +168,9 @@ The main chassis serves as the foundation of the car, housing most of the core c
 
 ## Assembly Of Robot
 
-![Demo GIF](https://drive.google.com/file/d/1Qf-vyi2SPQxsqwyzf68IYvzzFI2ACFOb/view?usp=sharing)
+![ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/ab738715-b7e1-4af7-a5c3-a2ef0259da04)
+
+
 
 # Power and Sense Management <a class="anchor"></a>  
 
