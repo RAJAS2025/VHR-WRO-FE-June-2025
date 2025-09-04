@@ -149,6 +149,9 @@ Our steering system uses a four-bar linkage with free-spinning wheels on each si
 
 The steering is managed by a Miuzei MG90S micro servo motor, which provides precise angular control. A standard servo arm drives a four-bar linkage, with free-spinning wheels on each side made from a bearing fitted with a tire. Each wheel is secured using a custom attachment that connects directly to the bearing. This lightweight and durable setup ensures quick, precise steering response, enabling the robot to execute sharp turns and navigate obstacles effectively. To save space, our steering is mounted in a reversed configuration: the four-bar sits behind the servo’s output, and the arm operates in the opposite direction.
 
+![ezgif com-speed](https://github.com/user-attachments/assets/2da16e3b-3356-4406-8408-ddd6f16c23b4)
+
+
 ## Old Robot Steering
 In our previous robot, we employed the same steering concept, but the system was configured in a forward layout and was significantly larger and wider. The servo arm and mount were 3D printed as a single piece, featuring a LEGO axle–shaped cross hole that rotated in sync with the servo. Unlike the new design, the four-bar linkage was not 3D printed; it was constructed by connecting two LEGO beams with a LEGO wheel mounted on each side.
 
@@ -156,17 +159,14 @@ In our previous robot, we employed the same steering concept, but the system was
 | --------------------------- |
 | <img src="https://drive.google.com/uc?id=16rHeZFgRDMQf3lHZIuXqODQA6GuB-DN7" /> |
 
-![ezgif com-speed](https://github.com/user-attachments/assets/2da16e3b-3356-4406-8408-ddd6f16c23b4)
-
-
 ## Car Component Placement
 
 The main chassis serves as the foundation of the car, housing most of the core components. On top of this base, additional parts such as VEX pieces, LEGO elements, and custom 3D-printed mounts are integrated to securely attach and support each component. More details about each specific electrical component can be found in power and sense management. 
 
 | Part | Description | Image |
 | ----------- | ----------- | ----------- |
-| TOF Distance Sensors | To transfer power from the 6V motors to the modified LEGO differential, we designed and 3D-printed a 36-tooth gear that fits the motor’s 3mm D-shaped shaft and meshes with the LEGO axle system. Using a 36-tooth input gear with a 24-tooth output gear, we geared it for higher speed because the motor has a low RPM and high torque. | ![image](https://drive.google.com/uc?id=15A_ULyuqfeW1OqZAiTphIvPfeZAlDUrT) |
-| Husky Lens Camera | The LEGO differential was imported from an online CAD model into SolidWorks, then slightly reinforced by adding extra material around the mounting holes and adapted to fit our custom chassis. These modifications improve durability while maintaining smooth power transfer to the wheels under high-torque operation. | ![image](https://drive.google.com/uc?id=1qzpYpQRpw_0YeEP1o6rX9YchPsRdpLrL) |
+| TOF Distance Sensors | We mounted the TOF sensors using a two-beam setup. A double-sided beam is secured with two VEX star-drive screws, with a LEGO beam and frame attached below it. The frame provides multiple connection points, allowing the TOF sensors to be mounted with compatible LEGO beams on their side. This setup makes it easy to adjust the sensor position or quickly fix issues, while still keeping everything stable. | ![image](https://drive.google.com/uc?id=1hOIrTfHFLa0zhwUb6Rqasj7uWyxvHSth) |
+| Husky Lens Camera | We mounted the camera on two VEX standoffs, which are fastened to a pair of LEGO beams with VEX star-drive screws. The camera itself is secured to the top LEGO beam using two M3 screws. We chose this setup over a 3D-printed bracket because the standoffs let us quickly adjust the camera height by swapping standoff lengths, and they provide greater rigidity and durability. | ![image](https://drive.google.com/uc?id=1ueXWMVm9pPt3y-N7kD_lzTD1kA_8lwpR) |
 | Battery | At the center of the robot, the chassis CAD includes a dedicated slot precisely designed to fit the battery. Positioning the battery here, with the PCB mounted directly above, ensures a short and direct connection while preventing wire tangling. Additionally, a cutout at the front of the slot provides space to integrate the servo motor without interference. | ![image](https://drive.google.com/uc?id=1Xr69AL12gRIF-5ft7Ylq5KtJu0QJ6xsf) |
 | PCB | Above the battery slot, the chassis includes a dedicated space for the PCB. The PCB is designed with ports for each sensor, so both sides of the slot are kept clear to allow ample room for wire management. A hole at the back of the PCB slot also provides easy access to the power button from the rear of the robot. | ![image](https://drive.google.com/uc?id=1eNLU3cQQbzHstJQHPj6PBz5TVGXz-ltt) |
 
