@@ -263,7 +263,7 @@ The Miuzei MG90S 9G Micro Servo Motor (S1) connects to pin D32 on the board for 
 
 ### Open Challenge
 
-In the open challenge, the only modification to the mat is the size of the interior walls. To handle this, we will use distance sensors to measure the robot’s distance from the walls. With multiple sensors positioned around the robot, it can accurately determine its position relative to the surroundings and make adjustments to stay parallel to the walls. A front-facing sensor will help the robot know when to turn—once the distance to the wall falls below a set threshold, it will initiate a turn. We will also track laps by counting each completed turn, allowing the robot to know when the course is finished.
+This program controls the robot using TOF sensors and a gyro to navigate by following the outer wall. When the robot detects a wall ahead, it chooses the clearer side by comparing right and left values, and stores it in side. From that point on, the robot consistently follows the chosen outer wall, using TOF readings and gyro correction to stay aligned. Because the outer wall distance is always fixed, this method remains reliable even if interior walls shift or move. A turn count tracks progress through the maze, and once it reaches 12, the robot stops wall-following and drives straight to the finish using gyro-based control.
 
 | Straight Movement | Turning |
 | ----------------- | ------- |
