@@ -149,7 +149,7 @@ Our steering system uses a four-bar linkage with free-spinning wheels on each si
 
 The steering is managed by a Miuzei MG90S micro servo motor, which provides precise angular control. A standard servo arm drives a four-bar linkage, with free-spinning wheels on each side made from a bearing fitted with a tire. Each wheel is secured using a custom attachment that connects directly to the bearing. This lightweight and durable setup ensures quick, precise steering response, enabling the robot to execute sharp turns and navigate obstacles effectively. To save space, our steering is mounted in a reversed configuration: the four-bar sits behind the servo’s output, and the arm operates in the opposite direction.
 
-![ezgif com-speed](https://github.com/user-attachments/assets/2da16e3b-3356-4406-8408-ddd6f16c23b4)
+![ezgif com-speed](https://github.com/user-attachments/assets/b662b802-03e8-402d-b673-f665436674bd)
 
 
 ## Old Robot Steering
