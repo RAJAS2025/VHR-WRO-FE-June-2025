@@ -417,13 +417,14 @@ This value is passed into the steering algorithm.
 
 Main control law that combines wall-following, block avoidance, and gyro correction:
 
-if (lwd < 250) lwallval = 0.15 * (lwd - 250);
-else lwallval = 0;
 
-float kp = 0.8;
-int angle;
+`if (lwd < 250) lwallval = 0.15 * (lwd - 250);
+else lwallval = 0;`
 
-// Correction logic
+`float kp = 0.8;
+int angle;`
+
+`// Correction logic
 if (distance) {
     angle = (int)(kp * (g - (offsetangle - block + rwallval - lwallval)));
 } else {
@@ -431,15 +432,15 @@ if (distance) {
         angle = (int)(kp * (g - (offsetangle - block - lwallval)));
     else
         angle = (int)(kp * (g - (offsetangle - block + rwallval)));
-}
+}`
 
-// Servo steering
+`// Servo steering
 int pos = 95 - angle;
 pos = constrain(pos, 65, 115);
-myservo.write(pos);
+myservo.write(pos);`
 
-// Motor forward with adaptive speed
-motor.run_motor(1, motorSpeed);
+`// Motor forward with adaptive speed
+motor.run_motor(1, motorSpeed); `
 
 #### Breakdown of `forward()`:
 - **Wall Following** → Keeps robot centered using TOF sensors (`rwd`, `lwd`).  
@@ -459,6 +460,100 @@ motor.run_motor(1, motorSpeed);
 
 ---
 
+## Parallel Parking
+
+### 1. Initial Right Turn
+
+- Robot drives while steering hard right.
+- Keeps turning until the gyro yaw reaches the target angle.
+- Stops and centers steering.
+
+### 2. Short Backward Movement
+
+- Moves backward for about 1 second.
+- Stops to reposition.
+
+### 3. Forward Until Front Obstacle
+
+- Drives straight forward.
+- Keeps going until the front sensor detects something closer than 20 cm.
+- Stops and pauses briefly.
+
+### 4. Second Right Turn
+
+- Makes another right turn at lower speed.
+- Uses gyro to measure the angle.
+- Stops and updates its internal offset angle.
+
+### 5. Forward Toward Wall
+
+- Moves forward while tracking the left wall.
+- Uses both the gyro and left sensor to stay aligned.
+- Stops once the front sensor detects an obstacle within 30 cm.
+
+### 6. Small Right Correction
+
+- Turns slightly right to refine alignment.
+- Stops once the target yaw is reached.
+
+### 7. Straightening (Left Turn)
+
+- Makes a small left turn to straighten the robot.
+- Centers the steering afterward.
+
+### 8. Forward Until Pink Wall
+
+- Drives forward briefly, then continues until the left sensor detects a wall within 20 cm.
+- Stops when close enough.
+
+### 9. Decision Point
+
+- Robot checks the left distance:
+- If < 30 cm → goes to Branch A.
+- If ≥ 30 cm → goes to Branch B.
+
+Branch A – Left Wall Close
+
+Turns right until yaw target reached.
+
+Centers steering.
+
+Moves forward a short distance.
+
+Reverses while turning left to straighten.
+
+Stops, centers steering, and remains parked.
+
+Branch B – Left Wall Far
+
+Reverses into a wider right turn.
+
+Stops and centers steering.
+
+Moves forward briefly.
+
+Backs up slightly.
+
+Makes a small reverse correction turn.
+
+Turns left until aligned.
+
+Centers steering and remains parked.
+
+Summary
+
+Gyro: controls turning and orientation.
+
+Servo: steers right/left.
+
+Front sensor: stops robot when approaching obstacles.
+
+Left sensor: helps align with the wall and decide parking branch.
+
+The sequence of turns + forward/reverse moves guides the robot into its parking spot.
+
+
+---
 ### Future Improvements
 
 - Tune coefficients (`0.0035`, `0.15`, `kp=0.8`) for better performance.  
