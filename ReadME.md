@@ -103,6 +103,8 @@ The robot's forward and backward propulsion is provided by a 24mm brushless DC g
 
 <img src="https://drive.google.com/uc?id=1zPMkLOjHfUfX1sFINI6UgpPYMk2pBiHa" width="20%" />
 
+Here are the specifications: <img src="https://drive.google.com/uc?id=1moiPKcTiO8_0Bga1mJdIX5mgfcUgAj7J" />
+
 ### Miuzei MG90S 9G Micro Servo Motor
 The robot's steering mechanism is controlled by a Miuzei MG90S 9G Micro Servo Motor. A servo is a specialized motor designed for precise angular control rather than continuous rotation. This particular model was chosen for its metal gear construction, which offers greater durability and higher torque than plastic gear versions. The servo's ability to hold a specific angle is what allows the robot to make precise steering adjustments and navigate tight corners effectively.
 
