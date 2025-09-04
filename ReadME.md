@@ -352,3 +352,112 @@ We implemented **three distinct turning logics** depending on what obstacle is d
 
 By combining **line detection (blue/orange lines)** with **gyro updates**, the robot could reliably identify its position and apply the correct turning strategy. This adaptive logic ensured consistent navigation through different obstacle configurations.
 
+
+## Dodging Blocks
+
+These are the following steps we take to dodge a block and generally, just have the robot run through the laps.
+
+- Detect and identify colored blocks (Red, Green, Blue, Orange, Pink).  
+- Slow down automatically as it approaches obstacles.  
+- Dodge blocks smoothly by adjusting steering.  
+- Maintain stable heading while wall-following.
+
+---
+
+### Block Detection (HuskyLens)
+
+The **HuskyLens** provides:
+
+- `xCenter` → horizontal position of the block.  
+- `yCenter` → vertical position (bigger = closer).  
+- `width / height` → block size in pixels.  
+
+In the `camread()` function:
+- Each color activates a flag (`rp`, `gp`, `bl`, `ol`, `pw`).  
+- Positions `(x, y)` are stored.  
+- The **closest block** is the one with the **largest yCenter**.  
+
+---
+
+### Adaptive Speed Control
+
+Motor speed decreases as blocks get closer:
+
+- `curr_y` = `yCenter` of closest block.  
+- Larger `y` → Closer block → Slower motor.  
+- Minimum speed of **45** is enforced.  
+
+---
+
+### Block Avoidance (Steering Offset)
+
+Each block influences the steering correction.  
+
+Example: **Red Block (forces left dodge)**
+
+- Formula = `(desired_x - current_x) * distance_y`.  
+- Far block (small y) → small correction.  
+- Close block (large y) → bigger correction.  
+
+The combined correction is:
+
+This value is passed into the steering algorithm.
+
+---
+
+### Steering & Wall Following (`forward()` Function)
+
+Main control law that combines wall-following, block avoidance, and gyro correction:
+
+if (lwd < 250) lwallval = 0.15 * (lwd - 250);
+else lwallval = 0;
+
+float kp = 0.8;
+int angle;
+
+// Correction logic
+if (distance) {
+    angle = (int)(kp * (g - (offsetangle - block + rwallval - lwallval)));
+} else {
+    if (side == 1)
+        angle = (int)(kp * (g - (offsetangle - block - lwallval)));
+    else
+        angle = (int)(kp * (g - (offsetangle - block + rwallval)));
+}
+
+// Servo steering
+int pos = 95 - angle;
+pos = constrain(pos, 65, 115);
+myservo.write(pos);
+
+// Motor forward with adaptive speed
+motor.run_motor(1, motorSpeed);
+
+#### Breakdown of `forward()`:
+- **Wall Following** → Keeps robot centered using TOF sensors (`rwd`, `lwd`).  
+- **Block Avoidance** → Adds correction (`block = target_x`) from HuskyLens.  
+- **Gyro Correction** → Maintains stable heading with IMU yaw.  
+- **Steering Command** → Servo angle constrained between `65` and `115`.  
+- **Motor Drive** → Runs forward at adaptive speed.  
+
+---
+
+### System Summary
+
+- **Closest Block** = Block with highest `yCenter`.  
+- **Speed Control** = Proportional to `yCenter` (closer = slower).  
+- **Dodging** = Steering correction from block offset.  
+- **Navigation** = Combination of wall following, block avoidance, and gyro correction.  
+
+---
+
+### Future Improvements
+
+- Tune coefficients (`0.0035`, `0.15`, `kp=0.8`) for better performance.  
+- Add PID-based velocity control for smoother deceleration.  
+- Expand block behaviors:
+  - **Blue** = Full stop  
+  - **Orange** = Turn around  
+  - **Pink** = Right-side dodge  
+
+
