@@ -512,43 +512,30 @@ motor.run_motor(1, motorSpeed); `
 - If < 30 cm → goes to Branch A.
 - If ≥ 30 cm → goes to Branch B.
 
-Branch A – Left Wall Close
+### Branch A – Left Wall Close
 
-Turns right until yaw target reached.
+- Turns right until yaw target reached.
+- Centers steering.
+- Moves forward a short distance.
+- Reverses while turning left to straighten.
+- Stops, centers steering, and remains parked.
 
-Centers steering.
+### Branch B – Left Wall Far
 
-Moves forward a short distance.
+- Reverses into a wider right turn.
+- Stops and centers steering.
+- Moves forward briefly.
+- Backs up slightly.
+- Makes a small reverse correction turn.
+- Turns left until aligned.
+- Centers steering and remains parked.
 
-Reverses while turning left to straighten.
+### Summary
 
-Stops, centers steering, and remains parked.
-
-Branch B – Left Wall Far
-
-Reverses into a wider right turn.
-
-Stops and centers steering.
-
-Moves forward briefly.
-
-Backs up slightly.
-
-Makes a small reverse correction turn.
-
-Turns left until aligned.
-
-Centers steering and remains parked.
-
-Summary
-
-Gyro: controls turning and orientation.
-
-Servo: steers right/left.
-
-Front sensor: stops robot when approaching obstacles.
-
-Left sensor: helps align with the wall and decide parking branch.
+- Gyro: controls turning and orientation.
+- Servo: steers right/left.
+- Front sensor: stops robot when approaching obstacles.
+- Left sensor: helps align with the wall and decide parking branch.
 
 The sequence of turns + forward/reverse moves guides the robot into its parking spot.
 
