@@ -259,6 +259,9 @@ The Miuzei MG90S 9G Micro Servo Motor (S1) connects to pin D32 on the board for 
 
 # Obstacle Management <a class="anchor"></a>
 
+## Libraries
+
+
 ## Strategy
 
 ### Open Challenge
