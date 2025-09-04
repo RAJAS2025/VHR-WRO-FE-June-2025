@@ -96,6 +96,10 @@ The distance sensor holder combines a custom-made 4M LEGO beam with a secure Tin
 
 <img src="https://drive.google.com/uc?id=1M6zluK-iLSjezei6UIyS69u5_PhCzkHq" />
 
+### Assembly of Chassis
+
+![ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/89af49ec-132a-41f5-96d3-b973e758dc6d)
+
 ## Motors
 
 ### 24mm Brushless DC Gear Motor
@@ -174,11 +178,6 @@ The main chassis serves as the foundation of the car, housing most of the core c
 | Husky Lens Camera | We mounted the camera on two VEX standoffs, which are fastened to a pair of LEGO beams with VEX star-drive screws. The camera itself is secured to the top LEGO beam using two M3 screws. We chose this setup over a 3D-printed bracket because the standoffs let us quickly adjust the camera height by swapping standoff lengths, and they provide greater rigidity and durability. | ![image](https://drive.google.com/uc?id=1ueXWMVm9pPt3y-N7kD_lzTD1kA_8lwpR) |
 | Battery | At the center of the robot, the chassis CAD includes a dedicated slot precisely designed to fit the battery. Positioning the battery here, with the PCB mounted directly above, ensures a short and direct connection while preventing wire tangling. Additionally, a cutout at the front of the slot provides space to integrate the servo motor without interference. | ![image](https://drive.google.com/uc?id=1t9aI2a0_YSJzfXPRAPhALQHHAnrYWMIR) |
 | PCB | Above the battery slot, the chassis includes a dedicated space for the PCB. The PCB is designed with ports for each sensor, so both sides of the slot are kept clear to allow ample room for wire management. A hole at the back of the PCB slot also provides easy access to the power button from the rear of the robot. | ![image](https://drive.google.com/uc?id=1Xr69AL12gRIF-5ft7Ylq5KtJu0QJ6xsf) |
-
-## Assembly Of Chassis
-
-![ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/ab738715-b7e1-4af7-a5c3-a2ef0259da04)
-
 
 
 # Power and Sense Management <a class="anchor"></a>  
