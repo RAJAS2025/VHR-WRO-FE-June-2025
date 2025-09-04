@@ -315,6 +315,16 @@ We implemented **three distinct turning logics** depending on what obstacle is d
 </tr>
 </table>
 
+`else if (gp == true) { `
+    `// move forward while ignoring walls`
+    `while (i < 450){ forward(yaw, 0, 1000, 1000); }`
+    `// keep moving until safe`
+    `while (frontdist > 350){ forward(yaw, 0, 1000, 1000); }`
+    `// then perform controlled turn`
+    `target = abs(offsetangle) + 70;`
+    `while (yaw < target) { myservo.write(135); }`
+`}`
+
 ---
 
 ### If we see a Red Block → Do Red Turning Logic  
@@ -334,6 +344,17 @@ We implemented **three distinct turning logics** depending on what obstacle is d
 </td>
 </tr>
 </table>
+
+`if (rp == true) {`
+    `motor.run_motor(1, 45);`
+    `if (rightdist < 300) {`
+        `target = abs(offsetangle) + 40;`
+        `while (yaw < target) { myservo.write(115); }`
+    `} else {`
+        `target = abs(offsetangle) + 38;`
+        `while (yaw < target) { myservo.write(135); }`
+    `}`
+`}`
 
 ---
 
@@ -355,8 +376,18 @@ We implemented **three distinct turning logics** depending on what obstacle is d
 </tr>
 </table>
 
----
+`else {`
+    `while (frontdist > 450) { forward(yaw, 0, 1000, 1000); }`
+    `target = abs(offsetangle) + 75;`
+    `while (yaw < target) { myservo.write(145); }`
+    `motor.stop_motor();`
+    `myservo.write(95);`
+    `motor.run_motor(0, 55);`
+    `delay(750);  // reverse slightly`
+    `motor.stop_motor();`
+`}`
 
+---
 By combining **line detection (blue/orange lines)** with **gyro updates**, the robot could reliably identify its position and apply the correct turning strategy. This adaptive logic ensured consistent navigation through different obstacle configurations.
 
 
