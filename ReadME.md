@@ -393,7 +393,7 @@ Motor speed decreases as blocks get closer:
 
 - `curr_y` = `yCenter` of closest block.  
 - Larger `y` → Closer block → Slower motor.  
-- Minimum speed of **45** is enforced.  
+- Minimum speed of **50** is enforced.  
 
 ---
 
