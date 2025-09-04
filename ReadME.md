@@ -110,6 +110,9 @@ The robot's steering mechanism is controlled by a Miuzei MG90S 9G Micro Servo Mo
 
 <img src="https://drive.google.com/uc?id=11jJfRISsUBbroW9buTjq_ObbzrjjaPJ_" width="20%" />
 
+Here are the specifications: [Servo Specifications](https://drive.google.com/file/d/1ZQCr9s1xJsN8NOYWgczae_1dq8hoC7bo/view?usp=drive_link)
+
+
 ## New Drivetrain & Chassis Design
 
 Our robot is a four-wheeled vehicle that uses a **rear-wheel drive with sharp front-wheel servo steering**. The chassis was custom-modeled in SolidWorks for a compact, lightweight structure that minimizes complexity while maximizing reliability. By separating the steering system from the drivetrain, we avoided issues with spacing and ensured that the steering servo and the drive motors operate independently without interference. This gave us two possible configurations: front-wheel drive with rear steering or rear-wheel drive with front steering.  
