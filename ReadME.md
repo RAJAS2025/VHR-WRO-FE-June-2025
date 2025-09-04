@@ -423,8 +423,18 @@ Motor speed decreases as blocks get closer:
 
 - `curr_y` = `yCenter` of closest block.  
 - Larger `y` → Closer block → Slower motor.  
-- Minimum speed of **50** is enforced.  
-
+- Minimum speed of **50** is enforced.
+- The full speed algorithm looks like this:
+  `motorSpeed = baseSpeed - int((0.3 * curr_y));  //70 and 0.2`
+  `if (by > 100 && side == 1) {`
+  ` motorSpeed = 50;`
+` } else if (oy > 100 && side == 2) {`
+  ` motorSpeed = 50;`
+ `}`
+ `if (motorSpeed < 50) {`
+  ` motorSpeed = 50;`
+` }  `
+- The additional logic is for slowing down when seeing the blue or orange line depending on which side we drive   
 ---
 
 ### Block Avoidance (Steering Offset)
