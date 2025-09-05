@@ -491,8 +491,6 @@ motor.run_motor(1, motorSpeed); `
 - **Steering Command** → Servo angle constrained between `65` and `115`.  
 - **Motor Drive** → Runs forward at adaptive speed.  
 
----
-
 ### System Summary
 
 - **Closest Block** = Block with highest `yCenter`.  
@@ -500,7 +498,10 @@ motor.run_motor(1, motorSpeed); `
 - **Dodging** = Steering correction from block offset.  
 - **Navigation** = Combination of wall following, block avoidance, and gyro correction.  
 
----
+### Future Improvements
+
+- Tune coefficients for better performance.  
+- Add PID-based velocity control for smoother deceleration.
 
 ## Parallel Parking
 
@@ -572,7 +573,7 @@ motor.run_motor(1, motorSpeed); `
 - Turns left until aligned.
 - Centers steering and remains parked.
 
-### Summary
+### Summary of Parking
 
 - Gyro: controls turning and orientation.
 - Servo: steers right/left.
@@ -582,14 +583,5 @@ motor.run_motor(1, motorSpeed); `
 The sequence of turns + forward/reverse moves guides the robot into its parking spot.
 
 
----
-### Future Improvements
-
-- Tune coefficients (`0.0035`, `0.15`, `kp=0.8`) for better performance.  
-- Add PID-based velocity control for smoother deceleration.  
-- Expand block behaviors:
-  - **Blue** = Full stop  
-  - **Orange** = Turn around  
-  - **Pink** = Right-side dodge  
 
 
