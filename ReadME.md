@@ -263,7 +263,7 @@ The Miuzei MG90S 9G Micro Servo Motor (S1) connects to pin D32 on the board for 
 
 # Obstacle Management <a class="anchor"></a>
 
-## Strategy
+## Strategy and Code Explanation
 
 ### Open Challenge
 
@@ -276,6 +276,10 @@ This program controls the robot using TOF sensors and a gyro to navigate by foll
 | Open Challenge Flowchart |
 | ------------------------ |
 | <img src="https://drive.google.com/uc?id=1ebbFPcefdsMD9-E0WnutMVh5yYC2ZdSq" /> |
+
+Below is the entire code explained: 
+
+In the open challenge, the robot begins only after the button is pressed `(while (buttonState == 1) { buttonState = digitalRead(buttonPin); })`, then drives straight with gyro correction by running `forward(yaw)`, where the steering is adjusted using `angle = (int)(0.8 * (g - (offsetangle))); and myservo.write(pos);`. When a wall is detected ahead `(if (frontdist < 550 && frontdist > 0 && ((millis() - turned) > 3000)))`, the robot decides a turn: if a side is already chosen `(if (side == 1) or else if (side == 2))`, it updates its reference with `offsetangle -= 89`; or `offsetangle += 89`; and turns until the gyro target is reached `(while (yaw > (target * -1)) or while (yaw < target))`. If no side is chosen, it compares rightdist and leftdist `(if (rightdist < 800 && leftdist > 800)` or else if `(leftdist < 800 && rightdist > 800))` to pick a wall. After the first corner, it wall follows with `rforwardwall(yaw, rightdist)` or `lforwardwall(yaw, leftdist)`, where the error is computed as `float wallval = 0.08 * (d - 350);` or `float wallval = 0.08 * (d - 400);` and steering is constrained `(angle = constrain(angle, -10,10);`, `pos = constrain(pos, 80,110);)`. Each turn increments `count`, so when `count == 0` the robot drives straight, for `count >= 1 && count < 12` it follows the chosen wall, and once `count >= 12`, it drives forward for while `(i < 2000)` encoder ticks using `forward(yaw);` before stopping with `motor.stop_motor();`. This ensures the robot starts with gyro following, picks a side, uses ToF sensors to maintain its wall distance, and finally halts after completing the loop.
 
 ### Obstacle Challenge
 
