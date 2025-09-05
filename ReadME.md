@@ -53,6 +53,11 @@ Points are awarded based on how well teams perform in the challenge rounds, the 
 To learn more about the challenge, click [here](https://wro-association.org/wp-content/uploads/WRO-2025-Future-Engineers-Self-Driving-Cars-General-Rules.pdf).
 
 ---
+
+# Video
+Here is the link to our Obstacle Challenge: [https://youtu.be/RuCk_0WW9Mc]
+Here is the link to our Open Challenge: 
+
 # Mobility Management <a class="anchor"></a>
 
 ### Chassis
