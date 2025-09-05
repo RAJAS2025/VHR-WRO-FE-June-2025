@@ -444,9 +444,10 @@ Each block influences the steering correction.
 
 Example: **Red Block (forces left dodge)**
 
+- **Red Block Code :**  `red = 0.0035 * (20 - rx) * ry;` (RED proportional is slightly higher than green because of the green being brighter and having higher Ycenter value)
 - Formula = `(desired_x - current_x) * distance_y`.  
 - Far block (small y) → small correction.  
-- Close block (large y) → bigger correction.  
+- Close block (large y) → bigger correction.
 
 The combined correction is:
 
@@ -459,10 +460,10 @@ This value is passed into the steering algorithm.
 Main control law that combines wall-following, block avoidance, and gyro correction:
 
 
-`if (lwd < 250) lwallval = 0.15 * (lwd - 250);
+`if (lwd < 350) lwallval = 0.035 * (lwd - 350);
 else lwallval = 0;`
 
-`float kp = 0.8;
+`float kp = 0.35;
 int angle;`
 
 `// Correction logic
