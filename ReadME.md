@@ -580,7 +580,7 @@ motor.run_motor(1, motorSpeed); `
 - Front sensor: stops robot when approaching obstacles.
 - Left sensor: helps align with the wall and decide parking branch.
 
-The sequence of turns + forward/reverse moves guides the robot into its parking spot.
+The sequence of turns + forward/reverse moves guides the robot into its parking spot. To examine specific lines of code, locate the `park()` clockwise run function at the bottom of the obstacle challenge code and review the accompanying comments.
 
 
 
