@@ -1,0 +1,904 @@
+#include <SMotor.h>
+#include <ESP32Servo.h>
+#include <ZebraTOF.h>
+#include <ZebraGyro.h>
+#include "Wire.h"
+#include "HUSKYLENS.h"
+SMotor motor(1);
+bool flag = false;
+Servo myservo;
+int servoPin = 27;
+ZebraGyro gyro(7, 12);
+ZebraTOF front(5);
+ZebraTOF right(4);
+ZebraTOF left(3);
+int target_x = 0;
+float offsetangle = 0;
+const int buttonPin = 15;
+int i = 0;
+float kp = 0.8;        // GYRO PROPORTIONAL
+bool distance = true;  //DISTANCE PROPORTIONAL BOOLEAN
+int count = 0;
+int side = 0;  // (1:left turn, 2:right turn)
+int target = 0;
+int rightdist = 0;
+int leftdist = 0;
+int frontdist = 0;
+#define enc 17
+float yaw = 0;
+int angle = 0;
+unsigned long turned = -2000;
+
+
+
+
+float lwallval = 0;
+float rwallval = 0;
+
+float red = 0;
+float green = 0;
+float pink = 0;
+int rx = 0;
+int ry = 0;
+int gx = 0;
+int gy = 0;
+int by = 0;
+int bx = 0;
+int ox = 0;
+int oy = 0;
+int px = 0;
+int py = 0;
+
+bool gp = false;
+bool rp = false;
+bool bl = false;
+bool ol = false;
+bool pw = false;
+
+bool wallval = true;
+
+int baseSpeed = 80;
+int motorSpeed = 60;
+int curr_y = 0;
+
+int rw = 0;
+int rh = 0;
+int ra = 0;
+int gw = 0;
+int gh = 0;
+int ga = 0;
+
+HUSKYLENS huskylens;
+HardwareSerial mySerial(2);
+#define HUSKYLENS_RX 4
+#define HUSKYLENS_TX 0
+bool pillar = false;
+void setup() {
+  // initialize device
+  Serial.begin(115200);
+  Wire.begin();
+  motor.run_motor(0, 0);
+  //initialize everything
+  front.begin();
+  right.begin();
+  left.begin();
+  gyro.begin();
+  pinMode(enc, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(enc), wheel_pulse, RISING);
+  ESP32PWM::allocateTimer(0);
+  ESP32PWM::allocateTimer(1);
+  ESP32PWM::allocateTimer(2);
+  ESP32PWM::allocateTimer(3);
+  myservo.setPeriodHertz(50);  // standard 50 hz servo
+
+  myservo.attach(servoPin, 500, 2500);
+  pinMode(2, OUTPUT);
+  digitalWrite(2, HIGH);
+
+  mySerial.begin(9600, SERIAL_8N1, HUSKYLENS_RX, HUSKYLENS_TX);
+  while (!huskylens.begin(mySerial)) {
+    Serial.println(F("Begin failed!"));
+    Serial.println(F("1. Recheck HUSKYLENS Protocol (should be Serial 9600)"));
+    Serial.println(F("2. Recheck wiring: Blue wire to RX, Green wire to TX"));
+    delay(1000);
+  }
+  // configure LED for output
+  int buttonState = digitalRead(buttonPin);
+
+  while (buttonState == 1) {
+    buttonState = digitalRead(buttonPin);
+  }
+  delay(200);
+  // Parrallel Exit
+  rightdist = constrain(right.readDistance1(), 0, 1200);  //RIGHT
+  leftdist = constrain(left.readDistance1(), 0, 1200);    //LEFT
+  if (rightdist < leftdist) {
+
+    side = 1;  //left
+    target = abs(offsetangle) + 75;
+    gyro.update();
+    yaw = gyro.getYaw();
+    motor.run_motor(1, 50);
+    while (yaw > (target * -1)) {
+      gyro.update();
+      yaw = gyro.getYaw();
+      myservo.write(45);
+    }
+    motor.stop_motor();
+    camread();
+    delay(500);
+    if (rp == true && ry > gy) {
+      target = abs(offsetangle);
+      gyro.update();
+      yaw = gyro.getYaw();
+      motor.run_motor(1, 55);
+      while (yaw < target) {
+        gyro.update();
+        yaw = gyro.getYaw();
+        myservo.write(132);
+      }
+      motor.stop_motor();
+    } else {
+      myservo.write(95);
+      frontdist = front.readDistance1();
+      offsetangle -= 90;
+      while (frontdist > 350) {
+        frontdist = front.readDistance1();
+        gyro.update();
+        yaw = gyro.getYaw();
+        forward(yaw, 0, 1000, 1000);
+      }
+      motor.stop_motor();
+      offsetangle += 90;
+      ////
+      target = abs(offsetangle) - 10;
+      gyro.update();
+      yaw = gyro.getYaw();
+      motor.run_motor(1, 55);
+      while (yaw < target) {
+        gyro.update();
+        yaw = gyro.getYaw();
+        myservo.write(135);
+      }
+      motor.stop_motor();
+    }
+  } else {
+
+    side = 2;  //right
+    target = abs(offsetangle) + 50;
+    gyro.update();
+    yaw = gyro.getYaw();
+    motor.run_motor(1, 50);
+    while (yaw < target) {
+      gyro.update();
+      yaw = gyro.getYaw();
+      myservo.write(135);
+    }
+    motor.stop_motor();
+    myservo.write(95);
+    camread();
+    if (rp == true) {
+      frontdist = front.readDistance1();
+      offsetangle += 90;
+      while (frontdist > 250) {
+        frontdist = front.readDistance1();
+        gyro.update();
+        yaw = gyro.getYaw();
+        forward(yaw, 0, 1000, 1000);
+      }
+      motor.stop_motor();
+      offsetangle -= 90;
+    } else {
+      motor.run_motor(1, 60);
+      delay(500);
+      motor.stop_motor();
+    }
+    target = abs(offsetangle) + 15;
+    gyro.update();
+    yaw = gyro.getYaw();
+    motor.run_motor(1, 60);
+    while (yaw > target) {
+      gyro.update();
+      yaw = gyro.getYaw();
+      myservo.write(55);
+    }
+    motor.stop_motor();
+    myservo.write(95);
+  }
+}
+void loop() {
+
+  //////////////
+
+  camread();
+  if (ra > ga) {
+    red = 0.003 * (20 - rx) * ry;  //0.005
+    green = 0;
+    curr_y = ry;
+  } else if (ga > ra) {
+    green = 0.003 * (280 - gx) * gy;  //0.004
+    red = 0;
+    curr_y = gy;
+  }
+  if (pw) {
+    distance = false;
+    if (side == 1) {
+      if (py > gy) {
+        pink = 0.0037 * (270 - px) * py;
+        green = 0.0004 * (280 - gx) * gy;
+      } else {
+        pink = 0.0004 * (270 - px) * py;
+        green = 0.003 * (280 - gx) * gy;
+      }
+    } else {
+      if (py > ry) {
+        pink = 0.0037 * (30 - px) * py;
+        red = 0.0004 * (20 - rx) * ry;
+      } else {
+        pink = 0.0004 * (30 - px) * py;
+        red = 0.003 * (20 - rx) * ry;
+      }
+    }
+  } else {
+    distance = true;
+  }
+  if (by > gy && by > ry && side == 1 && bx > rx && bx > gx && (millis() - turned > 4000)) {
+    green = 0;
+    red = 0;
+    curr_y = 0;
+  }
+
+  if (oy > gy && oy > ry && side == 2 && ox < rx && ox < gx && (millis() - turned > 4000)) {
+    green = 0;
+    red = 0;
+    curr_y = 0;
+  }
+
+  motorSpeed = baseSpeed - int((0.4 * curr_y));  //70 and 0.2
+  if (by > 100 && side == 1) {
+    motorSpeed = 45;
+  } else if (oy > 100 && side == 2) {
+    motorSpeed = 45;
+  }
+  if (motorSpeed < 45) {
+    motorSpeed = 45;
+  }
+  target_x = green + red + pink;
+
+
+  gyro.update();
+  yaw = gyro.getYaw();
+  rightdist = constrain(right.readDistance1(), 0, 1200);  //RIGHT
+  leftdist = constrain(left.readDistance1(), 0, 1200);    //LEFT
+
+  if (gp == true) {
+    rightdist = 1000;
+  } else if (rp == true) {
+    leftdist = 1000;
+  }
+  if (rightdist < 100) {
+    myservo.write(70);
+    motor.run_motor(1, 56);
+
+  } else if (leftdist < 100) {
+    myservo.write(125);
+    motor.run_motor(1, 56);
+  } else {
+    // gyro.update();
+    forward(yaw, target_x, rightdist, leftdist);
+  }
+
+
+  if (bl == true && by > 170 && side == 1 && (millis() - turned > 4000)) {  ////by > 140 && bx > 140
+    // motor.stop_motor();
+    count += 1;
+    if (count >= 13) {
+      park();
+    }
+    camread();
+    leftdist = constrain(left.readDistance1(), 0, 1200);
+    // motor.run_motor(1, 55);
+    if (gp == true) {
+      // motor.stop_motor();
+      // delay(100);
+      motor.run_motor(1, 45);
+      if (leftdist < 300) {
+        target = abs(offsetangle) + 30;
+        while (yaw > (target * -1)) {
+          gyro.update();
+          yaw = gyro.getYaw();
+          myservo.write(85);
+        }
+      } else {
+        target = abs(offsetangle) + 60;
+        while (yaw > (target * -1)) {
+          gyro.update();
+          yaw = gyro.getYaw();
+          myservo.write(65);
+        }
+      }
+      // motor.stop_motor();
+    } else if (rp == true) {
+      i = 0;
+      while (i < 450) {
+        gyro.update();
+        yaw = gyro.getYaw();
+        frontdist = constrain(front.readDistance1(), 0, 1200);
+        leftdist = 1000;
+        rightdist = 1000;
+        target_x = 0;
+        forward(yaw, target_x, rightdist, leftdist);
+      }
+      frontdist = constrain(front.readDistance1(), 0, 1200);
+      while (frontdist > 270) {
+        gyro.update();
+        yaw = gyro.getYaw();
+        frontdist = constrain(front.readDistance1(), 0, 1200);
+        leftdist = 1000;
+        rightdist = 1000;
+        target_x = 0;
+        forward(yaw, target_x, rightdist, leftdist);
+      }
+      // motor.stop_motor();
+      ////
+      motor.run_motor(1, 45);
+      target = abs(offsetangle) + 50;
+      while (yaw > target * -1) {
+        gyro.update();
+        yaw = gyro.getYaw();
+        myservo.write(55);
+      }
+      // motor.stop_motor();
+    } else {
+      frontdist = constrain(front.readDistance1(), 0, 1200);
+      while (frontdist > 450) {
+        gyro.update();
+        yaw = gyro.getYaw();
+        frontdist = constrain(front.readDistance1(), 0, 1200);
+        leftdist = 1000;
+        rightdist = 1000;
+        target_x = 0;
+        forward(yaw, target_x, rightdist, leftdist);
+      }
+      // motor.stop_motor();
+
+      ////
+      motor.run_motor(1, 45);
+      target = abs(offsetangle) + 75;
+      while (yaw > (target * -1)) {
+        gyro.update();
+        yaw = gyro.getYaw();
+        myservo.write(45);
+      }
+      motor.stop_motor();
+
+      myservo.write(95);
+      motor.run_motor(0, 55);
+      delay(750);
+      motor.stop_motor();
+    }
+    myservo.write(95);
+    distance = true;
+    // wallval = true;
+    i = 0;
+    offsetangle -= 88;
+    turned = millis();
+  }
+
+  if (ol == true && oy > 170 && side == 2 && (millis() - turned > 4000)) {
+    // motor.stop_motor();
+    count += 1;
+    if (count >= 13) {
+      park2();
+    }
+    camread();
+    rightdist = constrain(right.readDistance1(), 0, 1200);  //RIGHT
+    if (rp == true) {
+      // motor.stop_motor();
+      // delay(100);
+      motor.run_motor(1, 45);
+      if (rightdist < 300) {
+        target = abs(offsetangle) + 40;
+        while (yaw < target) {
+          gyro.update();
+          yaw = gyro.getYaw();
+          myservo.write(115);
+        }
+      } else {
+        target = abs(offsetangle) + 38;
+        while (yaw < target) {
+          gyro.update();
+          yaw = gyro.getYaw();
+          myservo.write(135);
+        }
+      }
+      // motor.stop_motor();
+
+    } else if (gp == true) {
+      i = 0;
+      while (i < 450) {
+        gyro.update();
+        yaw = gyro.getYaw();
+        frontdist = constrain(front.readDistance1(), 0, 1200);
+        leftdist = 1000;
+        rightdist = 1000;
+        target_x = 0;
+        forward(yaw, target_x, rightdist, leftdist);
+      }
+      frontdist = constrain(front.readDistance1(), 0, 1200);
+      while (frontdist > 350) {
+        gyro.update();
+        yaw = gyro.getYaw();
+        frontdist = constrain(front.readDistance1(), 0, 1200);
+        leftdist = 1000;
+        rightdist = 1000;
+        target_x = 0;
+        forward(yaw, target_x, rightdist, leftdist);
+      }
+      // motor.stop_motor();
+      ////
+      motor.run_motor(1, 45);
+      target = abs(offsetangle) + 70;
+      while (yaw < target) {
+        gyro.update();
+        yaw = gyro.getYaw();
+        myservo.write(135);
+      }
+      // motor.stop_motor();
+    } else {
+      frontdist = constrain(front.readDistance1(), 0, 1200);
+      while (frontdist > 450) {
+        gyro.update();
+        yaw = gyro.getYaw();
+        frontdist = constrain(front.readDistance1(), 0, 1200);
+        leftdist = 1000;
+        rightdist = 1000;
+        target_x = 0;
+        forward(yaw, target_x, rightdist, leftdist);
+      }
+      // motor.stop_motor();
+      ////
+      motor.run_motor(1, 45);
+      target = abs(offsetangle) + 75;
+      while (yaw < target) {
+        gyro.update();
+        yaw = gyro.getYaw();
+        myservo.write(145);
+      }
+      motor.stop_motor();
+      myservo.write(95);
+      motor.run_motor(0, 55);
+      delay(750);
+      motor.stop_motor();
+    }
+    myservo.write(95);
+    distance = true;
+    // wallval = true;
+    i = 0;
+    offsetangle += 90;
+    turned = millis();
+  }
+}
+
+
+void forward(float g, float block, int rwd, int lwd) {
+  if (rwd < 250) {
+    rwallval = 0.15 * (rwd - 250);
+  } else {
+    rwallval = 0;
+  }
+  if (lwd < 300) {
+    lwallval = 0.2 * (lwd - 300);
+  } else {
+    lwallval = 0;
+  }
+
+  kp = 0.5;
+  /////
+  if (millis() - turned < 2500) {
+    kp = 0.2;
+  }
+
+  angle = (int)(kp * (g - (offsetangle - block)));
+  int pos = 95 - angle;
+  pos = constrain(pos, 65, 115);
+  myservo.write(pos);
+  motor.run_motor(1, motorSpeed);
+}
+
+void rforwardwall(float g, int d) {  // what is r forward? write some comment about it.
+  float wallval = 0.2 * (d - 150);
+  angle = int(0.6 * (g - (offsetangle + wallval)));
+  int pos = 95 - angle;
+  pos = constrain(pos, 85, 105);
+  myservo.write(pos);
+  motor.run_motor(1, 60);
+}
+
+void lforwardwall(float g, int d) {
+  float wallval = 0.2 * (d - 200);
+  angle = int(0.8 * (g - (offsetangle - wallval)));
+  int pos = 95 - angle;
+  pos = constrain(pos, 85, 105);
+  myservo.write(pos);
+  motor.run_motor(1, 60);
+}
+
+void wheel_pulse() {
+  // Optional encoder logic if needed
+
+  i++;
+}
+void camread() {
+  huskylens.request();
+  rw = 0;
+  rh = 0;
+  ra = 0;
+  gw = 0;
+  gh = 0;
+  ga = 0;
+  ry = 0;
+  rx = 0;
+  gx = 0;
+  gy = 0;
+  bx = 0;
+  by = 0;
+  ox = 0;
+  oy = 0;
+  px = 0;
+  py = 0;
+  bl = false;
+  ol = false;
+  gp = false;
+  rp = false;
+  pw = false;
+  if (!huskylens.available()) {
+    target_x = 0;
+    wallval = true;
+    pillar = true;
+    bl = false;
+    ol = false;
+    gp = false;
+    rp = false;
+    pw = false;
+
+  } else {
+    while (huskylens.available()) {
+      HUSKYLENSResult result = huskylens.read();
+      if (result.command == COMMAND_RETURN_BLOCK) {
+
+        if (result.ID == 1) {  //result.yCenter > 50
+          rp = true;
+          rx = result.xCenter;
+          ry = result.yCenter;  // red → turn left
+          rw = result.width;
+          rh = result.height;
+          ra = rx * rh;
+          // red = 0.018 * (20 - result.xCenter) * result.yCenter;
+          // pillar = false;
+          // wallval = false;
+
+
+        }
+        // else {
+        //   rp = false;
+        //   rx = 0;
+        //   ry = 0;
+        //   red = 0;
+        // }
+        else if (result.ID == 2) {  //
+          gp = true;
+          gx = result.xCenter;
+          gy = result.yCenter;  // green → turn right
+          gw = result.width;
+          gh = result.height;
+          ga = gw * gh;
+          // green = 0.018 * (280 - result.xCenter) * result.yCenter;
+          // pillar = false;
+          // wallval = false;
+        }
+        //  else {
+        //   gp = false;
+        //   gx = 0;
+        //   gy = 0;
+        //   green = 0;
+        // }
+        else if (result.ID == 3) {
+          ol = true;
+          ox = result.xCenter;
+          oy = result.yCenter;
+        }
+        // else {
+        //   ox = 0;
+        //   oy = 0;
+        //   ol = false;
+        // }
+        else if (result.ID == 4) {
+          bl = true;
+          bx = result.xCenter;
+          by = result.yCenter;
+        }
+        // else {
+        //   bx = 0;
+        //   by = 0;
+        //   bl = false;
+        // }
+
+        else if (result.ID == 5) {
+          pw = true;
+          px = result.xCenter;
+          py = result.yCenter;
+        }
+        // else {
+        //   pw = false;
+        //   px = 0;
+        //   py = 0;
+        //   pink = 0;
+        // }
+      }
+    }
+  }
+}
+
+
+void park2() {
+  motor.run_motor(1, 60);  ////turn left
+  target = abs(offsetangle) - 80;
+  while (yaw > target) {
+    gyro.update();
+    yaw = gyro.getYaw();
+    myservo.write(45);
+  }
+  motor.stop_motor();
+  myservo.write(95);
+  offsetangle -= 88;
+  frontdist = constrain(front.readDistance1(), 0, 1200);
+  while (frontdist > 200) {
+    gyro.update();
+    yaw = gyro.getYaw();
+    frontdist = constrain(front.readDistance1(), 0, 1200);
+    leftdist = 1000;
+    rightdist = 1000;
+    target_x = 0;
+    forward(yaw, target_x, rightdist, leftdist);
+  }
+  motor.stop_motor();
+  myservo.write(95);
+  // delay(1000);
+  motor.run_motor(1, 60);  ////turn left
+  target = abs(offsetangle) - 80;
+  while (yaw > target) {
+    gyro.update();
+    yaw = gyro.getYaw();
+    myservo.write(45);
+  }
+  motor.stop_motor();
+  myservo.write(95);
+  offsetangle -= 88;
+  ////////
+  gyro.update();
+  yaw = gyro.getYaw();
+  frontdist = constrain(front.readDistance1(), 0, 1200);
+  while (frontdist > 300) {
+    gyro.update();
+    yaw = gyro.getYaw();
+    frontdist = constrain(front.readDistance1(), 0, 1200);
+    rightdist = constrain(right.readDistance1(), 0, 1200);  //RIGHT
+    rforwardwall(yaw, rightdist);
+  }
+  motor.stop_motor();
+  motor.run_motor(1, 60);  ////turn left
+  target = abs(offsetangle) - 45;
+  while (yaw > target) {
+    gyro.update();
+    yaw = gyro.getYaw();
+    myservo.write(75);
+  }
+  motor.stop_motor();
+
+  motor.run_motor(1, 45);  ///straighten
+  target = abs(offsetangle) + 20;
+  while (yaw < target) {
+    gyro.update();
+    yaw = gyro.getYaw();
+    myservo.write(125);
+  }
+  motor.stop_motor();
+  myservo.write(95);
+  motor.run_motor(1, 55);
+  delay(200);
+  motor.stop_motor();
+  /////
+  rightdist = constrain(right.readDistance1(), 0, 1200);
+  while (rightdist > 150) {
+    rightdist = constrain(right.readDistance1(), 0, 1200);  //RIGHT
+    gyro.update();
+    yaw = gyro.getYaw();
+    forward(yaw, 0, 1000, 1000);
+  }
+  motor.stop_motor();
+  /////
+  ///////////////
+  rightdist = constrain(right.readDistance1(), 0, 1200);
+  if (rightdist < 300) {     ////logic if close
+    motor.run_motor(0, 45);  ///left turn backwards
+    target = abs(offsetangle) - 80;
+    while (yaw > target) {
+      gyro.update();
+      yaw = gyro.getYaw();
+      myservo.write(150);
+    }
+    motor.stop_motor();
+    myservo.write(95);
+    motor.run_motor(0, 45);
+    target = abs(offsetangle) + 24;  //right turn forwards
+    while (yaw < target) {
+      gyro.update();
+      yaw = gyro.getYaw();
+      myservo.write(40);
+    }
+    motor.stop_motor();
+    myservo.write(95);
+    delay(100000000000000);
+  } else {
+    motor.run_motor(0, 45);
+    target = abs(offsetangle) - 80;
+    while (yaw > target) {
+      gyro.update();
+      yaw = gyro.getYaw();
+      myservo.write(150);
+    }
+    motor.stop_motor();
+    myservo.write(95);
+    motor.run_motor(0, 45);
+    delay(400);
+    motor.stop_motor();
+    ////
+    motor.run_motor(0, 45);  //right turn forwards
+    target = abs(offsetangle) + 24;
+    while (yaw < target) {
+      gyro.update();
+      yaw = gyro.getYaw();
+      myservo.write(40);
+    }
+    motor.stop_motor();
+    myservo.write(95);
+    delay(100000000000000);
+  }
+}
+
+
+
+
+
+//////////
+void park() {
+  motor.run_motor(1, 60);
+  target = abs(offsetangle) - 65;  ///right turn
+  while (yaw < (target * -1)) {
+    gyro.update();
+    yaw = gyro.getYaw();
+    myservo.write(130);
+  }
+  motor.stop_motor();
+  myservo.write(95);
+  motor.run_motor(0, 60);
+  delay(1000);
+  motor.stop_motor();
+  /////////
+  ////////
+  myservo.write(95);
+  offsetangle += 88;
+  frontdist = constrain(front.readDistance1(), 0, 1200);
+  while (frontdist > 200) {
+    gyro.update();
+    yaw = gyro.getYaw();
+    frontdist = constrain(front.readDistance1(), 0, 1200);
+    leftdist = 1000;
+    rightdist = 1000;
+    target_x = 0;
+    forward(yaw, target_x, rightdist, leftdist);
+  }
+  motor.stop_motor();
+  delay(1000);
+  ///////////
+  motor.run_motor(1, 45);
+  target = abs(offsetangle) - 70;
+  while (yaw < (target * -1)) {
+    gyro.update();
+    yaw = gyro.getYaw();
+    myservo.write(150);
+  }
+  motor.stop_motor();
+  offsetangle += 89;
+  gyro.update();
+  yaw = gyro.getYaw();
+  frontdist = constrain(front.readDistance1(), 0, 1200);
+  while (frontdist > 300) {
+    gyro.update();
+    yaw = gyro.getYaw();
+    frontdist = constrain(front.readDistance1(), 0, 1200);
+    leftdist = constrain(left.readDistance1(), 0, 1200);  //RIGHT
+    lforwardwall(yaw, leftdist);
+  }
+  motor.stop_motor();
+  ////turn right little
+  motor.run_motor(1, 45);
+  target = abs(offsetangle) - 55;
+  while (yaw < (target * -1)) {
+    gyro.update();
+    yaw = gyro.getYaw();
+    myservo.write(125);
+  }
+  motor.stop_motor();
+  ////turn left (straighten)
+  motor.run_motor(1, 45);
+  target = abs(offsetangle);
+  while (yaw > (target * -1)) {
+    gyro.update();
+    yaw = gyro.getYaw();
+    myservo.write(65);
+  }
+  motor.stop_motor();
+  myservo.write(95);
+  /////forward until pink wall
+  leftdist = constrain(left.readDistance1(), 0, 1200);
+  while (leftdist > 150) {
+    leftdist = constrain(left.readDistance1(), 0, 1200);  //RIGHT
+    gyro.update();
+    yaw = gyro.getYaw();
+    forward(yaw, 0, 1000, 1000);
+  }
+  motor.stop_motor();
+  /////////
+  leftdist = constrain(left.readDistance1(), 0, 1200);
+  if (leftdist < 300) {
+    motor.run_motor(0, 45);
+    target = abs(offsetangle) - 80;
+    while (yaw < (target * -1)) {  ///right turn
+      gyro.update();
+      yaw = gyro.getYaw();
+      myservo.write(60);
+    }
+    motor.stop_motor();
+    myservo.write(95);
+    ////
+    motor.run_motor(0, 45);
+    target = abs(offsetangle);
+    while (yaw > (target * -1)) {
+      gyro.update();
+      yaw = gyro.getYaw();
+      myservo.write(150);
+    }
+    motor.stop_motor();
+    myservo.write(95);
+    delay(100000000000000);
+    ////////////////
+  } else {
+    motor.run_motor(0, 45);
+    target = abs(offsetangle) + 80;
+    while (yaw < (target * -1)) {
+      gyro.update();
+      yaw = gyro.getYaw();
+      myservo.write(60);
+    }
+    motor.stop_motor();
+    myservo.write(95);
+    motor.run_motor(0, 55);
+    delay(200);
+    motor.stop_motor();
+    ////
+    motor.run_motor(0, 45);
+    delay(100);
+    motor.run_motor(0, 45);
+    target = abs(offsetangle) + 10;  // -5
+    while (yaw > target) {
+      gyro.update();
+      yaw = gyro.getYaw();
+      myservo.write(150);
+    }
+    motor.stop_motor();
+    myservo.write(95);
+    delay(100000000000000);
+  }
+}
