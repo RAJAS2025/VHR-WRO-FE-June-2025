@@ -219,7 +219,7 @@ This sensor allows the robot to perform complex tasks like avoiding obstacles an
 
 This schematic provides a clear overview of the robot's electronic design. It shows how a central ESP32 microcontroller manages various sensors and motors, enabling autonomous navigation and obstacle avoidance. The design is modular, with a focus on efficient communication and power management.
 
-<img src="https://drive.google.com/uc?id=1aF5MVUdIMGfIHesjWJOWcKdBSu5RwNBk" width="50%" alt="A schematic of the robot's electronic components and connections"/>
+<img src="https://drive.google.com/uc?id=1aF5MVUdIMGfIHesjWJOWcKdBSu5RwNBk" width="100%" alt="A schematic of the robot's electronic components and connections"/>
 
 ### Power Management
 The robot's power is supplied by a 6V battery pack, which connects at CN1. This power is distributed to all components in two ways. A voltage regulator (U8) steps down the 6V to a stable 3.3V to safely power the ESP32 and other sensitive electronics. The 6V supply is also used directly to power the motors and servo, as they require higher voltage and current.
