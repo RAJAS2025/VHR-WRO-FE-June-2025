@@ -352,7 +352,7 @@ This program controls the robot using TOF sensors and a gyro to navigate by foll
 | ------------------------ |
 | <img src="https://drive.google.com/uc?id=1ebbFPcefdsMD9-E0WnutMVh5yYC2ZdSq" /> |
 
-Below is the entire code explained: (For more questions about each specific line, click on the file of our open challenge and read the comments we've added)
+
 
 
 
@@ -536,7 +536,7 @@ This value is passed into the steering algorithm.
 
 ---
 
-### Steering & Wall Following (`forward()` Function)
+### Steering & Wall Following (`forward()` Function) (Obstacle)
 
 Main control law that combines wall-following, block avoidance, and gyro correction:
 
