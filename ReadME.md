@@ -22,6 +22,7 @@ This repository contains the documentation for Team VHR team's robot for the 202
     * [Old Robot Steering](#old-robot-steering)
     * [Car Component Placement](#car-component-placement) 
 * [Power and Sense Management](#power-and-sense-management-)
+  * [Controller](#controller)
   * [Battery](#battery)
   * [Sensing](#sensing)
   * [Gyro](#mpu-6050-3-axis-accelerometer--gyroscope)
