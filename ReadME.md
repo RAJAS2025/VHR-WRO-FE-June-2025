@@ -352,9 +352,66 @@ This program controls the robot using TOF sensors and a gyro to navigate by foll
 | ------------------------ |
 | <img src="https://drive.google.com/uc?id=1ebbFPcefdsMD9-E0WnutMVh5yYC2ZdSq" /> |
 
+### Robot Motion Control (Open)
 
+This part of the repository contains control laws for straight driving using gyro correction and wall-following behaviors using TOF sensor + gyro fusion.  
 
+#### Straight Driving (forward)
 
+The `forward()` function maintains straight-line motion by applying gyro-based steering correction.
+`void forward(float g) {
+angle = (int)(0.8 * (g - (offsetangle))); // Steering correction
+int pos = 95 - angle; // Servo position
+myservo.write(pos);
+motor.run_motor(1, 80); // Run motor forward
+}`
+
+##### Breakdown
+- **Gyro Correction** → Adjusts steering based on yaw error relative to `offsetangle`.  
+- **Steering Command** → Servo centered at 95, shifted by correction.  
+- **Motor Drive** → Moves forward at a fixed speed (80).  
+
+#### Right Wall Following (rforwardwall)
+
+The `rforwardwall()` function follows the right wall by combining TOF distance sensing and gyro correction.
+`void rforwardwall(float g, int d) {
+float wallval = 0.08 * (d - 350); // Correction based on distance
+angle = int(0.6 * (g - (offsetangle + wallval)));
+angle = constrain(angle, -10, 10);
+int pos = 95 - angle;
+pos = constrain(pos, 80, 110);
+myservo.write(pos);
+motor.run_motor(1, 100);
+}`
+
+##### Breakdown
+- **Wall Following** → Calculates offset `wallval` from right wall distance (`d`).  
+- **Gyro Correction** → Combines yaw angle and distance offset for stability.  
+- **Steering Command** → Servo constrained between 80 and 110 for safer correction.  
+- **Motor Drive** → Forward motion at higher speed (100).  
+
+---
+
+#### Left Wall Following (lforwardwall)
+
+The `lforwardwall()` function mirrors the right wall following, but uses the left wall as reference.
+`void lforwardwall(float g, int d) {
+float wallval = 0.08 * (d - 400); // Correction based on distance
+angle = int(0.6 * (g - (offsetangle - wallval)));
+angle = constrain(angle, -10, 10);
+int pos = 95 - angle;
+pos = constrain(pos, 80, 110);
+myservo.write(pos);
+motor.run_motor(1, 100);
+}`
+
+##### Breakdown
+- **Wall Following** → Calculates offset `wallval` from left wall distance (`d`).  
+- **Gyro Correction** → Uses yaw angle adjusted with left-side offset.  
+- **Steering Command** → Servo constrained between 80 and 110 to limit oscillations.  
+- **Motor Drive** → Forward motion at higher speed (100).  
+
+---
 
 ### Obstacle Challenge
 
