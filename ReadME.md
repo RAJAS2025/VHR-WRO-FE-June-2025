@@ -745,6 +745,7 @@ Here is our video for the assembly proccess of our robot: https://youtu.be/ncnzs
 | Distance Sensors | [`VL53L0X V2 Distance Sensors`](https://www.adafruit.com/product/3317?srsltid=AfmBOoo2bXDFNLP4muxH_TJ6E1TMgPw9tgMk8_leCCFIUnABXe_XegRi) | $14.95 |
 | Gyro | [`MPU-6050 3-Axis Accelerometer & Gyroscope: LINK NEEDED`](https://carisma-shop.com/products/gt24-alum-motor-mount) | $12.99 |
 | Camera | [`Huskylens`](https://ca.robotshop.com/products/gravity-huskylens-ai-machine-vision-sensor-w-silicone-case?gad_source=1&gad_campaignid=20151185247&gbraid=0AAAAAD_f_xxytUT8IaTqhSAT_ir4KZ1jB&gclid=CjwKCAjwk7DFBhBAEiwAeYbJsc7MoTx8vF9xUZyPZp27axQPZ4kNTacxE1th6vTxau1L4F4zaG-6MnRoCdAcQAvD_BwE) | $83.43 |
+| Camera Lens | [`Fish Eye Lens`](https://www.amazon.ca/dp/B00FTSG35E?ref=cm_sw_r_apan_dp_T1RFBBMJXDG4BQYRCR2F&ref_=cm_sw_r_apan_dp_T1RFBBMJXDG4BQYRCR2F&social_share=cm_sw_r_apan_dp_T1RFBBMJXDG4BQYRCR2F&titleSource=true)
 
 ## Miscallaneous 
 
