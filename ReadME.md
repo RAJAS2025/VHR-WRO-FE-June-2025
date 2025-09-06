@@ -108,6 +108,8 @@ Here is the link to our Obstacle Challenge: https://youtu.be/RuCk_0WW9Mc
 <br>
 Here is the link to our Open Challenge: https://youtu.be/YiaeHu-xXsg
 
+--- 
+
 # Mobility Management <a class="anchor"></a>
 
 ### Chassis
