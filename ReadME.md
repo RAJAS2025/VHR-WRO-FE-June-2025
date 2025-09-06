@@ -584,6 +584,8 @@ motor.run_motor(1, motorSpeed); `
 - Tune coefficients for better performance.  
 - Add PID-based velocity control for smoother deceleration.
 
+---
+
 ## Parallel Parking
 
 ### 1. Initial Right Turn
