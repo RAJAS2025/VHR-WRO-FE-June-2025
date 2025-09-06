@@ -669,6 +669,8 @@ The sequence of turns + forward/reverse moves guides the robot into its parking 
 
 Here is our video for the assembly proccess of our robot: https://youtu.be/ncnzsIrPrJM
 
+---
+
 # Cost Report
 
 ## Part Cost
