@@ -338,9 +338,7 @@ The Miuzei MG90S 9G Micro Servo Motor (S1) connects to pin D32 on the board for 
 
 # Obstacle Management <a class="anchor"></a>
 
-## Strategy and Code Explanation
-
-### Open Challenge
+## Open Challenge: Strategy and Code Explanation
 
 This program controls the robot using TOF sensors and a gyro to navigate by following the outer wall. When the robot detects a wall ahead, it chooses the clearer side by comparing right and left values, and stores it in side. From that point on, the robot consistently follows the chosen outer wall, using TOF readings and gyro correction to stay aligned. Because the outer wall distance is always fixed, this method remains reliable even if interior walls shift or move. A turn count tracks progress through the maze, and once it reaches 12, the robot stops wall-following and drives straight to the finish using gyro-based control.
 
@@ -417,7 +415,7 @@ motor.run_motor(1, 100);
 
 ---
 
-### Obstacle Challenge
+## Obstacle Challenge: Strategy and Code Explanation
 
 Our approach focuses on maintaining precise control and adaptability while navigating the course. The robot will use gyro-based line following to stay straight on the track, supported by distance sensors to prevent collisions on the walls. When encountering a block, the robot will slow down and maneuver around it before continuing forward once the path is clear. Turns will be guided by the camera system, which identifies the blue and orange lines on the mat to ensure consistent and accurate direction changes. Throughout the run, we will track progress by counting completed turns, allowing the robot to recognize when the course has been finished. This plan balances speed, accuracy, and reliability to effectively handle obstacles and complete the challenge.
 
@@ -427,14 +425,14 @@ Our approach focuses on maintaining precise control and adaptability while navig
 
 <br>
 
-## Obstacle Challenge Turning Logic
+### Obstacle Challenge Turning Logic
 
 In the **Obstacle Challenge**, our robot had to detect the blue and orange lines on the playing field and update its gyro heading to execute precise turning maneuvers.  
 We implemented **three distinct turning logics** depending on what obstacle is detected ahead:
 
 ---
 
-### If we see a Green Block → Do Green Turning Logic  
+#### If we see a Green Block → Do Green Turning Logic  
 
 <table>
 <tr>
@@ -452,19 +450,20 @@ We implemented **three distinct turning logics** depending on what obstacle is d
 </tr>
 </table>
 
-`else if (gp == true) { `
-    `// move forward while ignoring walls`
-    `while (i < 450){ forward(yaw, 0, 1000, 1000); }`
-    `// keep moving until safe`
-    `while (frontdist > 350){ forward(yaw, 0, 1000, 1000); }`
-    `// then perform controlled turn`
-    `target = abs(offsetangle) + 70;`
-    `while (yaw < target) { myservo.write(135); }`
-`}`
-
+```ino
+else if (gp == true) { 
+    // move forward while ignoring walls
+    while (i < 450){ forward(yaw, 0, 1000, 1000); }
+    // keep moving until safe
+    while (frontdist > 350){ forward(yaw, 0, 1000, 1000); }
+    // then perform controlled turn
+    target = abs(offsetangle) + 70;
+    while (yaw < target) { myservo.write(135); }
+}
+```
 ---
 
-### If we see a Red Block → Do Red Turning Logic  
+#### If we see a Red Block → Do Red Turning Logic  
 
 <table>
 <tr>
@@ -482,20 +481,22 @@ We implemented **three distinct turning logics** depending on what obstacle is d
 </tr>
 </table>
 
-`if (rp == true) {`
-    `motor.run_motor(1, 45);`
-    `if (rightdist < 300) {`
-        `target = abs(offsetangle) + 40;`
-        `while (yaw < target) { myservo.write(115); }`
-    `} else {`
-        `target = abs(offsetangle) + 38;`
-        `while (yaw < target) { myservo.write(135); }`
-    `}`
-`}`
+```ino
+if (rp == true) {
+    motor.run_motor(1, 45);
+    if (rightdist < 300) {
+        target = abs(offsetangle) + 40;
+        while (yaw < target) { myservo.write(115); }
+    } else {
+        target = abs(offsetangle) + 38;
+        while (yaw < target) { myservo.write(135); }
+    }
+}
+```
 
 ---
 
-### If No Block is Detected → Do No Block Turning Logic  
+#### If No Block is Detected → Do No Block Turning Logic  
 
 <table>
 <tr>
@@ -513,22 +514,24 @@ We implemented **three distinct turning logics** depending on what obstacle is d
 </tr>
 </table>
 
-`else {`
-    `while (frontdist > 450) { forward(yaw, 0, 1000, 1000); }`
-    `target = abs(offsetangle) + 75;`
-    `while (yaw < target) { myservo.write(145); }`
-    `motor.stop_motor();`
-    `myservo.write(95);`
-    `motor.run_motor(0, 55);`
-    `delay(750);  // reverse slightly`
-    `motor.stop_motor();`
-`}`
+```ino
+else {
+    while (frontdist > 450) { forward(yaw, 0, 1000, 1000); }
+    target = abs(offsetangle) + 75;
+    while (yaw < target) { myservo.write(145); }
+    motor.stop_motor();
+    myservo.write(95);
+    motor.run_motor(0, 55);
+    delay(750);  // reverse slightly
+    motor.stop_motor();
+}
+```
 
 ---
 By combining **line detection (blue/orange lines)** with **gyro updates**, the robot could reliably identify its position and apply the correct turning strategy. This adaptive logic ensured consistent navigation through different obstacle configurations.
 
 
-## Dodging Blocks
+### Dodging Blocks
 
 These are the following steps we take to dodge a block and generally, just have the robot run through the laps.
 
@@ -539,7 +542,7 @@ These are the following steps we take to dodge a block and generally, just have 
 
 ---
 
-### Block Detection (HuskyLens)
+#### Block Detection (HuskyLens)
 
 The **HuskyLens** provides:
 
@@ -558,7 +561,7 @@ https://www.desmos.com/3d/tnomdtba0m
 
 ---
 
-### Adaptive Speed Control
+#### Adaptive Speed Control
 
 Motor speed decreases as blocks get closer:
 
@@ -566,17 +569,19 @@ Motor speed decreases as blocks get closer:
 - Larger `y` → Closer block → Slower motor.  
 - Minimum speed of **50** is enforced.
 - The full speed algorithm looks like this:
-  `motorSpeed = baseSpeed - int((0.3 * curr_y));  //70 and 0.2`
-  `if (by > 100 && side == 1) {`
-  ` motorSpeed = 50;`
-` } else if (oy > 100 && side == 2) {`
-  ` motorSpeed = 50;`
- `}`
- `if (motorSpeed < 50) {`
-  ` motorSpeed = 50;`
-` }  `
+  ```ino
+  motorSpeed = baseSpeed - int((0.2 * curr_y));  //70 Base Speed and 0.2 slowing down constant
+  if (by > 100 && side == 1) {
+   motorSpeed = 50;
+  } else if (oy > 100 && side == 2) {
+   motorSpeed = 50;`
+  }
+  if (motorSpeed < 50) {
+   motorSpeed = 50;
+  }
+  ```
 - The additional logic is for slowing down when seeing the blue or orange line depending on which side we drive
-  Graph of our speed deceleration according to camera y:
+  If you want to visualize our function, here is a graph of our speed deceleration according to camera y:
 
   <img src="https://drive.google.com/uc?id=1LzeRyqKy1vD6STLniKZe9ZReyYeYG8ue" alt="Green Turning" width="350"/><br>
   
@@ -597,18 +602,18 @@ This value is passed into the steering algorithm.
 
 ---
 
-### Steering & Wall Following (`forward()` Function) (Obstacle)
+#### Steering & Wall Following (`forward()` Function) (Obstacle)
 
 Main control law that combines wall-following, block avoidance, and gyro correction:
 
+```ino
+if (lwd < 350) lwallval = 0.035 * (lwd - 350);
+else lwallval = 0;
 
-`if (lwd < 350) lwallval = 0.035 * (lwd - 350);
-else lwallval = 0;`
+float kp = 0.35;
+int angle;
 
-`float kp = 0.35;
-int angle;`
-
-`// Correction logic
+// Correction logic
 if (distance) {
     angle = (int)(kp * (g - (offsetangle - block + rwallval - lwallval)));
 } else {
@@ -616,17 +621,17 @@ if (distance) {
         angle = (int)(kp * (g - (offsetangle - block - lwallval)));
     else
         angle = (int)(kp * (g - (offsetangle - block + rwallval)));
-}`
+}
 
-`// Servo steering
+// Servo steering
 int pos = 95 - angle;
 pos = constrain(pos, 65, 115);
-myservo.write(pos);`
+myservo.write(pos);
 
-`// Motor forward with adaptive speed
-motor.run_motor(1, motorSpeed); `
-
-#### Breakdown of `forward()`:
+// Motor forward with adaptive speed
+motor.run_motor(1, motorSpeed);
+```
+##### Breakdown of `forward()`:
 - **Wall Following** → Keeps robot centered using TOF sensors (`rwd`, `lwd`).  
 - **Block Avoidance** → Adds correction (`block = target_x`) from HuskyLens.  
 - **Gyro Correction** → Maintains stable heading with IMU yaw.  
