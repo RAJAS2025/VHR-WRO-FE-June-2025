@@ -55,8 +55,8 @@ To learn more about the challenge, click [here](https://wro-association.org/wp-c
 ---
 
 # Video
-Here is the link to our Obstacle Challenge: [https://youtu.be/RuCk_0WW9Mc]
-Here is the link to our Open Challenge: 
+Here is the link to our Obstacle Challenge: https://youtu.be/RuCk_0WW9Mc
+Here is the link to our Open Challenge: https://youtu.be/YiaeHu-xXsg
 
 # Mobility Management <a class="anchor"></a>
 
