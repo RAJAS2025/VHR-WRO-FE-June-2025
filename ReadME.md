@@ -762,6 +762,12 @@ Here is our video for the assembly proccess of our robot: https://youtu.be/ncnzs
 
 **Total Car Cost: $193.78 CAD**
 
+# Special Thanks
 
+## Coach Vikram
+Coach Vikram is super passionate about mixing electronics and robotics, and you can totally feel that whenever he talks. He’s always cheerful and positive, which makes practice fun even when things get tough. He never just gave us the code or held our hands; instead, he kept asking us questions so we’d figure it out ourselves. That way, he got us ready for this new competition and made us more confident along the way.
+
+## Akhil
+Akhil is a 2nd year engineering student at Carlton University, and he’s the kind of guy who loves digging into code and building libraries from scratch. He’s calm and focused, always ready to sit down and figure out the tricky parts without rushing. Whenever we got stuck, he would explain things in a simple way and show us how to build tools that actually make our work easier. He helped us to create our libraries, when we had no experience with C+ and Arduino.
 
 
