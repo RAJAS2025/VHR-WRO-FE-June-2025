@@ -420,7 +420,11 @@ The **HuskyLens** provides:
 In the `camread()` function:
 - Each color activates a flag (`rp`, `gp`, `bl`, `ol`, `pw`).  
 - Positions `(x, y)` are stored.  
-- The **closest block** is the one with the **largest yCenter**.  
+- The **closest block** is the one with the **largest yCenter**.
+
+Below is a 3d graph model of how our function scales to go around the block.
+
+https://www.desmos.com/3d/tnomdtba0m
 
 ---
 
