@@ -327,26 +327,26 @@ void loop() {
   }
 
   // Reset steering influence if blue/orange detected with conditions and timer elapsed
-  if (by > gy && by > ry && side == 1 && (millis() - turned > 4000)) {
+  if (by > gy && by > ry && side == 1 && (millis() - turned > 2500)) {
     green = 0;
     red = 0;
     curr_y = 0;
   }
 
-  if (oy > gy && oy > ry && side == 2 && (millis() - turned > 4000)) {
+  if (oy > gy && oy > ry && side == 2 && (millis() - turned > 2500)) {
     green = 0;
     red = 0;
     curr_y = 0;
   }
 
   // Adjust motor speed according to current detection influence
-  motorSpeed = baseSpeed - int((0.3 * curr_y));
+  motorSpeed = baseSpeed - int((0.2 * curr_y));
   if (by > 100 && side == 1) {
-    motorSpeed = 50;
+    motorSpeed = 45;
   } else if (oy > 100 && side == 2) {
-    motorSpeed = 50;
+    motorSpeed = 45;
   }
-  if (motorSpeed < 50) motorSpeed = 50;
+  if (motorSpeed < 45) motorSpeed = 45;
 
   // Combine all color influence as target_x for steering
   target_x = green + red + pink;
@@ -1054,3 +1054,4 @@ void park() {
     delay(100000000000000);
   }
 }
+
