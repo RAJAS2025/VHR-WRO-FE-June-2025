@@ -175,8 +175,7 @@ Some of the key global variables in the code:
 | target_X | int | Takes the sum of the correctional values of red, green and pink |
 | count | int | Counts laps based of each 90 degree turn |
 | side | int | Defines direction (1 = counter-clockwise, 2 = clockwise) |
-| red, green, pink | float | They are float correction value calculated from the blocks x and y position, used to steer the robot toward alignment when the marker is off center.|
-| distance | bool | Used for proportional distance-based control |  
+| red, green, pink | float | They are float correction value calculated from the blocks x and y position, used to steer the robot toward alignment when the marker is off center.| 
 
 ## Example: Forward Movement with Gyro Correction
 
