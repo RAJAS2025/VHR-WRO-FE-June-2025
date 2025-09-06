@@ -1,3 +1,6 @@
+This repository contains the documentation for Team VHR team's robot for the 2025 World Robot Olympiad Future Engineers competition. 
+
+
 ## Table of Contents
 * [The Team](#the-team-)
 * [The Challenge](#the-challenge-)
@@ -37,23 +40,10 @@
   * [Steering and Gyro Function](#steering--wall-following-forward-function)
   * [Parallel Parking](#parallel-parking)
 * [Robot Assembly Guide](#assembly-guide)
-  * [Step 0: Print the 3D parts](#3d-printing)
-  * [Step 1: Assemble the steering system](#steering-system-assembly)
-  * [Step 2: Assemble the powertrain](#powertrain-assembly)
-  * [Step 3: Attach the electronics](#electronics-attachment)
-  * [Step 4: Attach the wheels](#wheel-attachment)
-  * [Step 5: Final touches](#final-touches)
-  * [Step 6: Upload the code](#code-upload)
+* NEED TO ADD GUIDE
 * [Cost Report](#cost-report)
-  * [3D Printing Costs](#3d-printing-costs)
-  * [Other Parts Tested](#other-parts-tested)
-  * [Tools and Equipment](#tools-and-equipment)
-  * [Summary of Costs](#summary-of-costs)
-* [Randomizer](#randomizer)
-* [Resources](#resources)
-  * [3D Models](#3d-models-resources)
-  * [Images](#images-resources)
-* [License](#copyright)
+  * [Parts Cost](#part-cost)
+  * [Parts BOM](#parts-bill-of-materials-bom)
 
 ---
 
