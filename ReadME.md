@@ -237,6 +237,12 @@ The main chassis serves as the foundation of the car, housing most of the core c
 
 # Power and Sense Management <a class="anchor"></a>  
 
+## Controller
+
+The robot uses an ESP32 microcontroller for fast processing and built-in Wi-Fi/Bluetooth. It handles everything from sensor input to motor control and wireless communication without slowing down. Its small size fits easily in the chassis, and low power use helps extend battery life — perfect for competition.
+
+<img src="https://drive.google.com/uc?id=1wBLfym0Pn2BkgklfYXTlf8sXXGUaGqUQ" width="20%" alt="An image of a ESP32 controller"/>
+
 ## Battery
 
 The robot is powered by two 6-volt NiMH (Nickel-Metal Hydride) battery packs. We chose these batteries for their high current output, which is essential for reliably running all the electronics, including the motors, without performance drops. Their use also ensures the robot has enough capacity for longer operation periods, a key advantage during competition.
@@ -257,6 +263,7 @@ The robot uses three VL53L0X Time-of-Flight (ToF) distance sensors to measure th
 
 The MPU-6050 is used to monitor the robot's orientation and heading. The gyroscope provides real-time data on the robot's yaw, pitch, and roll. The robot primarily uses the yaw axis to track its heading and maintain accurate directional control. Before each use, the gyro is calibrated to ensure precision, and a starting reference angle is set to 0. This allows the robot to consistently track its orientation and make precise turns, such as a 90-degree turn, by adjusting the offset relative to its starting position. This sensor is crucial for ensuring the robot drives in a straight line and turns accurately.
 
+<img src="https://drive.google.com/uc?id=1HInrGT8E10JHXhQ39ms4ZauZaeSHvE_a" width="20%" alt="An image of a MPU-6050 gyro sensor"/>
 
 ### HuskyLens AI Vision Sensor
 The HuskyLens is a powerful AI vision sensor that provides the robot with the ability to "see" and identify objects. It is pre-trained to recognize colors and objects, which is a key part of your strategy for the Obstacle Challenge. The robot uses the HuskyLens for several key functions:
