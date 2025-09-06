@@ -40,7 +40,6 @@ This repository contains the documentation for Team VHR team's robot for the 202
   * [Steering and Gyro Function](#steering--wall-following-forward-function)
   * [Parallel Parking](#parallel-parking)
 * [Robot Assembly Guide](#assembly-guide)
-* NEED TO ADD GUIDE
 * [Cost Report](#cost-report)
   * [Parts Cost](#part-cost)
   * [Parts BOM](#parts-bill-of-materials-bom)
