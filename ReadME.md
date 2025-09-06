@@ -594,6 +594,12 @@ motor.run_motor(1, motorSpeed); `
 
 The sequence of turns + forward/reverse moves guides the robot into its parking spot. To examine specific lines of code, locate the `park()` clockwise run function at the bottom of the obstacle challenge code and review the accompanying comments.
 
+---
+
+# Assembly Guide
+
+Here is our video for the assembly proccess of our robot: https://youtu.be/ncnzsIrPrJM
+
 
 
 
