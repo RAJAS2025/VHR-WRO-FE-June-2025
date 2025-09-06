@@ -43,6 +43,7 @@ This repository contains the documentation for Team VHR team's robot for the 202
 * [Cost Report](#cost-report)
   * [Parts Cost](#part-cost)
   * [Parts BOM](#parts-bill-of-materials-bom)
+* [Special Thanks](#special-thanks)
 
 ---
 
