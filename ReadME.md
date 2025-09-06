@@ -265,6 +265,40 @@ The Miuzei MG90S 9G Micro Servo Motor (S1) connects to pin D32 on the board for 
 
 **Total Car Cost: $180.79 CAD**
 
+## Energy Consumption Breakdown
+
+### Baseline (no motors)
+- ESP32 + HuskyLens + MPU6050 + 3× ToF  
+  - 120 + 230 = 350 mA  
+  - 350 + 4 = 354 mA  
+  - 354 + 60 = **414 mA**
+
+### Typical Total (with motors + servo)
+- Baseline: 414 mA  
+- + DC motor (typical): +450 mA → 864 mA  
+- + Servo (typical): +70 mA → **934 mA**
+
+### Peak Load
+- ESP32 peak: 260 mA  
+- HuskyLens peak: 300 mA → 560 mA  
+- + MPU6050: +4 mA → 564 mA  
+- + ToF peaks: +120 mA → 684 mA  
+- + Motor nominal: +450 mA → 1,134 mA  
+- + Servo peak (70–140 mA): → **~1,204 mA**
+
+### Worst-Case (stall currents)
+- DC motor stall: 3× nominal → 450 × 3 = 1,350 mA  
+- Servo stall: 2× → 70 × 2 = 140 mA  
+- Non-motor peak subtotal: 684 mA  
+- 684 + 1,350 + 140 = **≈ 2,174 mA (~2.17 A)**
+
+---
+
+**Summary:**  
+- Typical draw ≈ **934 mA**  
+- Peak ≈ **1.2 A**  
+- Worst-case transient ≈ **2.2 A**
+
 ---
 
 # Obstacle Management <a class="anchor"></a>
