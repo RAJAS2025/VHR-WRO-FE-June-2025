@@ -232,7 +232,7 @@ The main chassis serves as the foundation of the car, housing most of the core c
 | Husky Lens Camera | • Mounted on **two VEX standoffs**<br>• Standoffs fastened to **LEGO beams** with VEX screws<br>• Camera secured with **two M3 screws** on top beam<br>• Chosen over **3D-printed bracket** for flexibility<br>• **Adjustable height** by swapping standoffs<br>• Provides **rigidity and durability** | ![image](https://drive.google.com/uc?id=1ueXWMVm9pPt3y-N7kD_lzTD1kA_8lwpR) |
 | Battery | • Placed at **center of chassis CAD**<br>• **Dedicated slot** sized for battery fit<br>• **PCB mounted above** for short, direct connections<br>• Prevents **wire tangling**<br>• **Front cutout** allows space for servo motor integration | ![image](https://drive.google.com/uc?id=1t9aI2a0_YSJzfXPRAPhALQHHAnrYWMIR) |
 | PCB | • Located **above battery slot**<br>• Space designed for **PCB with sensor ports**<br>• **Clear sides** for neat wire management<br>• **Rear hole** provides access to power button<br>• Supports clean and efficient wiring layout | ![image](https://drive.google.com/uc?id=1Xr69AL12gRIF-5ft7Ylq5KtJu0QJ6xsf) |
-| Camera Lens | • Located **on camera**<br>• Added to widen camera view and see more blocks | ![image](https://drive.google.com/uc?id=1e45Q5dyqBYmxCTzEn6w6N4kPRnOa5b1d) |
+| Camera Lens | • Located **on camera**<br>• Added to widen camera view and see more blocks | ![image](https://drive.google.com/uc?id=1FN63wCOauWCTV_px2Ad7naLUNRfQyXR0) |
 
 
 
