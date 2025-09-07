@@ -8,12 +8,12 @@ This repository contains the documentation for Team VHR team's robot for the 202
 * [Performance Video](#video)
 * [Mobility Management](#mobility-management-)
   * [Chassis](#chassis)
-    * [Spur Gear](#spur-gear)
-    * [Differential Gear](#differential-gear)
-    * [Steering Connecting Bar](#steering-connecting-bar)
-    * [Wheel Holders](#wheel-holdersleft-and-right)
-    * [Distance Sensor Holders](#distance-sensor-holder)
-    * [Assembly of Chassis](#assembly-of-chassis)
+  * [Spur Gear](#spur-gear)
+  * [Differential Gear](#differential-gear)
+  * [Steering Connecting Bar](#steering-connecting-bar)
+  * [Wheel Holders](#wheel-holdersleft-and-right)
+  * [Distance Sensor Holders](#distance-sensor-holder)
+  * [Assembly of Chassis](#assembly-of-chassis)
   * [Motors](#motors)
   * [Drivetrain and Chassis Design](#new-drivetrain--chassis-design)
     * [Old Drivetrain and Chassis Design](#old-drivetrain--chassis-design)
@@ -124,7 +124,7 @@ Here is the link to our Open Challenge: https://youtu.be/YiaeHu-xXsg
 
 # Mobility Management <a class="anchor"></a>
 
-### Chassis
+## Chassis
 
 Our chassis is a fully custom-designed base, modeled in SolidWorks to create a compact and efficient structure optimized for sharp servo steering. On top of the chassis, we mounted our PCB, which holds the main electronics and three laser distance sensors—one at the front and one on each side—allowing the robot to sense walls and obstacles accurately. The motor is positioned beneath the PCB in a dedicated motor holder and drives a spur gear that connects to a reinforced LEGO differential, forming a robust drivetrain.
 
