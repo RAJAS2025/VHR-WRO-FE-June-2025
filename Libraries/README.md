@@ -1,6 +1,6 @@
 # Libraries we made
 
-We developed custom libraries for both the gyro and time-of-flight sensors, and tested them on our custom-designed PCB, which was built to support all possible functions required in both the qualifying and obstacle challenge rounds. The remaining libraries, such as ESP32 Servo and HuskyLens, were sourced externally, uploaded to our project folder, and included in our main code.
+We developed custom libraries for both the gyro and time-of-flight sensors, and tested them on our custom-designed PCB, which was built to support all possible functions required in both the qualifying and obstacle challenge rounds. The ESP32 Servo library was installed directly through the Arduino IDE, while the HuskyLens library was downloaded from GitHub, where we also studied its functions and learned how it works. Here is the link: https://github.com/HuskyLens/HUSKYLENSArduino/tree/master
 
 ## ZebraGyro Library
 
