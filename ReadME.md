@@ -37,7 +37,7 @@ This repository contains the documentation for Team VHR team's robot for the 202
     * [Dodging Blocks](#dodging-blocks)
       * [Block Detection](#block-detection-huskylens)
       * [Adaptive Speed Control](#adaptive-speed-control)
-      * [Block Dodging Algorithm](#block dodging aglorithm)
+      * [Block Dodging Algorithm](#block-dodgin-algorithm)
       * [Steering and Gyro Function](#steering--wall-following-forward-function-obstacle)
     * [Parallel Parking](#parallel-parking)
 * [Robot Assembly Guide](#assembly-guide)
