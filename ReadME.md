@@ -105,10 +105,10 @@ To learn more about the challenge, click [here](https://wro-association.org/wp-c
 
 # Photos of our Robot
 
-| <img src="https://drive.google.com/uc?id=1aWJ-H0-GOFDvV9gDJ4QAf6hmklhst8gK" width="80%" /> | <img src="https://drive.google.com/uc?id=1oX-KxfzI2DTj24vLX8rqyh11PAV4olQl" width="80%" /> | 
+| <img src="https://drive.google.com/uc?id=1aWJ-H0-GOFDvV9gDJ4QAf6hmklhst8gK" width="62%" /> | <img src="https://drive.google.com/uc?id=1oX-KxfzI2DTj24vLX8rqyh11PAV4olQl" width="80%" /> | 
 | :--: | :--: | 
 | *Front* | *Back* |
-| <img src="https://drive.google.com/uc?id=1H0KkBUIwidjpX5ytaliWRWB7coaz1PZi" width="80%" /> | <img src="https://drive.google.com/uc?id=1AKIJB9Yb-v1_quOu6_hbZusZiDMD91AX" width="80%" /> | 
+| <img src="https://drive.google.com/uc?id=1H0KkBUIwidjpX5ytaliWRWB7coaz1PZi" width="85%" /> | <img src="https://drive.google.com/uc?id=1AKIJB9Yb-v1_quOu6_hbZusZiDMD91AX" width="80%" /> | 
 | *Left* | *Right* |
 | <img src="https://drive.google.com/uc?id=1MHiPeFvvq3-WE02_ar_w_I4MMNLeCKCs"  width="80%" /> | <img src="https://drive.google.com/uc?id=1-gwoOr5C1kGRDVXE89HdioXeioHhLkj5" width="80%" /> | 
 | *Top* | *Bottom* |
