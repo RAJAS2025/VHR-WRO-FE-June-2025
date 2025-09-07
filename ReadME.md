@@ -4,7 +4,7 @@ This repository contains the documentation for Team VHR team's robot for the 202
 ## Table of Contents
 * [The Team](#the-team-)
 * [The Challenge](#the-challenge-)
-* [The Robot](#robot-image)
+* [Photos of our Robot](#photos-of-our-robot)
 * [Performance Video](#video)
 * [Mobility Management](#mobility-management-)
   * [Chassis](#chassis)
