@@ -37,6 +37,7 @@ This repository contains the documentation for Team VHR team's robot for the 202
     * [Dodging Blocks](#dodging-blocks)
       * [Block Detection](#block-detection-huskylens)
       * [Adaptive Speed Control](#adaptive-speed-control)
+      * [Block Dodging Algorithm](#block dodging aglorithm)
       * [Steering and Gyro Function](#steering--wall-following-forward-function-obstacle)
     * [Parallel Parking](#parallel-parking)
 * [Robot Assembly Guide](#assembly-guide)
@@ -554,7 +555,7 @@ By combining **line detection (blue/orange lines)** with **gyro updates**, the r
 
 These are the following steps we take to dodge a block and generally, just have the robot run through the laps.
 
-- Detect and identify colored blocks (Red, Green, Blue, Orange, Pink).  
+- Detect and identify colored blocks and lines (Red, Green, Blue, Orange, Pink).  
 - Slow down automatically as it approaches obstacles.  
 - Dodge blocks smoothly by adjusting steering.  
 - Maintain stable heading while wall-following.
@@ -572,11 +573,7 @@ The **HuskyLens** provides:
 In the `camread()` function:
 - Each color activates a flag (`rp`, `gp`, `bl`, `ol`, `pw`).  
 - Positions `(x, y)` are stored.  
-- The **closest block** is the one with the **largest yCenter**.
-
-Below is a 3d graph model of how our function scales to go around the block.
-
-https://www.desmos.com/3d/tnomdtba0m
+- The **closest block** is the one with the **largest yCenter** or when comparing if green and red is closer, the **largest area** taken on screen.
 
 ---
 
@@ -605,6 +602,7 @@ Motor speed decreases as blocks get closer:
   <img src="https://drive.google.com/uc?id=1LzeRyqKy1vD6STLniKZe9ZReyYeYG8ue" alt="Green Turning" width="350"/><br>
   
 ---
+#### Block Dodging Algorithm
 
 Each block influences the steering correction.  
 
@@ -618,6 +616,10 @@ Example: **Red Block (forces left dodge)**
 The combined correction is:
 
 This value is passed into the steering algorithm.
+
+Below is a 3d graph model of how our function scales to go around the block.
+
+https://www.desmos.com/3d/tnomdtba0m
 
 ---
 
