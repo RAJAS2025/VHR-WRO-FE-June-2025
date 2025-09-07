@@ -103,6 +103,18 @@ To learn more about the challenge, click [here](https://wro-association.org/wp-c
 
 ---
 
+# Photos of our Robot
+
+| <img src="https://drive.google.com/uc?id=1aWJ-H0-GOFDvV9gDJ4QAf6hmklhst8gK" /> | <img src="https://drive.google.com/uc?id=1oX-KxfzI2DTj24vLX8rqyh11PAV4olQl" /> | 
+| :--: | :--: | 
+| *Front* | *Back* |
+| <img src="https://drive.google.com/uc?id=1H0KkBUIwidjpX5ytaliWRWB7coaz1PZi" /> | <img src="https://drive.google.com/uc?id=1AKIJB9Yb-v1_quOu6_hbZusZiDMD91AX" /> | 
+| *Left* | *Right* |
+| <img src="https://drive.google.com/uc?id=1MHiPeFvvq3-WE02_ar_w_I4MMNLeCKCs" /> | <img src="https://drive.google.com/uc?id=1-gwoOr5C1kGRDVXE89HdioXeioHhLkj5" /> | 
+| *Top* | *Bottom* |
+
+---
+
 # Video
 Here is the link to our Obstacle Challenge: https://youtu.be/RuCk_0WW9Mc
 <br>
