@@ -426,7 +426,7 @@ Our approach focuses on maintaining precise control and adaptability while navig
 | ----------------- | ------- |
 | <img src="https://drive.google.com/uc?id=1x1ThfU5bREkVYrc2lWV1rFM2sHI3Szyz" /> | <img src="https://drive.google.com/uc?id=1t3yGyIsXJndeDdpIoREGKFj_onKRimM3"/> |
 
-| Open Challenge Flowchart |
+| Obstacle Challenge Flowchart |
 | ------------------------ |
 | <img src="https://drive.google.com/uc?id=1eM6amhwdPep5HF0AxssYeLSjjfxbVY83" /> |
 
